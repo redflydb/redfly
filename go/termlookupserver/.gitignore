@@ -1,0 +1,7 @@
+# Ignore external assets (FlyBase GFF files, OWL ontology files, etc).
+assets/*.gff
+assets/*.log
+assets/*.owl
+assets/cache.db
+assets/cache-backup.db
+assets/tron.obo

@@ -1,0 +1,10 @@
+Ext.define('REDfly.Config', {
+    singleton: true,
+    getApiV1Url: function () {
+        return '<REDFLY_BASE_URL>api/rest';
+    },
+    getApiV2Url: function () {
+        return '<REDFLY_BASE_URL>api/v2';
+    }
+});
+Ext.Ajax.setTimeout(60000);

@@ -1,0 +1,541 @@
+ @font-face
+{
+    font-family: 'Open Sans';
+    src: url('../font/OpenSans-Regular.woff2') format('woff2'),
+         url('../font/OpenSans-Regular.woff') format('woff'),
+         url('../font/OpenSans-Regular.ttf') format('truetype');
+}
+
+/****************************************/
+/*               General                */
+/****************************************/
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    background-color: #FFFFFF;
+}
+
+/****************************************/
+/*                Header                */
+/****************************************/
+
+header.header
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+div.tagline
+{
+    text-align: center;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.version
+{
+    font-size: 200%;
+    font-weight: bold;
+    margin: 0 0 -30px;
+}
+
+div.lastupdate
+{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 110%;
+}
+
+hr.redline
+{
+    border: 0;
+    background-color: #be1e2d;
+    height: 3px;
+    width: 98%;
+    margin: 0 auto 10px auto;
+}
+
+/****************************************/
+/*                 Nav                  */
+/****************************************/
+
+.menu
+{
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+}
+
+.menu_items
+{
+    line-height: 30px;
+    height: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px; /* Specific number so that navbar is usable on tablets */
+    font-weight: bold;
+}
+
+.menu_items li
+{
+    float: left;
+}
+
+.nav_effect
+{
+    display: inline-block;
+    line-height: 12px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #be1e2d;
+    text-decoration: none;
+    padding: 10px 10px 8px 10px;
+    transition: background-color 0.25s;
+    -webkit-transition: background-color 0.25s;
+    border-radius: 5px 5px 0 0;
+}
+
+.nav_effect:hover
+{
+    background-color: rgb(239, 206, 211);
+}
+/****************************************/
+/*                Body                  */
+/****************************************/
+
+div.body_header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.welcome
+{
+    width: 100%;
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.news
+{
+    font-weight: bold;
+    margin: 15px 0 0;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(165, 0, 18, 0.2);
+}
+
+div.info
+{
+    position: relative;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.watermark
+{
+    position: absolute;
+    width: 492.75px;
+    height: 342px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.search_button
+{
+    font-size: 18px;
+    height: 40px;
+    width: 160px;
+    color: black;
+    background-color: rgba(242, 242, 242, 1);
+    border: 1px solid #BFBFBF;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.search_button:hover
+{
+    background-color: rgba(242, 242, 242, 0.6);
+    border-radius: 20px;
+}
+
+.search_button:focus
+{
+    outline: none;
+    box-shadow: 0 0 3px rgb(190, 30, 45);
+}
+
+span.section
+{
+    font-size: 14pt;
+    color: #0F37C8;
+    font-weight: bold;
+}
+
+span.subsection
+{
+    color: #0F37C8;
+    font-weight: bold;
+}
+
+span.back_to_contents
+{
+    color: #0B39F9;
+}
+
+span.redfly_red
+{
+    color: #be1e2d;
+    font-weight: bold;
+    font-style: italic;
+}
+
+div.heading_release_c
+{
+    color: #000000;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.heading_release_l
+{
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+}
+
+div.heading_l
+{
+    font-size: 110%;
+    font-weight: bold;
+    text-align: left;
+}
+
+div.heading_c
+{
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.heading_r
+{
+    font-size: 110%;
+    font-weight: bold;
+    text-align: right;
+}
+
+div.heading_sm_l
+{
+    color: #0033CC;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+}
+
+div.heading_sm_c
+{
+    color: #0033CC;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.heading_sm_r
+{
+    color: #0033CC;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: right;
+}
+
+div.heading_lg_l
+{
+    color: #0033CC;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: left;
+}
+
+div.heading_lg_c
+{
+    color: #0033CC;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.heading_lg_r
+{
+    color: #0033CC;
+    font-size: 130%;
+    font-weight: bold;
+    text-align: right;
+}
+
+td.heading_l
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: left;
+}
+
+td.heading_c
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.heading_r
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: right;
+}
+
+th.heading_l
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: left;
+}
+
+th.heading_c
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+}
+
+th.heading_r
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: right;
+}
+
+div.indent_l
+{
+    padding-left: 20;
+}
+
+td.sm_label_l
+{
+    color: #0033CC;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+}
+
+td.sm_label_r
+{
+    color: #0033CC;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: right;
+}
+
+td.sm_label_c
+{
+    color: #0033CC;
+    font-size: 90%;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.label_l
+{
+    color: #0033CC;
+    font-weight: bold;
+    text-align: left;
+}
+
+td.label_r
+{
+    color: #0033CC;
+    font-weight: bold;
+    text-align: right;
+}
+
+td.label_c
+{
+    color: #0033CC;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.lg_label_l
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: left;
+}
+
+td.lg_label_r
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: right;
+}
+
+td.lg_label_c
+{
+    color: #0033CC;
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+}
+
+span.label
+{
+    font-weight: bold;
+}
+
+div.label_c
+{
+    color: #0033CC;
+    font-weight: bold;
+    text-align: center;
+}
+
+span.form_error
+{
+    color: red;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+td.form_error
+{
+    color: red;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+td.error
+{
+    color: red;
+    font-weight: bold;
+}
+
+span.error
+{
+    color: red;
+    font-weight: bold;
+}
+
+div.cite_reminder
+{
+    margin: 20px 0 0;
+}
+
+div.main_text
+{
+    font-size: 110%;
+}
+
+.red_circle
+{
+    display: inline-block;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color: #be1e2d;
+}
+
+.separator
+{
+    width: 100%;
+    text-align: center;
+}
+
+/****************************************/
+/*            Contact Form              */
+/****************************************/
+
+.email
+{
+    position: relative;
+    background-color: rgba(165, 0, 18, 0.2);
+    width: 720px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.email input:not(.email-btn),
+.email textarea
+{
+    font-size: 16px;
+}
+
+.email input:not(.email-btn)
+{
+    width: 300px;
+}
+
+.email p
+{
+    margin: 0;
+    font-size: 20px;
+}
+
+.shadow
+{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.disable
+{
+    opacity: 0.4;
+}
+
+.email-btn
+{
+    background-color: white;
+    border: none;
+    color: #be1e2d;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
+    border-radius: 20px;
+}
+
+.email-btn:not(.disable):hover
+{
+    padding: 0;
+    border: 2px solid #be1e2d;
+}

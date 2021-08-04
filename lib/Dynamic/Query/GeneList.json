@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties": {
+        "page": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "start": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "limit": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "sort": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "property": {"enum": [
+                        "name",
+                        "identifier"
+                    ]},
+                    "direction": {"enum": [
+                        "ASC",
+                        "DESC"
+                    ]}
+                },
+                "required": [
+                    "property",
+                    "direction"
+                ]
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "query": {
+            "type": "string"
+        }
+    },
+    "required": ["page", "start", "limit", "sort", "query"]
+}

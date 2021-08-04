@@ -1,0 +1,5 @@
+# Go executable
+cmd/icrm_calculation
+
+# VS Code files
+.vscode/launch.json

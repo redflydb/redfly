@@ -1,0 +1,6 @@
+gene_name	arbitrary_name	assayed_in_species	expression	PMID	stage_on	stage_off	biological_process	sex	ectopic	enhancer/silencer	notes
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345670	FBdv:00000000	dmel:none		f	0	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345672	FBdv:00000000	dmel:none		f	0	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729	12345674	FBdv:00000000	dmel:none		f	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345676	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176	12345678	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note9

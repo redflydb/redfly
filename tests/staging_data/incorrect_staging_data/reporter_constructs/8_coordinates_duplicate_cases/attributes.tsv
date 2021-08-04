@@ -1,0 +1,2 @@
+sequence_from_species	PMID	author_email	gene_name	arbitrary_name	transgenic_construct	evidence	sequence_source	coordinates	notes	figure_label	is_negative
+Drosophila melanogaster	30315166	avillaho@ccr.buffalo.edu	Ir7c	SA2-duplicate		Reporter construct (in vivo)	sequence ends provided in reference	X:7873229..7874827	adult abdomen, adult wings/halteres, adult legs, adult labellar taste bristles, adult subesophageal zone, thoracico-abdominal ganglion (prothoracic, mesothoracic, metathoracic and abdominal neuromeres)	3^S2	0

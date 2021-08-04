@@ -1,0 +1,3 @@
+# Note on Annotations Used by the BDGP
+
+A number of terms used in the annotation of the [BDGP in situ database](http://www.fruitfly.org/cgi-bin/ex/insitu.pl) have not yet been brought into line with the most current fly anatomy ontology terms and contain term ID's that are associated with different terms in the anatomy ontology. _**RED**fly_ conforms to the anatomy ontology throughout, which could potentially lead to confusion when comparing entries in the two databases. These [conflicting terms](http://redfly.ccr.buffalo.edu/conflicting_terms.php) should be resolved once the BDGP terms are updated.

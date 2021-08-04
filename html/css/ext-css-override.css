@@ -1,0 +1,42 @@
+.x-window
+{
+    background-color: #F0F0F0;
+    zoom: 1;
+}
+
+.x-column-inner
+{
+    overflow: hidden;
+    background-color: #F0F0F0;/*gray*/  /*#dfe8f6; blue*/
+    zoom: 1;
+}
+
+.x-panel-header
+{
+    color: #15428b;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: tahoma,arial,verdana,sans-serif;
+    border-color: #99bbe8;
+}
+
+.x-tip {
+    width: auto !important;
+}
+
+.x-tip-body {
+    width: auto !important;
+}
+
+.x-tip-body span {
+    width: auto !important;
+}
+
+.ext-gecko
+{
+    padding: 0;
+}
+
+.x-fieldset {
+    overflow: visible !important;
+}

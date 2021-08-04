@@ -1,0 +1,68 @@
+# Composer files
+vendor/*
+
+# Data files
+html/datadumps/*
+
+# Environment files
+*.bak
+config/settings.yml
+config/*.apps.googleusercontent.com.json
+db/backups/*.sql.gz
+db/development/author_myself.sql
+db/dumps/*.sql.gz
+.env
+
+# ExtJS 3.4.1.1 files
+html/js/extjs/*
+
+# ExtJS 6.2.0 files
+html/admin/new/bootstrap.*
+html/admin/new/app/Config.js
+html/admin/new/build/*
+html/admin/new/ext/*
+html/admin/new/index.html
+html/admin/new/overrides/*
+html/admin/new/packages/*
+html/admin/new/resources/*
+html/admin/new/sass/*
+html/admin/new/.sencha/*
+
+# FlyExpress files
+html/images/flyexpress/*
+
+# GitBook html files
+html/gitbook/*
+
+# Log files
+logs/*
+
+# macOS hidden files
+.DS_Store
+._*
+
+# Release output files
+release_output/*.json
+
+# UBIR data files
+ubir/*.csv
+ubir/*.zip
+
+# Update output files
+update_output/*.tsv
+
+# VS Code files
+Backups/*
+Cache/*
+CachedData/*
+CachedExtensions/*
+GPUCache/*
+html/.vscode/*
+html/Backups/*
+html/Cache/*
+html/CachedData/*
+html/CachedExtensions/*
+html/GPUCache/*
+html/User/*
+User/*
+.vscode/launch.json

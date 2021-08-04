@@ -1,0 +1,11 @@
+gene_name	arbitrary_name	assayed_in_species	expression	PMID	stage_on	stage_off	biological_process	sex	ectopic	enhancer/silencer	notes
+Angel	SA2	The Thing	FBbt:00003AAA	12345678	dmel:none	FBdv:XY000000	GO:YYY0001	a	2	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:99999999		FBdv:99999999	FBdv:99999999	GO:9999999	1	a	enhancer	
+Ir7c	SA2	Drosophila melanogaster	cabeza	123AA678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	-12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	1234.5678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345687	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:2000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancing	

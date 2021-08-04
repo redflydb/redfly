@@ -1,0 +1,34 @@
+.x-form-check-group-label
+{
+    border-bottom: 1px solid #F0F0F0;
+    background-color: #F0F0F0;
+}
+
+.x-panel-body
+{
+    border-color: #FFF;
+    background-color: #FFF;
+}
+
+.x-panel-body-noheader, .x-panel-mc .x-panel-body
+{
+    border-top-color: #FFF;
+}
+
+.x-panel-tl .x-panel-header
+{
+    color: #333;
+    font: bold 13px tahoma,arial,verdana,sans-serif;
+}
+
+body.x-body-masked .x-window-plain .x-window-mc
+{
+    background-color: #F0F0F0;
+    z-index: 11000;
+}
+
+.custom-search
+{
+    background-color: #F0F0F0;
+}
+

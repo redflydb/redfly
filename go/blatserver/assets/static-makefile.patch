@@ -1,0 +1,8 @@
+3c3
+< L += -lm $(SOCKETLIB)
+---
+> L += -lm -ldl $(SOCKETLIB) -static-libgcc
+10c10
+< 	${CC} ${COPT} ${CFLAGS} -o ${DESTDIR}${BINDIR}/blat $O $(MYLIBS) $L
+---
+> 	${CC} ${COPT} ${CFLAGS} -o ${DESTDIR}${BINDIR}/blat $O -static $(MYLIBS) $L

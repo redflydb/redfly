@@ -1,0 +1,11 @@
+%s has rejected one or more records you submitted for approval. Please log in to the REDfly administration website and review and/or edit the rejected record(s).
+
+The list of rejected record(s) shows as follows:
+%s
+
+The reason(s) provided are:
+%s
+
+Thank you,
+
+The REDfly team

@@ -1,0 +1,21 @@
+gene_name	arbitrary_name	assayed_in_species	expression	PMID	stage_on	stage_off	biological_process	sex	ectopic	enhancer/silencer	notes
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345670	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729	12345671	FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004640	12345672	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note12
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345673	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note13
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639	12345674	FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note14
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345675	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note15
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345676	FBdv:00005266	FBdv:00005267		m	0	enhancer	note16
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345677	dmel:none	dmel:none	GO:0000019		1	enhancer	note17
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176	12345678	FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note18
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345679	FBdv:00005270	FBdv:00005271				enhancer	note19
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003024	12345680	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note20
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004730	12345681	FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note21
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004641	12345682	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note22
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004163	12345683	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note23
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110640	12345684	FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note24
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004055	12345685	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note25
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110177	12345686	FBdv:00005266	FBdv:00005267		m	0	enhancer	note26
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110178	12345697	dmel:none	dmel:none	GO:0000019		1	enhancer	note27
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110179	12345698	FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note28
+Ir7c	SA2	Drosophila melanogaster	FBbt:00111179	12345690	FBdv:00005270	FBdv:00005271				enhancer	note29

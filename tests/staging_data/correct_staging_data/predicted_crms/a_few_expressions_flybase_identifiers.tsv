@@ -1,0 +1,6 @@
+name	sequence_from_species	expression	PMID	stage_on	stage_off	biological_process	sex	enhancer/silencer	notes
+avb	Drosophila melanogaster	FBbt:00003023	12345670	FBdv:00000000	dmel:none		f	enhancer	note1
+avb	Drosophila melanogaster	FBbt:00004162	12345672	FBdv:00000000	dmel:none		f	enhancer	note3
+avb	Drosophila melanogaster	FBbt:00004729	12345674	FBdv:00000000	dmel:none		f	enhancer	note5
+avb	Drosophila melanogaster	FBbt:00110174	12345676	FBdv:00000000	dmel:none	GO:0000001		enhancer	note7
+avb	Drosophila melanogaster	FBbt:00110176	12345678	FBdv:00000000	dmel:none	GO:0000001		enhancer	note9

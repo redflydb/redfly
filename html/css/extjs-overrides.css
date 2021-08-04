@@ -1,0 +1,17 @@
+/* Fix an issue with Firefox on OSX where a scrollbar would appear under each radio
+ * button in the download windows.
+ */
+
+.redfly-download-window .x-form-check-wrap {
+    overflow: hidden;
+}
+
+/* Override the grey text in disabled form fields so it's more readable */
+
+.x-item-disabled {
+    color: black;
+}
+
+.x-item-disabled * {
+    color: black !important;
+}

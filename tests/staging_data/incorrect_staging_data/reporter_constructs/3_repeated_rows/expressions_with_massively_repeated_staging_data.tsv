@@ -1,0 +1,469 @@
+gene_name	arbitrary_name	assayed_in_species	expression	PMID	stage_on	stage_off	biological_process	sex	ectopic	enhancer/silencer	notes
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11
+Ir7c	SA2	Drosophila melanogaster	FBbt:00003023	12345678	dmel:none	FBdv:00000000	GO:0000001	m	1	enhancer	note0
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004729		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	wing	12345678	FBdv:00004886	FBdv:00005259	GO:0000003	f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004162	12345678	FBdv:00005261	dmel:none	GO:0000011	m	1	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110639		FBdv:00005262	FBdv:00005263	GO:0000012	f	1	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	FBbt:00004052	12345678	FBdv:00005264	FBdv:00005265	GO:0000017	both	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110174	12345678	FBdv:00005266	FBdv:00005267		m	0	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110175	12345678	dmel:none	dmel:none	GO:0000019		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110176		FBdv:00005268	FBdv:00005269	GO:0000020	m		enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	wing		FBdv:00000054	FBdv:00004450	GO:0000002	m	1	enhancer	note10
+Ir7c	SA2	Drosophila melanogaster	FBbt:00110173	12345678	FBdv:00005270	FBdv:00005271				enhancer	note11

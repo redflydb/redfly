@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<ruleset name="REDfly">
+    <description>The coding standard for the REDfly project.</description>
+
+    <file>./lib/aEntityHelper.php</file>
+    <file>./lib/aExtDatasource.php</file>
+    <file>./lib/Auth.php</file>
+    <file>./lib/bootstrap.php</file>
+    <file>./lib/Citation.php</file>
+    <file>./lib/Coordinates.php</file>
+    <file>./lib/CrmHelper.php</file>
+    <file>./lib/CrmSegmentHelper.php</file>
+    <file>./lib/CrmSegmentTsHelper.php</file>
+    <file>./lib/CsvHelper.php</file>
+    <file>./lib/DbService.php</file>
+    <file>./lib/dependencies.php</file>
+    <file>./lib/ExportFile.php</file>
+    <file>./lib/iExportFile.php</file>
+    <file>./lib/iExtDatasource.php</file>
+    <file>./lib/PotentialCRM.php</file>
+    <file>./lib/PotentialCRMSet.php</file>
+    <file>./lib/PredictedCrmHelper.php</file>
+    <file>./lib/PredictedCrmTsHelper.php</file>
+    <file>./lib/RC.php</file>
+    <file>./lib/RcEtHelper.php</file>
+    <file>./lib/RcHelper.php</file>
+    <file>./lib/RCSet.php</file>
+    <file>./lib/RcTsHelper.php</file>
+    <file>./lib/RestHandlerHelper.php</file>
+    <file>./lib/routes.php</file>
+    <file>./lib/TfbsHelper.php</file>
+    <file>./lib/User.php</file>
+    <file>./lib/Admin</file>
+    <file>./lib/api</file>
+    <file>./lib/Audit</file>
+    <file>./lib/Datasource</file>
+    <file>./lib/Download</file>
+    <file>./lib/Dynamic</file>
+    <file>./lib/ExportFile</file>
+    <file>./lib/ExtDatasource</file>
+    <file>./lib/Import</file>
+    <file>./lib/Middleware</file>
+    <file>./lib/Service</file>
+
+    <rule ref="PSR2">
+        <exclude name="PSR2.Namespaces.UseDeclaration"/>
+    </rule>
+
+    <rule ref="PSR2.ControlStructures.ControlStructureSpacing">
+        <properties>
+            <property name="requiredSpacesAfterOpen" value="1"/>
+            <property name="requiredSpacesBeforeClose" value="1"/>
+        </properties>
+    </rule>
+
+    <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration">
+        <properties>
+            <property name="requiredSpacesAfterOpen" value="1"/>
+            <property name="requiredSpacesBeforeClose" value="1"/>
+        </properties>
+    </rule>
+</ruleset>

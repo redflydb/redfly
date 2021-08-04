@@ -1,0 +1,3 @@
+sequence_from_species	author_email	PMID	transgenic_construct	arbitrary_name	gene_name	evidence	sequence_source	figure_label	notes	is_negative	coordinates
+Yeti	avillahoccr.buffalo.edu	30A15166	abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij	1000	Nada	No evidence!!!	Sequence does not end provided in reference	3^S2	123	-1	1:78AA233..7874827
+Drosophila melanogaster	avillaho@ccr.buffalo.edu	999	FBtp:111111	SA2	Ir7c	Reporter construct (in vivo)	Sequence ends provided in reference	3^S2	adult abdomen, adult wings/halteres, adult legs, adult labellar taste bristles, adult subesophageal zone, thoracico-abdominal ganglion (prothoracic, mesothoracic, metathoracic and abdominal neuromeres)	0	X:78732337874827

@@ -1,0 +1,4 @@
+# Rename this file to "statistics.txt" and add/overwrite the results of "make $(cat .env | xargs) statistics" here after every release.
+# If you want to get statistics information starting from a custom date (not included),
+# uncomment the following line with your date chosen and execute "make $(cat .env | xargs) statistics" again:
+#Database last updated: 2019-05-02

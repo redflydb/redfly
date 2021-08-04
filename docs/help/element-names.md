@@ -1,0 +1,3 @@
+# Element Names
+
+All Reporter Constructs are named beginning with their associated gene symbol followed by an underscore (e.g., eve\_). Where RCs are described with specific names in the literature, we have attempted to maintain those names. In those cases where no specific names were given, we have assigned names based either on spatial activity or on position with respect to the gene. TFBSs are named with the convention [name\_of\_TF]\_[name\_of\_regulated\_gene]:REDflyID. In some instances, the name of the associated gene for a CRM or the transcription factor for a TFBS is not known. In these cases, the gene name is given as “unspecified.”

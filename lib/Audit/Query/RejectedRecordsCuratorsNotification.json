@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties": {
+        "auditor_username": {
+            "type": "string"
+        },
+        "rejected_records_list": {
+            "type": "string"
+        },        
+        "reasons": {
+            "type": "string"
+        },
+        "curator_ids": {
+            "type": "array",
+            "items": {
+                "type": "integer"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "auditor_username", 
+        "rejected_records_list", 
+        "reasons", 
+        "curator_ids"]
+}

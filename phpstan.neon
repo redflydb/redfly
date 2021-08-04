@@ -1,0 +1,4 @@
+parameters:
+    excludes_analyse:
+        - %currentWorkingDirectory%/lib/dependencies.php
+        - %currentWorkingDirectory%/lib/routes.php

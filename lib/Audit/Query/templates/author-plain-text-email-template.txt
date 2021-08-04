@@ -1,0 +1,19 @@
+Dear author:
+
+We are excited to tell you that your paper "%s" has been curated for inclusion in REDfly. REDfly, as you may know, is the database of Drosophila cis-regulatory sequences: a comprehensive collection of all experimentally-verified fly regulatory elements along with their DNA sequence, their associated genes, and the gene expression patterns they direct. REDfly data are included in FlyBase as “regulatory region” features.
+
+Because we want the data in REDfly to be accurate, we are asking your help! The data we have curated from your paper are listed below. At your convenience, we would greatly appreciate if you could quickly review these for accuracy and provide any necessary corrections or additions. Simply “reply” to this email with any corrections listed in the “Comments” area below each annotation. If no corrections are necessary, just type an “X” in the “looks good” box and hit reply.
+
+Thank you for helping us make your cis-regulatory data more accessible to the community! Your data will be available in our next release.
+
+Regards,
+The REDfly team
+
+Follow us on Twitter!
+%s
+Give us valuable feedback with the 4-question REDfly survey!
+%s
+
+[ ] Everything looks good!
+
+----------------------------

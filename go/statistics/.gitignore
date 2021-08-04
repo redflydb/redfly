@@ -1,0 +1,11 @@
+# Go executable
+cmd/statistics_report
+
+# Statistics data
+cmd/docs/statistics_all.txt
+cmd/docs/statistics_all_????????.txt
+cmd/docs/statistics_????.txt
+cmd/docs/statistics_????_????????.txt
+
+# VS Code files
+.vscode/launch.json

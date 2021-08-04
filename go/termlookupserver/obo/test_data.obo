@@ -1,0 +1,42 @@
+format-version: 1.2
+date: 11:06:2013 16:04
+saved-by: Topito
+auto-generated-by: OBO-Edit 2.3
+default-namespace: default_namespace
+
+[Term]
+id: TGMA:0000000
+name: hemolymph
+def: "The bloodlike fluid of invertebrates having open blood-vascular systems." [URL:http\://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1007&context=onlinedictinvertzoology]
+synonym: "haemolymph" EXACT [URL:http\://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1007&context=onlinedictinvertzoology]
+is_a: TGMA:0001824 ! portion of organism substance
+
+[Term]
+id: TGMA:0000001
+name: hemocyte
+def: "Differentiated cells with the ability to defend insects against pathogens, parasites and other foreign bodies, which entered in the hemocoel." [PubMed:PMID\:15857775]
+synonym: "haemocyte" EXACT [URL:http\://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1007&context=onlinedictinvertzoology]
+is_a: TGMA:0001833 ! cells
+
+[Term]
+id: TGMA:0000002
+name: adult head
+def: "The anterior section (tagma) of the insect body bearing the compound eyes, antennae and mouthparts; separated from the thorax by the cervix." [ISBN:0-937548-00-6]
+comment: Fig. 01,02,03,04 in ISBN:0-937548-00-6.
+is_a: TGMA:0001840 ! organism subdivision
+
+[Term]
+id: TGMA:0000003
+name: adult cranium
+def: "The sclerotized skull-like part of the head." [ISBN:0-937548-00-6]
+synonym: "head capsule" RELATED [ISBN:0-937548-00-6]
+synonym: "Kopfkapsel" RELATED [ISBN:0-937548-00-6]
+is_a: TGMA:0001842 ! anatomical cluster
+relationship: part_of TGMA:0000002 ! adult head
+
+[Term]
+id: TGMA:0000004
+name: adult gnathal appendages
+def: "The set of the appednages on the adult head used in feeding." [ISBN:0-937548-00-6]
+is_a: TGMA:0001842 ! anatomical cluster
+relationship: part_of TGMA:0000002 ! adult head

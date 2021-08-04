@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+    php_server:
+        build: ./
+        depends_on:
+            - blat_server
+            - mariadb_server
+            - termlookup_server
+        ports:
+            - 80:80
+        volumes:
+            - ./:/var/www
+    blat_server:
+        build: ./go/blatserver
+        volumes:
+            - ./go/blatserver/assets:/assets
+    mariadb_server:
+        command:
+            # 2097152 = 2MB
+            --group_concat_max_len=2097152
+            --max_allowed_packet=2097152
+            --plugin-load-add=server_audit.so
+            --server_audit_file_path=/tmp
+            --server_audit_events=query_dml_no_select
+            --server_audit_file_rotate_now=1
+            --server_audit_file_rotate_size=1000000000
+        environment:
+            - MYSQL_ROOT_PASSWORD
+            - MYSQL_DATABASE
+            - MYSQL_USER
+            - MYSQL_PASSWORD
+            - TZ=America/New_York
+        image: mariadb:10.5
+        ports:
+            - 3306:3306
+        volumes:
+            - ./db/dumps:/docker-entrypoint-initdb.d
+            - ./logs:/tmp
+    termlookup_server:
+        build: ./go/termlookupserver
+        volumes:
+            - ./go/termlookupserver/assets:/go/src/assets

@@ -1,0 +1,21 @@
+name	sequence_from_species	expression	PMID	stage_on	stage_off	biological_process	sex	enhancer/silencer	notes
+avb	Drosophila melanogaster	FBbt:00003023	12345670	dmel:none	FBdv:00000000	GO:0000001	m	enhancer	note10
+avb	Drosophila melanogaster	FBbt:00004729	12345671	FBdv:00000054	FBdv:00004450	GO:0000002	m	enhancer	note11
+avb	Drosophila melanogaster	FBbt:00004640	12345672	FBdv:00004886	FBdv:00005259	GO:0000003	f	enhancer	note12
+avb	Drosophila melanogaster	FBbt:00004162	12345673	FBdv:00005261	dmel:none	GO:0000011	m	enhancer	note13
+avb	Drosophila melanogaster	FBbt:00110639	12345674	FBdv:00005262	FBdv:00005263	GO:0000012	f	enhancer	note14
+avb	Drosophila melanogaster	FBbt:00004052	12345675	FBdv:00005264	FBdv:00005265	GO:0000017	both	enhancer	note15
+avb	Drosophila melanogaster	FBbt:00110174	12345676	FBdv:00005266	FBdv:00005267		m	enhancer	note16
+avb	Drosophila melanogaster	FBbt:00110175	12345677	dmel:none	dmel:none	GO:0000019		enhancer	note17
+avb	Drosophila melanogaster	FBbt:00110176	12345678	FBdv:00005268	FBdv:00005269	GO:0000020	m	enhancer	note18
+avb	Drosophila melanogaster	FBbt:00110173	12345679	FBdv:00005270	FBdv:00005271			enhancer	note19
+avb	Drosophila melanogaster	FBbt:00003024	12345680	dmel:none	FBdv:00000000	GO:0000001	m	enhancer	note20
+avb	Drosophila melanogaster	FBbt:00004730	12345681	FBdv:00000054	FBdv:00004450	GO:0000002	m	enhancer	note21
+avb	Drosophila melanogaster	FBbt:00004641	12345682	FBdv:00004886	FBdv:00005259	GO:0000003	f	enhancer	note22
+avb	Drosophila melanogaster	FBbt:00004163	12345683	FBdv:00005261	dmel:none	GO:0000011	m	enhancer	note23
+avb	Drosophila melanogaster	FBbt:00110640	12345684	FBdv:00005262	FBdv:00005263	GO:0000012	f	enhancer	note24
+avb	Drosophila melanogaster	FBbt:00004055	12345685	FBdv:00005264	FBdv:00005265	GO:0000017	both	enhancer	note25
+avb	Drosophila melanogaster	FBbt:00110177	12345686	FBdv:00005266	FBdv:00005267		m	enhancer	note26
+avb	Drosophila melanogaster	FBbt:00110178	12345697	dmel:none	dmel:none	GO:0000019		enhancer	note27
+avb	Drosophila melanogaster	FBbt:00110179	12345698	FBdv:00005268	FBdv:00005269	GO:0000020	m	enhancer	note28
+avb	Drosophila melanogaster	FBbt:00111179	12345690	FBdv:00005270	FBdv:00005271			enhancer	note29

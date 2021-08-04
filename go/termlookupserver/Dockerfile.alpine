@@ -1,0 +1,23 @@
+FROM golang:1.10
+
+WORKDIR /go/src/
+RUN apt-get update && apt-get install -y librdf0-dev
+
+RUN go get -u github.com/mattn/go-sqlite3
+RUN go get -u github.com/lib/pq
+RUN go get -u github.com/gorilla/mux
+
+ADD . .
+RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -a ./cmd/main.go
+
+FROM alpine:latest
+
+RUN apk add --no-cache redland
+RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+
+COPY --from=0 /go/src/main ./cmd/app
+EXPOSE 80
+VOLUME ["./assets"]
+
+WORKDIR ./cmd
+CMD ["./app"]

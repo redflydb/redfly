@@ -1,0 +1,5 @@
+# .2bit files (about compressed FASTA genomes)
+*.2bit
+
+# VS Code files
+.vscode/launch.json

@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "REDfly",
+            "type": "chrome",
+            "request": "launch",
+            "url": "<REDFLY_BASE_URL>",
+            "webRoot": "${workspaceFolder}/html"
+        },
+        {
+            "name": "REDfly Admin",
+            "type": "chrome",
+            "request": "launch",
+            "url": "<REDFLY_BASE_URL>admin",
+            "webRoot": "${workspaceFolder}/html"
+        },
+        {
+            "name": "REDfly Admin Batch Import",
+            "type": "chrome",
+            "request": "launch",
+            "url": "<REDFLY_BASE_URL>admin/new/#import",
+            "webRoot": "${workspaceFolder}/html/admin/new"
+        },
+        {
+            "name": "REDfly Admin Batch Audit",
+            "type": "chrome",
+            "request": "launch",
+            "url": "<REDFLY_BASE_URL>admin/new/#audit",
+            "webRoot": "${workspaceFolder}/html/admin/new"
+        },        
+        {
+            "name": "XDebug",
+            "type": "php",
+            "request": "launch",
+            "pathMappings": {
+                "/var/www": "${workspaceFolder}"
+            },
+            "port": 9003,
+            "xdebugSettings": {
+                "max_children": 512,
+                "max_data": 5120,
+                "max_depth": 4
+            }
+        }
+    ]
+}

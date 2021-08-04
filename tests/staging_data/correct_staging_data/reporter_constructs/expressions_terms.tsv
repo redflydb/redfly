@@ -1,0 +1,11 @@
+gene_name	arbitrary_name	assayed_in_species	expression	PMID	stage_on	stage_off	biological_process	sex	ectopic	enhancer/silencer	notes
+Ir7c	SA2	Drosophila melanogaster	adult abdomen	12345670	FBdv:00000000	dmel:none		f	0	enhancer	note1
+Ir7c	SA2	Drosophila melanogaster	thoracico-abdominal ganglion	12345671	FBdv:00000000	dmel:none		f	0	enhancer	note2
+Ir7c	SA2	Drosophila melanogaster	labellar taste bristle	12345672	FBdv:00000000	dmel:none		f	0	enhancer	note3
+Ir7c	SA2	Drosophila melanogaster	leg	12345673	FBdv:00000000	dmel:none		f	0	enhancer	note4
+Ir7c	SA2	Drosophila melanogaster	wing	12345674	FBdv:00000000	dmel:none		f	0	enhancer	note5
+Ir7c	SA2	Drosophila melanogaster	adult abdominal neuromere	12345675	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note6
+Ir7c	SA2	Drosophila melanogaster	adult prothoracic neuromere	12345676	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note7
+Ir7c	SA2	Drosophila melanogaster	adult mesothoracic neuromere	12345677	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note8
+Ir7c	SA2	Drosophila melanogaster	adult metathoracic neuromere	12345678	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note9
+Ir7c	SA2	Drosophila melanogaster	adult subesophageal zone	12345679	FBdv:00000000	dmel:none	GO:0000001		1	enhancer	note10
