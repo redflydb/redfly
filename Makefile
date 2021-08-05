@@ -124,14 +124,14 @@ build: logs html/admin/new/ext html/js/extjs html/images/flyexpress vendor-insta
 	cd ./go/termlookupserver/assets && sh ./download-external-assets.sh
 
 clean:
-	rm -f ./html/admin/new/bootstrap.*
-	rm -rf ./html/admin/new/build
-	rm -rf ./html/admin/new/ext
-	rm -rf ./html/admin/new/overrides
-	rm -rf ./html/admin/new/packages
-	rm -rf ./html/admin/new/resources
-	rm -rf ./html/admin/new/sass
-	rm -rf ./html/admin/new/.sencha
+	sudo rm -f ./html/admin/new/bootstrap.*
+	sudo rm -rf ./html/admin/new/build
+	sudo rm -rf ./html/admin/new/ext
+	sudo rm -rf ./html/admin/new/overrides
+	sudo rm -rf ./html/admin/new/packages
+	sudo rm -rf ./html/admin/new/resources
+	sudo rm -rf ./html/admin/new/sass
+	sudo rm -rf ./html/admin/new/.sencha
 	rm -rf ./html/datadumps
 	rm -rf ./html/gitbook
 	rm -rf ./html/images/flyexpress	
@@ -143,7 +143,6 @@ clean:
 	rm -f ./go/termlookupserver/assets/*.gff
 	rm -f ./go/termlookupserver/assets/*.gff3
 	rm -f ./go/blatserver/assets/*.2bit
-	rm -f ./go/blatserver/assets/*.zip
 
 configuration:
 	cp ./config/settings.yml.dist ./config/settings.yml
@@ -208,6 +207,7 @@ html/admin/new/ext:
 	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app install -f /sencha-sdks
 	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app refresh
 	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app build -e development
+	sudo rm ./html/admin/new/index.html
 
 html/images/flyexpress:
 	mkdir -p ./html/images/flyexpress
