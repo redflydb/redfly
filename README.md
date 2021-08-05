@@ -13,9 +13,10 @@
    Run `make help` to list available targets and a description of what they do.
  - The configuration and build process is controlled via a Makekefile and uses the environment defined
    in the `.env` file.  
-   Run the following make targets to configure, build, and start the services:
+   Run the following make targets to configure, build, start the services, and create the database-backup user:
    ```
    make $(cat .env | xargs) configuration
+   make $(cat .env | xargs) build
    make $(cat .env | xargs) docker-initialize
    make $(cat .env | xargs) mariadb-access
    ```

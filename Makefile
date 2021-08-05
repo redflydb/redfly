@@ -180,7 +180,8 @@ datadumps: vendor
 
 docker-initialize:
 	mkdir -p ./db/dumps
-	chmod g+r,o+r db/dumps/*.sql.gz
+	chown $$(id -u):$$(id -g) ./db/dumps
+	chmod 0644 ./db/dumps/*.sql.gz
 	docker-compose down -v
 	docker-compose build
 	docker-compose up -d
@@ -224,7 +225,7 @@ lint: vendor
 logs:
 	mkdir -p ./logs
 	chown $$(id -u):$$(id -g) ./logs
-	chmod 777 ./logs
+	chmod 0777 ./logs
 
 # Create users and apply permissions after database initialization
 mariadb-access:

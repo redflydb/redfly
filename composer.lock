@@ -474,16 +474,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.205.0",
+            "version": "v0.206.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "75ff6a81838493bb9b5aad0458ebd4226e0c0557"
+                "reference": "8ac3f4a7c201bbf794801b215e63f75f15cd0208"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/75ff6a81838493bb9b5aad0458ebd4226e0c0557",
-                "reference": "75ff6a81838493bb9b5aad0458ebd4226e0c0557",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/8ac3f4a7c201bbf794801b215e63f75f15cd0208",
+                "reference": "8ac3f4a7c201bbf794801b215e63f75f15cd0208",
                 "shasum": ""
             },
             "require": {
@@ -512,9 +512,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.205.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.206.0"
             },
-            "time": "2021-07-24T11:20:23+00:00"
+            "time": "2021-07-31T11:20:25+00:00"
         },
         {
             "name": "google/auth",
@@ -3062,16 +3062,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.7",
+            "version": "9.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d0dc8b6999c937616df4fb046792004b33fd31c5"
+                "reference": "191768ccd5c85513b4068bdbe99bb6390c7d54fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d0dc8b6999c937616df4fb046792004b33fd31c5",
-                "reference": "d0dc8b6999c937616df4fb046792004b33fd31c5",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/191768ccd5c85513b4068bdbe99bb6390c7d54fb",
+                "reference": "191768ccd5c85513b4068bdbe99bb6390c7d54fb",
                 "shasum": ""
             },
             "require": {
@@ -3083,7 +3083,7 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
                 "myclabs/deep-copy": "^1.10.1",
-                "phar-io/manifest": "^2.0.1",
+                "phar-io/manifest": "^2.0.3",
                 "phar-io/version": "^3.0.2",
                 "php": ">=7.3",
                 "phpspec/prophecy": "^1.12.1",
@@ -3149,7 +3149,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.7"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.8"
             },
             "funding": [
                 {
@@ -3161,7 +3161,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-19T06:14:47+00:00"
+            "time": "2021-07-31T15:17:34+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -4016,7 +4016,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
