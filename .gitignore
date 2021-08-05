@@ -18,7 +18,6 @@ html/js/extjs/*
 
 # ExtJS 6.2.0 files
 html/admin/new/bootstrap.*
-html/admin/new/workspace.json
 html/admin/new/app/Config.js
 html/admin/new/build/*
 html/admin/new/ext/*
