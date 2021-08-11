@@ -21,7 +21,9 @@ To receive announcements about important <?= HTML_REDFLY_LOGO ?> news, follow us
      target="_blank">University at Buffalo</a>.
 </p>
 <p>
-The <?= HTML_REDFLY_LOGO ?> team respects the diversity of all individuals, regardless of race, ethnicity, sex, disability, religion, gender identification, or sexual orientation.
+The <?= HTML_REDFLY_LOGO ?> team respects the diversity of all individuals,
+regardless of race, ethnicity, sex, disability, religion, gender identification,
+or sexual orientation.
 </p>
 <p>
   <span class="label">Using <?= HTML_REDFLY_LOGO ?></span>:
@@ -30,29 +32,69 @@ Please see our <a href="help.php">User&#39;s Guide</a> for more information.
 </p>
 <span class="label"> Citing <?= HTML_REDFLY_LOGO ?></span>:
 <br><br>
-When referencing specific CRMs, please be sure to include a reference to the original discoverers (cited in the "cite" tab or under "PMID" in the GFF-formatted download).
+When referencing specific CRMs, please be sure to include a reference to the original discoverers
+(cited in the "cite" tab or under "PMID" in the GFF-formatted download).
 <ul>
-  <li>Rivera, John, Keränen, Soile V. E., Gallo, Steven M. and Halfon, Marc S. (2018). REDfly: the transcriptional regulatory element database for Drosophila. <i>Nucleic Acids Res.</i>;
+  <li>Rivera, John, Keränen, Soile V. E., Gallo, Steven M. and Halfon, Marc S. (2018).
+    REDfly: the transcriptional regulatory element database for Drosophila.
+    <i>Nucleic Acids Res.</i>;
     <a href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky957/5133668"
-       target="_blank">doi:10.1093/nar/gky957</a><br><br>
+       target="_blank">doi:10.1093/nar/gky957</a><br>
   </li>
-  <li>Gallo, S.M., Gerrard, D.T., Miner, D., Simich, M., Des Soye, B., Bergman, C.M. and Halfon, M.S. (2010). REDfly v3.0: Toward a comprehensive database of transcriptional regulatory elements in Drosophila. <i>Nucleic Acids Res.</i>;
+  <li>Gallo, S.M., Gerrard, D.T., Miner, D., Simich, M., Des Soye, B., Bergman, C.M. and Halfon, M.S. (2010).
+    REDfly v3.0: Toward a comprehensive database of transcriptional regulatory elements in Drosophila.
+    <i>Nucleic Acids Res.</i>;
     <a href="https://academic.oup.com/nar/article/39/suppl_1/D118/2509243"
-       target="_blank">doi:39/suppl_1/D118/2509243</a><br><br>
+       target="_blank">doi:39/suppl_1/D118/2509243</a><br>
   </li>
-  <li>Halfon, M.S., Gallo, S.M., and Bergman, C.M. (2008). REDfly 2.0: an integrated database of cis-regulatory modules and transcription factor binding sites in Drosophila. Nucl Acids Res 36, D594-598;
+  <li>Halfon, M.S., Gallo, S.M., and Bergman, C.M. (2008).
+    REDfly 2.0: an integrated database of cis-regulatory modules and transcription factor binding sites in Drosophila.
+    <i>Nucleic Acids Res. 36, D594-598</i>;
     <a href="https://academic.oup.com/nar/article/36/suppl_1/D594/7632242"
-       target="_blank">doi:36/suppl_1/D594/7632242</a><br><br>
+       target="_blank">doi:36/suppl_1/D594/7632242</a><br>
   </li>
-  <li>Gallo, S. M., Li, L., Hu, Z. and Halfon, M. S. (2006). REDfly: a regulatory element database for Drosophila. Bioinformatics, Vol. 22 no. 3 2006, pages 381-383;
+  <li>Gallo, S. M., Li, L., Hu, Z. and Halfon, M. S. (2006).
+    REDfly: a regulatory element database for Drosophila.
+    <i>Bioinformatics, Vol. 22 no. 3 2006, pages 381-383</i>;
     <a href="https://academic.oup.com/bioinformatics/article/22/3/381/220380"
-       target="_blank">doi:22/3/381/220380</a><br><br>
+       target="_blank">doi:22/3/381/220380</a><br>
   </li>
-  <li>Bergman, C. M., Carlson, J. W. and Celniker, S. E. (2005). Drosophila DNase I footprint database: a systematic genome annotation of transcription factor binding sites in the fruitfly, Drosophila melanogaster. Bioinformatics, Vol. 21 no. 5 2005, pages 1747-1749;
+  <li>Bergman, C. M., Carlson, J. W. and Celniker, S. E. (2005).
+    Drosophila DNase I footprint database: a systematic genome annotation of transcription factor binding sites in the fruitfly, Drosophila melanogaster.
+    <i>Bioinformatics, Vol. 21 no. 5 2005, pages 1747-1749</i>;
     <a href="https://academic.oup.com/bioinformatics/article/21/8/1747/249595"
-       target="_blank">doi:21/8/1747/249595</a><br><br>
+       target="_blank">doi:21/8/1747/249595</a><br>
   </li>
 </ul>
+<p>
+  <span class="label">Software Licenses:</span><br>
+  <ul>
+    <li>CentOS
+        <a href="https://www.centos.org/legal/licensing-policy/"
+           target="_blank">license</a><br>
+    </li>
+    <li>Docker
+        <a href="https://www.docker.com/legal/docker-software-end-user-license-agreement/"
+           target="_blank">license</a><br>
+    </li>    
+    <li>Ext JS 3.4.1.1 and 6.2.0.981
+        <a href="https://www.sencha.com/legal/GPL/"
+           target="_blank">license</a><br>
+    </li>
+    <li>Go
+        <a href="https://golang.org/LICENSE/"
+           target="_blank">license</a><br>
+    </li>
+    <li>MariaDB
+        <a href="https://mariadb.com/kb/en/legal-documents-mariadb-license/" 
+           target="_blank">license</a><br>
+    </li>
+    <li>PHP
+        <a href="https://www.php.net/license/"
+           target="_blank">license</a><br>
+    </li>
+  </ul>
+</p>
 <p>
   <span class="label">About our logo:</span>
   <br><br>The <?= HTML_REDFLY_LOGO ?> logo was designed by 

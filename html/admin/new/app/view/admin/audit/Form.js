@@ -112,7 +112,7 @@ Ext.define(
                 },
                 valueField: 'full_name',
                 xtype: 'combobox'
-            }, ]
+            }]
         }, {
             border: false,
             columnWidth: 0.185,

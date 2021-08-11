@@ -34,17 +34,17 @@
 
 ## Requirements for both production and test environments
 
-- Docker CE 20.10.7+
+- Docker CE 20.10.8+
 - Docker Compose 1.27.4+
 - GitBook 3.2.3+
-- PHP 7.4.21+
+- PHP 7.4.22+
 - **The current iCRM calculation requires >= 8GB of RAM and >= 30GB of HD space**
 
 ## Requirements for the development environment besides the previous ones
 
-- DBeaver 21.1.3+
+- DBeaver 21.1.4+
 - Go 1.16.6+
-- Visual Studio Code 1.58.2+
+- Visual Studio Code 1.59.0+
 
 ## Building REDfly for the First Time
 

@@ -33,7 +33,8 @@ PHP_BASH = docker-compose exec php_server
 	student-reset$\
 	ubir-backup$\
 	update$\
-	vendor$\
+	vendor-install$\
+	vendor-update$\
 	vscode-debug-settings-configuration$\
 	xdebug
 
