@@ -67,30 +67,36 @@ When referencing specific CRMs, please be sure to include a reference to the ori
   </li>
 </ul>
 <p>
-  <span class="label">Software Licenses:</span><br>
+  <a name="REDfly-licensing-statement"></a>
+  <span class="label">REDfly licensing statement:</span><br><br>
+  The REDfly database is licensed under a
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+     target="_blank">
+  Creative Commons Attribution-NonCommercial-NoDerivatives License v4 International</a> <img class="w3-ul" src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" alt="by-nc-nd" border="0" />
+  (CC BY-NC-ND 4.0)
+  and its underlying source code under a
+  <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"
+     target="_blank">GNU General Public License v3</a> (GNU GPL 3.0).<br>
+  Portions of the REDfly source code incorporate the following software components with their license links:<br>
   <ul>
-    <li>CentOS
-        <a href="https://www.centos.org/legal/licensing-policy/"
-           target="_blank">license</a><br>
-    </li>
-    <li>Docker
-        <a href="https://www.docker.com/legal/docker-software-end-user-license-agreement/"
+  <li>Apache HTTP Server
+        <a href="https://www.apache.org/licenses/LICENSE-2.0"
            target="_blank">license</a><br>
     </li>    
-    <li>Ext JS 3.4.1.1 and 6.2.0.981
+  <li>CentOS
+        <a href="https://www.centos.org/legal/licensing-policy/#code-contributions"
+           target="_blank">license</a><br>
+    </li>
+    <li>Ext JS 3.4.1.1
         <a href="https://www.sencha.com/legal/GPL/"
            target="_blank">license</a><br>
     </li>
-    <li>Go
-        <a href="https://golang.org/LICENSE/"
-           target="_blank">license</a><br>
-    </li>
     <li>MariaDB
-        <a href="https://mariadb.com/kb/en/legal-documents-mariadb-license/" 
+        <a href="https://mariadb.com/kb/en/mariadb-license/" 
            target="_blank">license</a><br>
     </li>
     <li>PHP
-        <a href="https://www.php.net/license/"
+        <a href="https://www.php.net/license/3_01.txt"
            target="_blank">license</a><br>
     </li>
   </ul>
@@ -98,9 +104,10 @@ When referencing specific CRMs, please be sure to include a reference to the ori
 <p>
   <span class="label">About our logo:</span>
   <br><br>The <?= HTML_REDFLY_LOGO ?> logo was designed by 
-    <a href="mailto:alexreaddesign@gmail.com">Alex Read</a> of alexreaddesign as part of the 
-    <a href="http://gmod.org/wiki/GMOD_Logo_Program"
-       target="_blank">GMOD Spring 2010 Logo Program</a>.
+  <a href="https://www.linkedin.com/in/alexread89"
+     target="_blank">Alex Read</a> as part of the 
+  <a href="http://gmod.org/wiki/GMOD_Logo_Program"
+     target="_blank">GMOD Spring 2010 Logo Program</a>.
 </p>
 <p>
   <span class="label">Funding Support:</span>

@@ -30,9 +30,11 @@
   </tr>
   <tr>
     <td align="center"><p style="font-size: 0.8em;">
-      Copyright © University at Buffalo—State University of New York.
-      <?= HTML_REDFLY_LOGO ?> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. The copyrights of all curated content belong to their respective owners.</p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+      Copyright © University at Buffalo—State University of New York.<br>
+      <?= HTML_REDFLY_LOGO ?> is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+      See <a href="<?= $baseURL ?>about_redfly.php#REDfly-licensing-statement"
+             target="_blank">License</a>.<br>
+      The copyrights of all curated content belong to their respective owners.</p>
     </td>
   </tr>
 </table>
