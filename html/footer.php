@@ -30,7 +30,7 @@
   </tr>
   <tr>
     <td align="center"><p style="font-size: 0.8em;">
-      Copyright © University at Buffalo—State University of New York.<br>
+      Copyright © University at Buffalo—State University of New York.
       <?= HTML_REDFLY_LOGO ?> is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
       See <a href="<?= $baseURL ?>about_redfly.php#REDfly-licensing-statement"
              target="_blank">License</a>.<br>

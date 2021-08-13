@@ -76,30 +76,11 @@ When referencing specific CRMs, please be sure to include a reference to the ori
   (CC BY-NC-ND 4.0)
   and its underlying source code under a
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"
-     target="_blank">GNU General Public License v3</a> (GNU GPL 3.0).<br>
-  Portions of the REDfly source code incorporate the following software components with their license links:<br>
-  <ul>
-  <li>Apache HTTP Server
-        <a href="https://www.apache.org/licenses/LICENSE-2.0"
-           target="_blank">license</a><br>
-    </li>    
-  <li>CentOS
-        <a href="https://www.centos.org/legal/licensing-policy/#code-contributions"
-           target="_blank">license</a><br>
-    </li>
-    <li>Ext JS 3.4.1.1
-        <a href="https://www.sencha.com/legal/GPL/"
-           target="_blank">license</a><br>
-    </li>
-    <li>MariaDB
-        <a href="https://mariadb.com/kb/en/mariadb-license/" 
-           target="_blank">license</a><br>
-    </li>
-    <li>PHP
-        <a href="https://www.php.net/license/3_01.txt"
-           target="_blank">license</a><br>
-    </li>
-  </ul>
+     target="_blank">GNU General Public License v3</a> (GNU GPL 3.0). 
+  See
+  <a href="disclaimer.php"
+     target="_blank">
+  disclaimer</a>.<br>
 </p>
 <p>
   <span class="label">About our logo:</span>
