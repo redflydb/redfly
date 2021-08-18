@@ -20,6 +20,7 @@ RUN mkdir /tmp/blat && \
     unzip -q ./assets/blat.zip -d /tmp/blat/ && \
     cp /tmp/blat/blatSrc/blat/makefile /tmp/blat/blatSrc/blat/makefile.original && \
     patch /tmp/blat/blatSrc/blat/makefile.original -i ./assets/static-makefile.patch -o /tmp/blat/blatSrc/blat/makefile && \
+    sed -i '/webBlat/d' /tmp/blat/blatSrc/makefile && \
     mkdir -p /root/bin/x86_64 && \
     (cd /tmp/blat/blatSrc && MACHTYPE=x86_64 make) && \
     mv /root/bin/x86_64/blat ./

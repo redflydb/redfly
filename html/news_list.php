@@ -3,6 +3,16 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2021-August-18 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.5.0 released</li>
+      <li>Source code available in GitHub</li>
+      <li>Please see the <a href="release_notes.php#2021-08-18">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2021-August-3 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.4.4 released</li>

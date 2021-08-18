@@ -2,7 +2,7 @@
     <div class="news">
         <?= HTML_REDFLY_LOGO ?> version <?= $GLOBALS["options"]->general->redfly_version ?> released!
         <br>
-        <?= HTML_REDFLY_LOGO ?> now includes a new enhancer/silencer attribute!
+        The <?= HTML_REDFLY_LOGO ?> source code now available in GitHub!
         <br><br>
         The <?= HTML_REDFLY_LOGO ?> team respects the diversity of all individuals, regardless of race,<br>
         ethnicity, sex, disability, religion, gender identification, or sexual orientation.
