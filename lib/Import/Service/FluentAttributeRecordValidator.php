@@ -234,10 +234,10 @@ class FluentAttributeRecordValidator
         }
         if ( $this->isValidCoordinateString($record["coordinates"]) === false ) {
             $this->errors[] = "Invalid coordinates value: \"" . $record["coordinates"] .
-                "\". It must be in the format [string]:[start]..[end]";
+                "\". It must be in the format [string]:[start]..[end] or [string]:[start]-[end](+)";
             return $this;
         }
-        $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+..[0-9]+/";
+        $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+/";
         $matches = [];
         preg_match(
             $regex,
@@ -251,13 +251,27 @@ class FluentAttributeRecordValidator
             ":",
             $matches[0]
         );
+        if ( strpos(
+            $coordinates,
+            ".."
+        ) !== false ) {
+            $separator = "..";
+        } else {
+            $separator = "-";
+        }
         [
             $start,
             $end
         ] = explode(
-            "..",
+            $separator,
             $coordinates
         );
+        if ( $separator === "-" ) {
+            $end = explode(
+                "(",
+                $end
+            )[0];
+        }
         if ( $this->entityExistenceDao->hasDuplicateRcCoordinates(
             $record["sequence_from_species"],
             $chromosomeName,
@@ -290,10 +304,10 @@ class FluentAttributeRecordValidator
         }
         if ( $this->isValidCoordinateString($record["coordinates"]) === false ) {
             $this->errors[] = "Invalid coordinates value: \"" . $record["coordinates"] .
-                "\". It must be in the format [string]:[start]..[end]";
+                "\". It must be in the format [string]:[start]..[end] or [string]:[start]-[end](+)";
             return $this;
         }
-        $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+..[0-9]+/";
+        $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+/";
         $matches = [];
         preg_match(
             $regex,
@@ -307,13 +321,27 @@ class FluentAttributeRecordValidator
             ":",
             $matches[0]
         );
+        if ( strpos(
+            $coordinates,
+            ".."
+        ) !== false ) {
+            $separator = "..";
+        } else {
+            $separator = "-";
+        }
         [
             $start,
             $end
         ] = explode(
-            "..",
+            $separator,
             $coordinates
         );
+        if ( $separator === "-" ) {
+            $end = explode(
+                "(",
+                $end
+            )[0];
+        }        
         if ( $this->entityExistenceDao->hasDuplicatePredictedCrmCoordinates(
             $record["sequence_from_species"],
             $chromosomeName,
@@ -385,15 +413,23 @@ class FluentAttributeRecordValidator
     }
     private function isValidCoordinateString(string $value): bool
     {
-        $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+..[0-9]+/";
+        $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+/";
         $matches = [];
         if ( preg_match(
             $regex,
             $value,
             $matches
         ) === 1 ) {
+            if ( strpos(
+                $value,
+                ".."
+            ) !== false ) {
+                $separator = "..";
+            } else {
+                $separator = "-";
+            }
             $exploded = explode(
-                "..",
+                $separator,
                 substr(
                     $matches[0],
                     strpos($matches[0], ":") + 1
@@ -404,6 +440,12 @@ class FluentAttributeRecordValidator
                     $start,
                     $end
                 ] = $exploded;
+                if ( $separator === "-" ) {
+                    $end = explode(
+                        "(",
+                        $end
+                    )[0];
+                }
                 if ( (! $this->isInteger($start)) ||
                     (! $this->isInteger($end)) ) {
                     return false;

@@ -812,7 +812,7 @@ class ImportDataHandler
             throw new RuntimeException("Cannot open FASTA file.");
         }
         $fixedFastaFile = tmpfile();
-        $regex = "/(^>|loc=)((X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+..[0-9]+)(\s|;)/";
+        $regex = "/(^>|loc=)((X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+)/";
         $matches = [];
         while ( ($line = fgets($fastaFile)) ) {
             if ( ctype_space($line) === false ) {
@@ -822,7 +822,14 @@ class ImportDataHandler
                         $line,
                         $matches
                     );
-                    fwrite($fixedFastaFile, ">" . $matches[2] . "\n");
+                    if ( strpos(
+                        $line,
+                        ".."
+                    ) !== false ) {
+                        fwrite($fixedFastaFile, ">" . $matches[2] . "\n");
+                    } else {
+                        fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
+                    }
                 } else {
                     fwrite($fixedFastaFile, $line);
                 }

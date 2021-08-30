@@ -35,7 +35,7 @@ class CrossReferenceChecker
             "r"
         );
         $coordinates = [];
-        $headerRegex = "/(^>|loc=)((X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+..[0-9]+)(\s|;)/";
+        $headerRegex = "/(^>|loc=)((X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+)/";
         $matches = [];
         $lineNumber = 0;
         $headersNumber = 0;
@@ -48,7 +48,14 @@ class CrossReferenceChecker
                     $line,
                     $matches
                 ) === 1 ) {
-                    $coordinates[] = $matches[2];
+                    if ( strpos(
+                        $line,
+                        ".."
+                    ) !== false ) {
+                        $coordinates[] = $matches[2];
+                    } else {
+                        $coordinates[] = $matches[2] . "(+)";
+                    }
                 } else {
                     yield $lineNumber => "Sequence header wrong found in the line #" . $lineNumber .
                         " of the FASTA file";
@@ -176,7 +183,7 @@ class CrossReferenceChecker
             throw new RuntimeException("Cannot open FASTA file.");
         }
         $fixedFastaFile = tmpfile();
-        $headerRegex = "/(^>|loc=)((X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+..[0-9]+)(\s|;)/";
+        $headerRegex = "/(^>|loc=)((X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+)/";
         $matches = [];
         while ( ($line = fgets($fastaFile)) ) {
             if ( ctype_space($line) === false ) {
@@ -187,7 +194,14 @@ class CrossReferenceChecker
                         $line,
                         $matches
                     );
-                    fwrite($fixedFastaFile, ">" . $matches[2] . "\n");
+                    if ( strpos(
+                        $line,
+                        ".."
+                    ) !== false ) {
+                        fwrite($fixedFastaFile, ">" . $matches[2] . "\n");
+                    } else {
+                        fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
+                    }
                 } else {
                     fwrite($fixedFastaFile, $line);
                 }
