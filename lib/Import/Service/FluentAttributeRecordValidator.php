@@ -234,7 +234,7 @@ class FluentAttributeRecordValidator
         }
         if ( $this->isValidCoordinateString($record["coordinates"]) === false ) {
             $this->errors[] = "Invalid coordinates value: \"" . $record["coordinates"] .
-                "\". It must be in the format [string]:[start]..[end] or [string]:[start]-[end](+)";
+                "\". It must be in the format [string]:[start]..[end] or [string]:[start]-[end](+/-)";
             return $this;
         }
         $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+/";
@@ -304,7 +304,7 @@ class FluentAttributeRecordValidator
         }
         if ( $this->isValidCoordinateString($record["coordinates"]) === false ) {
             $this->errors[] = "Invalid coordinates value: \"" . $record["coordinates"] .
-                "\". It must be in the format [string]:[start]..[end] or [string]:[start]-[end](+)";
+                "\". It must be in the format [string]:[start]..[end] or [string]:[start]-[end](+/-)";
             return $this;
         }
         $regex = "/^(X|2R|2L|3R|3L|4|U|Y|UNKN|Y_unplaced|Mt|MT|NC_[0-9]+\.[0-9]+|NW_[0-9]+\.[0-9]+):[0-9]+(\.\.|-)+[0-9]+/";

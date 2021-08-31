@@ -198,7 +198,7 @@ class InformationHandler
         $db = DbService::factory();
         // The number of current reporter constructs
         $sql = <<<SQL
-        SELECT NumberOfCurrentReporterConstructs(1);
+        SELECT NumberOfCurrentReporterConstructs(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -207,8 +207,7 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(rc_id)
         FROM ReporterConstruct
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             is_crm = 0;
 SQL;
         $queryResult = $db->query($sql);
@@ -218,8 +217,7 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(rc_id)
         FROM ReporterConstruct
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             is_crm = 0 AND
             cell_culture_only = 0;
 SQL;
@@ -228,14 +226,14 @@ SQL;
         $information["number_rcs_not_crm_excluding_cell_culture"] = $row[0];
         // The number of current cis-regulatory modules
         $sql = <<<SQL
-        SELECT NumberOfCurrentCisRegulatoryModules(1);
+        SELECT NumberOfCurrentCisRegulatoryModules(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_crms"] = $row[0];
         // The number of current in-vivo cis-regulatory modules
         $sql = <<<SQL
-        SELECT NumberOfCurrentInVivoCisRegulatoryModules(1);
+        SELECT NumberOfCurrentInVivoCisRegulatoryModules(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -243,35 +241,35 @@ SQL;
         // The number of current non in-vivo cis-regulatory modules
         // having no cell culture
         $sql = <<<SQL
-        SELECT NumberOfCurrentNonInVivoCisRegulatoryModulesHavingNoCellCulture(1);
+        SELECT NumberOfCurrentNonInVivoCisRegulatoryModulesHavingNoCellCulture(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_crms_non_in_vivo_having_no_cell_culture"] = $row[0];
         // The number of current cis-regulatory modules having cell culture only
         $sql = <<<SQL
-        SELECT NumberOfCurrentCisRegulatoryModulesHavingCellCultureOnly(1);
+        SELECT NumberOfCurrentCisRegulatoryModulesHavingCellCultureOnly(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_crms_cell_culture_only"] = $row[0];
         // The number of current transcription factor binding sites
         $sql = <<<SQL
-        SELECT NumberOfCurrentTranscriptionFactorBindingSites(1);
+        SELECT NumberOfCurrentTranscriptionFactorBindingSites(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_tfbss"] = $row[0];
         // The number of current predicted cis-regulatory modules
         $sql = <<<SQL
-        SELECT NumberOfCurrentPredictedCisRegulatoryModules(1);
+        SELECT NumberOfCurrentPredictedCisRegulatoryModules(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_predictedcrms"] = $row[0];
         // The number of current cis-regulatory module segments
         $sql = <<<SQL
-        SELECT NumberOfCurrentCisRegulatoryModuleSegments(1);
+        SELECT NumberOfCurrentCisRegulatoryModuleSegments(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -280,22 +278,21 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(DISTINCT gene_id)
         FROM ReporterConstruct
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current';
+        WHERE state = 'current';
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_rc_genes"] = $row[0];
         // The number of different genes associated with current cis-regulatory modules
         $sql = <<<SQL
-        SELECT NumberOfCurrentCisRegulatoryModuleGenes(1);
+        SELECT NumberOfCurrentCisRegulatoryModuleGenes(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_crm_genes"] = $row[0];
         // The number of different genes associated with current transcription factor binding sites
         $sql = <<<SQL
-        SELECT NumberOfCurrentTranscriptionFactorBindingSiteGenes(1);
+        SELECT NumberOfCurrentTranscriptionFactorBindingSiteGenes(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -303,14 +300,14 @@ SQL;
         // The number of different transcription factors associated with current transcription factor
         // binding sites
         $sql = <<<SQL
-        SELECT NumberOfCurrentTranscriptionFactors(1);
+        SELECT NumberOfCurrentTranscriptionFactors(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
         $information["number_tfbs_tfs"] = $row[0];
         // The number of different genes associated with current cis-regulatory module segments
         $sql = <<<SQL
-        SELECT NumberOfCurrentCisRegulatoryModuleSegmentGenes(1);
+        SELECT NumberOfCurrentCisRegulatoryModuleSegmentGenes(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -319,7 +316,7 @@ SQL;
         // current transcription factor binding sites, current predicted cis-regulatory modules,
         // and current cis-regulatory module segments
         $sql = <<<SQL
-        SELECT NumberOfCuratedPublications(1);
+        SELECT NumberOfCuratedPublications(0);
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -328,8 +325,7 @@ SQL;
         $sql = <<<SQL
         SELECT IFNULL(UNIX_TIMESTAMP(DATE(MAX(last_update))), UNIX_TIMESTAMP(DATE('1970-01-01 00:00:00')))
         FROM ReporterConstruct
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current';
+        WHERE state = 'current';
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -338,8 +334,7 @@ SQL;
         $sql = <<<SQL
         SELECT IFNULL(UNIX_TIMESTAMP(DATE(MAX(last_update))), UNIX_TIMESTAMP(DATE('1970-01-01 00:00:00')))
         FROM ReporterConstruct
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             is_crm = 1;
 SQL;
         $queryResult = $db->query($sql);
@@ -350,8 +345,7 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(entity_id)
         FROM ReporterConstruct
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             DATE(last_update) = DATE(FROM_UNIXTIME({$lastUpdate}));
 SQL;
         $queryResult = $db->query($sql);
@@ -361,8 +355,7 @@ SQL;
         $sql = <<<SQL
         SELECT IFNULL(UNIX_TIMESTAMP(DATE(MAX(last_update))), UNIX_TIMESTAMP(DATE('1970-01-01 00:00:00')))
         FROM BindingSite
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current';
+        WHERE state = 'current';
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -373,8 +366,7 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(entity_id)
         FROM BindingSite
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             DATE(last_update) = DATE(FROM_UNIXTIME({$lastUpdate}));
 SQL;
         $queryResult = $db->query($sql);
@@ -384,8 +376,7 @@ SQL;
         $sql = <<<SQL
         SELECT IFNULL(UNIX_TIMESTAMP(DATE(MAX(last_update))), UNIX_TIMESTAMP(DATE('1970-01-01 00:00:00')))
         FROM PredictedCRM
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current';
+        WHERE state = 'current';
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -396,8 +387,7 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(entity_id)
         FROM PredictedCRM
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             DATE(last_update) = DATE(FROM_UNIXTIME({$lastUpdate}));
 SQL;
         $queryResult = $db->query($sql);
@@ -407,8 +397,7 @@ SQL;
         $sql = <<<SQL
         SELECT IFNULL(UNIX_TIMESTAMP(DATE(MAX(last_update))), UNIX_TIMESTAMP(DATE('1970-01-01 00:00:00')))
         FROM CRMSegment
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current';
+        WHERE state = 'current';
 SQL;
         $queryResult = $db->query($sql);
         $row = $queryResult->fetch_row();
@@ -419,8 +408,7 @@ SQL;
         $sql = <<<SQL
         SELECT COUNT(entity_id)
         FROM CRMSegment
-        WHERE sequence_from_species_id = 1 AND
-            state = 'current' AND
+        WHERE state = 'current' AND
             DATE(last_update) = DATE(FROM_UNIXTIME({$lastUpdate}));
 SQL;
         $queryResult = $db->query($sql);

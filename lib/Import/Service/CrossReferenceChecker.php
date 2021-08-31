@@ -54,7 +54,14 @@ class CrossReferenceChecker
                     ) !== false ) {
                         $coordinates[] = $matches[2];
                     } else {
-                        $coordinates[] = $matches[2] . "(+)";
+                        if ( strpos(
+                            $line,
+                            "(+)"
+                        ) !== false ) {                        
+                            $coordinates[] = $matches[2] . "(+)";
+                        } else {
+                            $coordinates[] = $matches[2] . "(-)";
+                        }
                     }
                 } else {
                     yield $lineNumber => "Sequence header wrong found in the line #" . $lineNumber .
@@ -200,7 +207,14 @@ class CrossReferenceChecker
                     ) !== false ) {
                         fwrite($fixedFastaFile, ">" . $matches[2] . "\n");
                     } else {
-                        fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
+                        if ( strpos(
+                            $line,
+                            "(+)"
+                        ) !== false ) {                        
+                            fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
+                        } else {
+                            fwrite($fixedFastaFile, ">" . $matches[2] . "(-)\n");
+                        }
                     }
                 } else {
                     fwrite($fixedFastaFile, $line);

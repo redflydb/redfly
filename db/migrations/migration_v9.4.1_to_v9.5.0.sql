@@ -1,3 +1,10 @@
+\! echo "Making table transformations..."; 
+
+INSERT INTO EvidenceSubtypeTerm (term)
+VALUES ('STARR-seq');
+
+\! echo "Done!";
+
 \! echo "Making procedure transformations...";
 
 DELIMITER //

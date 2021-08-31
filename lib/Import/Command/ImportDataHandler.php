@@ -828,7 +828,14 @@ class ImportDataHandler
                     ) !== false ) {
                         fwrite($fixedFastaFile, ">" . $matches[2] . "\n");
                     } else {
-                        fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
+                        if ( strpos(
+                            $line,
+                            "(+)"
+                        ) !== false ) {    
+                            fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
+                        } else {
+                            fwrite($fixedFastaFile, ">" . $matches[2] . "(-)\n");
+                        }
                     }
                 } else {
                     fwrite($fixedFastaFile, $line);

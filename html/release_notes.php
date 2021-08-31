@@ -4,6 +4,7 @@
 <?= HTML_REDFLY_LOGO ?> v9.5.0 Release Notes (August 18, 2021)
 <ul>
   <li>The REDfly source code available in GitHub</li>
+  <li>Updated licensing and disclaimer information</li>
 </ul>
 <a name="2021-08-03"></a>
 <?= HTML_REDFLY_LOGO ?> v9.4.4 Release Notes (August 3, 2021)
