@@ -6,6 +6,6 @@
 
 \! echo "Done!";
 
-\! echo "Making function transformations..."; 
+\! echo "Making procedure transformations..."; 
 
 \! echo "Done!";
