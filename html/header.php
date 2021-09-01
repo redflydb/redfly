@@ -38,6 +38,7 @@ $lastUpdateTime = date(
     max(
         $information->last_rc_update,
         $information->last_crmsegment_update,
+        $information->last_predictedcrm_update,
         $information->last_tfbs_update
     )
 );
@@ -53,6 +54,12 @@ if ( date(
     $information->last_crmsegment_update
 ) === $lastUpdateTime ) {
     $numberLastUpdate += $information->number_last_crmsegment_update;
+}
+if ( date(
+    "m/d/Y",
+    $information->last_predictedcrm_update
+) === $lastUpdateTime ) {
+    $numberLastUpdate += $information->number_last_predictedcrm_update;
 }
 if ( date(
     "m/d/Y",
