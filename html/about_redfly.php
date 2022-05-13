@@ -94,14 +94,18 @@ When referencing specific CRMs, please be sure to include a reference to the ori
   <span class="label">Funding Support:</span>
   <br><br>
   <?= HTML_REDFLY_LOGO ?> is funded in part by 
-    <a href="http://www.nsf.gov"
-       target="_blank">National Science Foundation</a> grant 
-    <a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1758252"
-       target="_blank">DBI-1758252</a> and 
     <a href="http://www.nih.gov/"
        target="_blank">National Institutes of Health</a> grant 
+    <a href="https://reporter.nih.gov/search/26mjToed5Uu9fBcb8ZOBoA/project-details/10267371"
+       target="_blank">U24 GM142435</a>. Previous support was provided by 
+    <a href="http://www.nih.gov/"
+       target="_blank">NIH</a> grant 
     <a href="https://projectreporter.nih.gov/project_info_description.cfm?aid=9024852&icde=28958976"
-       target="_blank">R01 GM114067</a>. Previous support was provided by NSF 
+       target="_blank">R01 GM114067</a> and 
+    <a href="http://www.nsf.gov/"
+       target="_blank">National Science Foundation</a> grants 
+    <a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1758252"
+       target="_blank">DBI-1758252</a> and 
     <a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1355511"
        target="_blank">DBI-1355511</a>.
 </p>

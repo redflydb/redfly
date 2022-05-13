@@ -41,6 +41,21 @@ header("refresh: 2; url=contact.php");
 <?php
 // If the captcha is validated successfully, the mail is sent with the 
 // inputted credentials to redflyteam@gmail.com.
+$date = new DateTime();
+$date -> setTimezone(new DateTimeZone('America/New_York'));
+$date = $date -> format('Y-m-d H:i:s');
+
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+}
+
+$mailLog = sprintf("time: %s, ip: %s, name: %s, email: %s, body: %s", $date, $ip, $_POST["userName"], $_POST["userEmail"], $_POST["emailBody"]);
+error_log($mailLog, 3, "../logs/mail.log");
+
 if ( ! isset($_POST["userName"]) ) {
     exit("Username not provided");
 }
@@ -115,10 +130,16 @@ if ( isset($_POST["g-recaptcha-response"]) ) {
         // PHPMailer::send() returns true if mail is staged for delivery, false on failure
         if ( $mail->send() ) {
             echo "<div class=\"message success\"><p>Email Sent! &#10003;</p></div>";
+
+            error_log(", result: success\n", 3, "../logs/mail.log");
         } else {
             echo "<div class=\"message error\"><p>Email failed to send<br>Please try again</p></div>";
+
+            error_log(", result: fail\n", 3, "../logs/mail.log");
         }
     } else {
         echo "<div class=\"message error\"><p>CAPTCHA could not be validated<br>Please try again</p></div>";
+
+        error_log(", result: error\n", 3, "../logs/mail.log");
     }
 }
