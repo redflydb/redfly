@@ -31,10 +31,12 @@ services:
             - MYSQL_USER
             - MYSQL_PASSWORD
             - TZ=America/New_York
-        image: mariadb:10.5
+        restart: always
+        image: mariadb:10.6
         ports:
             - 3306:3306
         volumes:
+            - /var/lib/mysql:/var/lib/mysql
             - ./db/dumps:/docker-entrypoint-initdb.d
             - ./logs:/tmp
     termlookup_server:

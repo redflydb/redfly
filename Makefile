@@ -1,7 +1,7 @@
-BLAT = sudo docker-compose exec blat_server blat
-MARIADB = sudo docker-compose exec mariadb_server mysql
-PHP = sudo docker-compose exec php_server php
-PHP_BASH = sudo docker-compose exec php_server
+BLAT = docker-compose exec blat_server blat
+MARIADB = docker-compose exec mariadb_server mysql
+PHP = docker-compose exec php_server php
+PHP_BASH = docker-compose exec php_server
 
 .PHONY: analyze$\
 	build$\
@@ -168,35 +168,35 @@ configuration:
 	sed -i 's,<REDFLY_BASE_URL>,$(REDFLY_BASE_URL),g' ./html/admin/new/app/Config.js
 
 database-backup:
-	sudo docker build -t mariadb_database_backup ./utilities/mariadb/database-backup/
-	sudo docker run --rm -tv $(PWD)/db/dumps:/db/dumps --user $$(id -u):$$(id -g) --env-file ./.env --network redfly_default mariadb_database_backup
+	docker build -t mariadb_database_backup ./utilities/mariadb/database-backup/
+	docker run --rm -tv $(PWD)/db/dumps:/db/dumps --user $$(id -u):$$(id -g) --env-file ./.env --network redfly_default mariadb_database_backup
 
 # Note that the datadumps procedure will write the new output data to the directory: html/datadumps
 datadumps: vendor
 	[ -d html/datadumps ] || (mkdir -p ./html/datadumps && chmod -R g+rwX,o+rwX ./html/datadumps)
-	sudo docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_flybase.php --rc --out crm_dump.gff3
-	sudo docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_flybase.php --tfbs --out tfbs_dump.gff3
-	sudo docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_gbrowse.php --rc --rc_cell_culture_only --tfbs --out redfly.fff
+	docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_flybase.php --rc --out crm_dump.gff3
+	docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_flybase.php --tfbs --out tfbs_dump.gff3
+	docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_gbrowse.php --rc --rc_cell_culture_only --tfbs --out redfly.fff
 
 docker-initialize:
 	mkdir -p ./db/dumps
 	chown $$(id -u):$$(id -g) ./db/dumps
 	chmod 0644 ./db/dumps/*.sql.gz
-	sudo docker-compose down -v
-	sudo docker-compose build
-	sudo docker-compose up -d
+	docker-compose down -v
+	docker-compose build
+	docker-compose up -d
 	sleep 2m
 
 # Useful for restarting containers and re-loading the database from the ./db/dumps directory
 docker-restart:
-	sudo docker-compose down -v
-	sudo docker-compose up -d
+	docker-compose down -v
+	docker-compose up -d
 	sleep 2m
 
 extjs-libraries-reload:
-	sudo docker build -t sencha ./utilities/sencha/
-	sudo docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app refresh
-	sudo docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app build -e development
+	docker build -t sencha ./utilities/sencha/
+	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app refresh
+	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app build -e development
 
 help-update:
 	cd ./docs/help && gitbook build
@@ -204,10 +204,10 @@ help-update:
 	mv ./docs/help/_book ./html/gitbook
 
 html/admin/new/ext:
-	sudo docker build -t sencha ./utilities/sencha/
-	sudo docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app install -f /sencha-sdks
-	sudo docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app refresh
-	sudo docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app build -e development
+	docker build -t sencha ./utilities/sencha/
+	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app install -f /sencha-sdks
+	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app refresh
+	docker run --rm -tv $(PWD)/html/admin/new:/sencha sencha app build -e development
 	sudo rm ./html/admin/new/index.html
 
 html/images/flyexpress:
@@ -250,16 +250,16 @@ endif
 ifeq ($(MYSQL_DUMP_DIR),/)
 	$(error MySQL dump directory cannot be '/')
 endif
-	sudo docker build -t mariadb_database_backup ./utilities/mariadb/database-backup/
-	sudo docker run --rm -tv $(MYSQL_DUMP_DIR):/db/dumps --user $$(id -u):$$(id -g) --env-file ./.env --network redfly_default mariadb_database_backup
+	docker build -t mariadb_database_backup ./utilities/mariadb/database-backup/
+	docker run --rm -tv $(MYSQL_DUMP_DIR):/db/dumps --user $$(id -u):$$(id -g) --env-file ./.env --network redfly_default mariadb_database_backup
 	# Clean up backups older than 30 days
 	find $(MYSQL_DUMP_DIR) -maxdepth 1 -type f -mtime +30 -name '*.sql.gz' -execdir rm -- '{}' \;
 
 php-libraries-reload:
-	sudo docker pull composer:latest
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer --version
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer validate
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer dump-autoload -o
+	docker pull composer:latest
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer --version
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer validate
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer dump-autoload -o
 
 # Note the "$$" in the shell command below, we must escape the $ so it is not interpreted as a make variable
 redfly-database-curator-users:
@@ -293,19 +293,19 @@ release:
 	[ -d html/datadumps/reports ] || (mkdir -p ./html/datadumps/reports && chmod -R g+rwX,o+rwX ./html/datadumps)
 	curl -u $(REDFLY_USER):$(REDFLY_PASSWORD) $(REDFLY_BASE_URL)api/rest/jsonstore/reporterconstruct/minimization > ./release_output/minimization_output_$(date +'%Y%m%d').json || (echo "minimization failed $$?"; exit 1)
 	curl -u $(REDFLY_USER):$(REDFLY_PASSWORD) $(REDFLY_BASE_URL)api/rest/jsonstore/reporterconstruct/calculateCrm > ./release_output/calculateCrm_output_$(date +'%Y%m%d').json || (echo "calculateCrm failed $$?"; exit 1)
-	sudo docker build -t redfly_icrm:latest ./go/icrm/
-	sudo docker run --rm -tv $(PWD)/go/icrm/cmd:/go/src/cmd redfly_icrm
-	sudo docker rmi $$(docker images | grep "redfly_icrm" | tr -s " " | cut -d" " -f3)	
+	docker build -t redfly_icrm:latest ./go/icrm/
+	docker run --rm -tv $(PWD)/go/icrm/cmd:/go/src/cmd redfly_icrm
+	docker rmi $$(docker images | grep "redfly_icrm" | tr -s " " | cut -d" " -f3)	
 	(cd ./go/icrm/cmd && ./icrm_calculation --username=$(MYSQL_USER) --password=$(MYSQL_PASSWORD)) || (echo "icrm_calculation failed $$?"; exit 1)
 
 schema-backup:
-	sudo docker build -t mariadb_schema_backup ./utilities/mariadb/schema-backup/
-	sudo docker run --rm -tv $(PWD)/db:/db --user $$(id -u):$$(id -g) --env-file ./.env --network redfly_default mariadb_schema_backup
+	docker build -t mariadb_schema_backup ./utilities/mariadb/schema-backup/
+	docker run --rm -tv $(PWD)/db:/db --user $$(id -u):$$(id -g) --env-file ./.env --network redfly_default mariadb_schema_backup
 
 statistics:
-	sudo docker build -t redfly_statistics:latest ./go/statistics/
-	sudo docker run --rm -tv $(PWD)/go/statistics/cmd:/go/src/cmd redfly_statistics
-	sudo docker rmi $$(docker images | grep "redfly_statistics" | tr -s " " | cut -d" " -f3)
+	docker build -t redfly_statistics:latest ./go/statistics/
+	docker run --rm -tv $(PWD)/go/statistics/cmd:/go/src/cmd redfly_statistics
+	docker rmi $$(docker images | grep "redfly_statistics" | tr -s " " | cut -d" " -f3)
 	cd ./go/statistics/cmd && ./statistics_report -username=$(MYSQL_USER) -password=$(MYSQL_PASSWORD)
 
 # Note the "$$" in the shell command below, we must escape the $ so it is not interpreted as a make variable
@@ -378,17 +378,17 @@ update:
 
 vendor-install: composer.json
 	[ -f composer.lock ] && rm composer.lock || true
-	sudo docker pull composer:latest
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer --version
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer validate
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer install
+	docker pull composer:latest
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer --version
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer validate
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer install
 
 vendor-update: composer.json
 	[ -f composer.lock ] && rm composer.lock || true
-	sudo docker pull composer:latest
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer --version
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer validate
-	sudo docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer update
+	docker pull composer:latest
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer --version
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer validate
+	docker run --rm --volume $(PWD):/app --user $$(id -u):$$(id -g) composer update
 
 vscode-debug-settings-configuration:
 	cp ./.vscode/launch.json.dist ./.vscode/launch.json
@@ -413,4 +413,4 @@ xdebug:
 	$(PHP_BASH) cp ./assets/xdebug.ini.dist /usr/local/etc/php/conf.d/xdebug.ini
 	$(PHP_BASH) chmod 0644 /usr/local/etc/php/conf.d/xdebug.ini
 	$(PHP_BASH) sed -i 's,<XDEBUG_IP_ADDRESS>,$(XDEBUG_IP_ADDRESS),g' /usr/local/etc/php/conf.d/xdebug.ini
-	sudo docker-compose restart php_server
+	docker-compose restart php_server
