@@ -3,6 +3,7 @@ vendor/*
 
 # Data files
 html/datadumps/*
+db/dumps/
 
 # Environment files
 *.bak
@@ -36,6 +37,7 @@ html/gitbook/*
 
 # Log files
 logs/*
+*.log
 
 # macOS hidden files
 .DS_Store

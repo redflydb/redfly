@@ -31,8 +31,7 @@ services:
             - MYSQL_USER
             - MYSQL_PASSWORD
             - TZ=America/New_York
-        restart: always
-        image: mariadb:10.6
+        image: mariadb:10.5
         ports:
             - 3306:3306
         volumes:
