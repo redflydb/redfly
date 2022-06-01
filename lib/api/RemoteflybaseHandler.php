@@ -59,34 +59,23 @@ class RemoteflybaseHandler
                     " database with string \"" . $connection ."\""
             );
         }
+
+        // Query FBrf from Flybase remote database
         $sql = <<<SQL
-        SELECT p.uniquename,
-            f.uniquename,
-            f.name
-        FROM feature f,
-            feature_cvterm fcvt,
-            pub p,
-            cvterm cvt,
-            cv
-        WHERE p.uniquename = (SELECT p.uniquename
-                              FROM pub p,
-                                    pub_dbxref pdbx,
-                                    dbxref dbx,
-                                    db
-                              WHERE dbx.accession = '$pmid' AND
-                                db.name = 'pubmed' AND
-                                pdbx.is_current = true AND
-                                p.pub_id = pdbx.pub_id AND
-                                pdbx.dbxref_id = dbx.dbxref_id AND
-                                dbx.db_id = db.db_id AND
-                                p.is_obsolete = 'f') AND
-        cv.name = 'transgene_description' AND
-        fcvt.pub_id = p.pub_id AND
-        f.feature_id = fcvt.feature_id AND
-        fcvt.cvterm_id = cvt.cvterm_id AND
-        cvt.cv_id = cv.cv_id AND
-        f.is_analysis = 'f';
-SQL;
+        SELECT p.uniquename
+        FROM pub AS p
+        JOIN pub_dbxref AS pdbx
+        ON p.pub_id = pdbx.pub_id AND
+            p.is_obsolete = 'f' AND
+            pdbx.is_current = true
+        JOIN dbxref AS dbx
+        ON dbx.accession = '$pmid' AND
+            pdbx.dbxref_id = dbx.dbxref_id
+        JOIN db
+        ON db.name = 'pubmed' AND
+            dbx.db_id = db.db_id;
+        SQL;
+
         if ( ($result = pg_query($dbHandle, $sql)) === false ) {
             $message = "Error querying flybase for FBtp: \"" .
                 pg_result_error($result) . "\"";
@@ -95,20 +84,27 @@ SQL;
             $message = "No FBtp results found in Flybase for PMID " . $pmid;
             $returnValue = false;
         } else {
-            $results[] = array(
-                "fbrf"  => "",
-                "fbtp"  => "",
-                "tname" => ""
-            );
-            while ( $row = pg_fetch_array($result) ) {
+            $fbrf = pg_fetch_array($result)[0];
+        }
+        pg_close($dbHandle);
+
+        // Query FBtp From Flybase API 
+        $xml = simplexml_load_string(file_get_contents("https://api.flybase.org/api/v1.0/chadoxml/" . $fbrf));
+        $results[] = array(
+            "fbrf"  => "",
+            "fbtp"  => "",
+            "tname" => ""
+        );
+        foreach ($xml->pub->feature_pub as $item) {
+            if ($item->feature_id->feature->type_id->cvterm->name == 'transgenic_transposable_element') {
                 $results[] = array(
-                    "fbrf"  => $row[0],
-                    "fbtp"  => $row[1],
-                    "tname" => $row[2]
+                    "fbrf"  => $fbrf,
+                    "fbtp"  => $item->feature_id->feature->uniquename->__toString(),
+                    "tname" => $item->feature_id->feature->feature_synonym->synonym_id->synonym->name->__toString()
                 );
             }
         }
-        pg_close($dbHandle);
+
         return RestResponse::factory(
             $returnValue,
             $message,
