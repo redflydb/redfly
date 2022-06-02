@@ -35,7 +35,7 @@ services:
         ports:
             - 3306:3306
         volumes:
-            - /var/lib/mysql:/var/lib/mysql
+            - ./mysql:/var/lib/mysql
             - ./db/dumps:/docker-entrypoint-initdb.d
             - ./logs:/tmp
     termlookup_server:
