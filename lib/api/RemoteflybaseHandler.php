@@ -73,7 +73,8 @@ class RemoteflybaseHandler
             pdbx.dbxref_id = dbx.dbxref_id
         JOIN db
         ON db.name = 'pubmed' AND
-            dbx.db_id = db.db_id;
+            dbx.db_id = db.db_id
+        LIMIT 1;
         SQL;
 
         if ( ($result = pg_query($dbHandle, $sql)) === false ) {
