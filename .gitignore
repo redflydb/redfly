@@ -68,3 +68,6 @@ html/GPUCache/*
 html/User/*
 User/*
 .vscode/launch.json
+
+# Mysql Data
+/mysql

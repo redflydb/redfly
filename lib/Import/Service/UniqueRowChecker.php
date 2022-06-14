@@ -25,8 +25,14 @@ class UniqueRowChecker
         // Such a new array created by the "iterator_to_array" function begins by 1
         $attributeArray = iterator_to_array($attributesReader->getRecords());
         $attributeRowsNumber = count($attributeArray);
-        for ( $rowIndex = 1; $rowIndex <= $attributeRowsNumber; $rowIndex++ ) {
-            $data = $attributeArray[$rowIndex];
+
+        $rowIndex = 1;
+        foreach ($attributeArray as $index => $data) {
+            while ($rowIndex < $index) {
+                yield $rowIndex - 1 => "There are blank line in Attribute TSV.";
+                $rowIndex ++;
+            }
+
             // "Decontaminating" each array key from non-standard characters
             // and spaces
             $rowKeys = array_keys($data);
@@ -61,7 +67,10 @@ class UniqueRowChecker
                 $data
             );
             $attributeArray[$rowIndex] = $data;
+
+            $rowIndex ++;
         }
+
         // Such a new new array created by the "array_column" function begin by 0
         $arbitraryNames = array_column(
             $attributeArray,
@@ -183,8 +192,14 @@ class UniqueRowChecker
         // Such a new array created by the "iterator_to_array" function begins by 1
         $anatomicalExpressionArray = iterator_to_array($anatomicalExpressionsReader->getRecords());
         $anatomicalExpressionRowsNumber = count($anatomicalExpressionArray);
-        for ( $rowIndex = 1; $rowIndex <= $anatomicalExpressionRowsNumber; $rowIndex++ ) {
-            $data = $anatomicalExpressionArray[$rowIndex];
+
+        $rowIndex = 1;
+        foreach ($anatomicalExpressionArray as $index => $data) {
+            while ($rowIndex < $index) {
+                yield $rowIndex - 1 => "There are blank line in Expression TSV.";
+                $rowIndex ++;
+            }
+
             // "Decontaminating" each array key from non-standard characters
             // and spaces
             $rowKeys = array_keys($data);
@@ -219,7 +234,10 @@ class UniqueRowChecker
                 $data
             );
             $anatomicalExpressionArray[$rowIndex] = $data;
+
+            $rowIndex ++;
         }
+
         // Such both new arrays created by the "array_column" function begin by 0
         $assayedInSpeciesScientificNames = array_column(
             $anatomicalExpressionArray,

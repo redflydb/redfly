@@ -34,7 +34,7 @@ class FieldChecker
             ->skipEmptyRecords();
         // Such a new array created by the "iterator_to_array" function begins by 1
         $attributeArray = iterator_to_array($attributesReader->getRecords());
-        $attributeHeaders = array_keys($attributeArray[1]);
+        $attributeHeaders = array_keys(array_values($attributeArray)[0]);
         $attributeHeadersNumber = count($attributeHeaders);
         // "Decontaminating" each array value from non-standard characters
         // and spaces
