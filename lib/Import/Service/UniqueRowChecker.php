@@ -29,7 +29,7 @@ class UniqueRowChecker
         $rowIndex = 1;
         foreach ($attributeArray as $index => $data) {
             while ($rowIndex < $index) {
-                yield $rowIndex - 1 => "There are blank line in Attribute TSV.";
+                yield $rowIndex - 1 => "There is blank line.";
                 $rowIndex ++;
             }
 
@@ -196,7 +196,7 @@ class UniqueRowChecker
         $rowIndex = 1;
         foreach ($anatomicalExpressionArray as $index => $data) {
             while ($rowIndex < $index) {
-                yield $rowIndex - 1 => "There are blank line in Expression TSV.";
+                yield $rowIndex - 1 => "There is blank line.";
                 $rowIndex ++;
             }
 

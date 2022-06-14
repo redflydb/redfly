@@ -24,7 +24,9 @@ class FastaFileValidator
         $index = 0;
         $size = 0;
         while ( ($line = fgets($handle)) ) {
-            if ( ctype_space($line) === false ) {
+            if ($line[0] === "\n") {
+                yield $index - 1 => "There is blank line";
+            } else if ( ctype_space($line) === false ) {
                 if ( $line[0] === ">" ) {
                     if ( $new ) {
                         yield $index => "An entry must contain a sequence on its own line(s)";
