@@ -38,7 +38,7 @@ flybase:
 # Configuration that affects the application as a whole.
 general:
     environment_name: <ENVIRONMENT_NAME>
-    redfly_version: '9.4.4'
+    redfly_version: '9.5.2'
     site_base_url: '<REDFLY_BASE_URL>'
     site_base_dir: '/var/www/'
     site_auth_realm: '<SITE_AUTH_REALM>'
