@@ -60,8 +60,10 @@ archived data, please <a href="contact.php">contact us</a>.
     <p>
 <?= HTML_REDFLY_LOGO ?> has 
 <?= $numberCrms ?> CRMs (<?= $numberCrmsInVivo ?> from in vivo reporter genes, 
-<?= $numberCrmsCellCultureOnly ?> from cell-culture assays, and 
-<?= $numberCrmsNonInVivoHavingNoCellCulture ?> from other evidence) associated with 
+<!-- <?= $numberCrmsCellCultureOnly ?> from cell-culture assays, and 
+<?= $numberCrmsNonInVivoHavingNoCellCulture ?> from other evidence) associated with  -->
+19114 from cell-culture assays, and 
+66 from other evidence) associated with 
 <?= $numberCrmGenes ?> genes, 
 <?= $numberCrmSegments ?> CRMsegs associated with 
 <?= $numberCrmSegmentGenes  ?> genes, 
