@@ -71,3 +71,6 @@ User/*
 
 # Mysql Data
 /mysql
+
+# Statistics files
+go/statistics/cmd/docs/*.txt
