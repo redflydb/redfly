@@ -177,6 +177,7 @@ datadumps: vendor
 	docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_flybase.php --rc --out crm_dump.gff3
 	docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_flybase.php --tfbs --out tfbs_dump.gff3
 	docker-compose exec --user $$(id -u):$$(id -g) php_server php ./html/utilities/dump_gbrowse.php --rc --rc_cell_culture_only --tfbs --out redfly.fff
+	$(MARIADB) -u $(MYSQL_USER) -p$(MYSQL_PASSWORD) redfly -e "update ReporterConstruct set cell_culture_only=1 where cell_culture_only=0 and evidence_id in (14, 15);"
 
 docker-initialize:
 	mkdir -p ./db/dumps
