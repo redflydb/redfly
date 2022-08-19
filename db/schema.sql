@@ -1,8 +1,8 @@
--- MariaDB dump 10.19  Distrib 10.5.11-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19  Distrib 10.5.15-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: mariadb_server    Database: redfly
 -- ------------------------------------------------------
--- Server version	10.5.11-MariaDB-1:10.5.11+maria~focal
+-- Server version	10.5.15-MariaDB-1:10.5.15+maria~focal
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -92,7 +92,7 @@ CREATE TABLE `BindingSite` (
   CONSTRAINT `fk_{9C263B85-7A07-4EAF-8E89-787DD33795D7}` FOREIGN KEY (`auditor_id`) REFERENCES `Users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_{B211B76A-19E3-4506-8D36-560270DC37D3}` FOREIGN KEY (`tf_id`) REFERENCES `Gene` (`gene_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_{D895F07B-5B3D-408E-9F33-5D3A520234D4}` FOREIGN KEY (`chromosome_id`) REFERENCES `Chromosome` (`chromosome_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7725 DEFAULT CHARSET=utf8 COMMENT='Transcription Factor Binding Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=7923 DEFAULT CHARSET=utf8 COMMENT='Transcription Factor Binding Sites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -110,7 +110,7 @@ CREATE TABLE `BiologicalProcess` (
   PRIMARY KEY (`process_id`),
   KEY `process_id` (`process_id`),
   KEY `go_id` (`go_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=65986 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=66310 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -184,7 +184,7 @@ CREATE TABLE `CRMSegment` (
   CONSTRAINT `CRMSegment_ibfk_7` FOREIGN KEY (`auditor_id`) REFERENCES `Users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `CRMSegment_ibfk_8` FOREIGN KEY (`sequence_source_id`) REFERENCES `SequenceSourceTerm` (`source_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `CRMSegment_ibfk_9` FOREIGN KEY (`sequence_from_species_id`) REFERENCES `Species` (`species_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,7 +269,7 @@ CREATE TABLE `Citation` (
   PRIMARY KEY (`citation_id`),
   UNIQUE KEY `citation_type` (`citation_type`,`external_id`),
   KEY `external_id` (`external_id`(16))
-) ENGINE=InnoDB AUTO_INCREMENT=1966 DEFAULT CHARSET=utf8 COMMENT='Document citations, typically pulled from PubMed';
+) ENGINE=InnoDB AUTO_INCREMENT=2210 DEFAULT CHARSET=utf8 COMMENT='Document citations, typically pulled from PubMed';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -339,7 +339,7 @@ CREATE TABLE `ExpressionTerm` (
   KEY `species_id` (`species_id`),
   KEY `identifier` (`identifier`),
   CONSTRAINT `fk_{76ED8668-409F-4CB3-81ED-952F2F8EBFDB}` FOREIGN KEY (`species_id`) REFERENCES `Species` (`species_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=18970 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19282 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -395,7 +395,7 @@ CREATE TABLE `Gene` (
   CONSTRAINT `Gene_ibfk_1` FOREIGN KEY (`chrm_id`) REFERENCES `Chromosome` (`chromosome_id`),
   CONSTRAINT `Gene_ibfk_2` FOREIGN KEY (`genome_assembly_id`) REFERENCES `GenomeAssembly` (`genome_assembly_id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `fk_{CDDFC633-C07B-4C56-9C80-07E705CF810E}` FOREIGN KEY (`species_id`) REFERENCES `Species` (`species_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=636075 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=699925 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -474,7 +474,7 @@ CREATE TABLE `PredictedCRM` (
   CONSTRAINT `PredictedCRM_ibfk_6` FOREIGN KEY (`auditor_id`) REFERENCES `Users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `PredictedCRM_ibfk_7` FOREIGN KEY (`sequence_source_id`) REFERENCES `SequenceSourceTerm` (`source_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `PredictedCRM_ibfk_8` FOREIGN KEY (`sequence_from_species_id`) REFERENCES `Species` (`species_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=15917 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16415 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -612,7 +612,7 @@ CREATE TABLE `ReporterConstruct` (
   CONSTRAINT `fk_{B5CF8D06-B5F8-4553-BF62-1DDA2C25233F}` FOREIGN KEY (`gene_id`) REFERENCES `Gene` (`gene_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_{C2EDB40C-47C4-4079-B283-2B776F996ACC}` FOREIGN KEY (`chromosome_id`) REFERENCES `Chromosome` (`chromosome_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_{F53FB70F-C2AD-45CB-BEB3-002484A019BC}` FOREIGN KEY (`sequence_source_id`) REFERENCES `SequenceSourceTerm` (`source_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=98586 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=129415 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -668,7 +668,7 @@ CREATE TABLE `Users` (
   `role` enum('admin','curator') NOT NULL DEFAULT 'curator',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COMMENT='List of curators and auditors';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='List of curators and auditors';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -747,7 +747,7 @@ CREATE TABLE `inferred_crm` (
   CONSTRAINT `inferred_crm_ibfk_2` FOREIGN KEY (`sequence_from_species_id`) REFERENCES `Species` (`species_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `inferred_crm_ibfk_3` FOREIGN KEY (`assayed_in_species_id`) REFERENCES `Species` (`species_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `inferred_crm_ibfk_4` FOREIGN KEY (`chromosome_id`) REFERENCES `Chromosome` (`chromosome_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=137706 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=182478 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -892,7 +892,7 @@ CREATE TABLE `triplestore_crm_segment` (
   KEY `biological_process` (`biological_process`),
   KEY `pubmed_id` (`pubmed_id`),
   CONSTRAINT `triplestore_crm_segment_ibfk_1` FOREIGN KEY (`crm_segment_id`) REFERENCES `CRMSegment` (`crm_segment_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -920,7 +920,7 @@ CREATE TABLE `triplestore_predicted_crm` (
   KEY `biological_process` (`biological_process`),
   KEY `pubmed_id` (`pubmed_id`),
   CONSTRAINT `triplestore_predicted_crm_ibfk_1` FOREIGN KEY (`predicted_crm_id`) REFERENCES `PredictedCRM` (`predicted_crm_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6945 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7443 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -949,7 +949,7 @@ CREATE TABLE `triplestore_rc` (
   KEY `biological_process` (`biological_process`),
   KEY `pubmed_id` (`pubmed_id`),
   CONSTRAINT `triplestore_rc_ibfk_1` FOREIGN KEY (`rc_id`) REFERENCES `ReporterConstruct` (`rc_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=52205 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=90557 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2920,22 +2920,21 @@ DELIMITER ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-CREATE DEFINER=`redfly`@`%` PROCEDURE `release_approved_records`(OUT new_current_rcs_number INT,
-                                                     OUT new_archived_rcs_number INT,
-													 OUT new_current_tfbss_number INT,
-                                                     OUT new_archived_tfbss_number INT,
-                                                     OUT new_current_crm_segments_number INT,
-                                                     OUT new_archived_crm_segments_number INT,
-                                                     OUT new_current_predicted_crms_number INT,
-                                                     OUT new_archived_predicted_crms_number INT)
+CREATE DEFINER=`redfly`@`%` PROCEDURE `release_approved_records`(
+    OUT new_current_rcs_number INT,
+    OUT new_archived_rcs_number INT,
+	OUT new_current_tfbss_number INT,
+    OUT new_archived_tfbss_number INT,
+    OUT new_current_crm_segments_number INT,
+    OUT new_archived_crm_segments_number INT,
+    OUT new_current_predicted_crms_number INT,
+    OUT new_archived_predicted_crms_number INT)
     MODIFIES SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Sets all approved entities to current.'
 BEGIN
     CREATE TEMPORARY TABLE tmp_release_staging (record_id INT UNSIGNED);
 
-	
-   
     INSERT INTO tmp_release_staging (record_id)
     SELECT rc_id
     FROM ReporterConstruct AS rc
@@ -2980,8 +2979,6 @@ BEGIN
     
     TRUNCATE TABLE tmp_release_staging;
 
-   	
-   
     INSERT INTO tmp_release_staging (record_id)
     SELECT tfbs_id
     FROM BindingSite AS bs
@@ -3031,8 +3028,6 @@ BEGIN
     
     TRUNCATE TABLE tmp_release_staging;
 
-	
-   
     INSERT INTO tmp_release_staging (record_id)
     SELECT crm_segment_id
     FROM CRMSegment AS crmsegment
@@ -3077,8 +3072,6 @@ BEGIN
     
     TRUNCATE TABLE tmp_release_staging;
    
-   	
-   
     INSERT INTO tmp_release_staging (record_id)
     SELECT predicted_crm_id
     FROM PredictedCRM AS pcrm
@@ -3097,7 +3090,8 @@ BEGIN
                             GROUP BY entity_id) AS v
             ON pcrm.entity_id = v.entity_id
     SET pcrm.state = 'current',
-        pcrm.version = IF(latest IS NOT NULL, latest + 1, 0)
+        pcrm.version = IF(latest IS NOT NULL, latest + 1, 0),
+        pcrm.last_update = CURRENT_TIMESTAMP
     WHERE pcrm.state = 'approved';
 
     SELECT ROW_COUNT()
@@ -3186,8 +3180,8 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`redfly`@`%` PROCEDURE `update_anatomical_expressions`(
     OUT identifiers TEXT,
-    OUT old_terms TEXT,
-    OUT new_terms TEXT,
+    OUT old_terms LONGTEXT,
+    OUT new_terms LONGTEXT,
     OUT updated_anatomical_expressions_number INT,
     OUT deleted_anatomical_expressions_number INT,
     OUT new_anatomical_expressions_number INT
@@ -4375,4 +4369,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-23 14:28:35
+-- Dump completed on 2022-08-19 15:03:27
