@@ -34,6 +34,8 @@ func blat(
 	out string) {
 	cmd := exec.Command(
 		"blat",
+		"-stepSize=5",
+		"-minScore=20",
 		"-minIdentity=95",
 		"-noHead",
 		"-out=pslx",

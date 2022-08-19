@@ -1,7 +1,12 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
-<a name="2021-06-17"></a>
-<?= HTML_REDFLY_LOGO ?> v9.5.2 Release Notes (August 18, 2021)
+<a name="2022-08-19"></a>
+<?= HTML_REDFLY_LOGO ?> v9.5.3 Release Notes (August 19, 2022)
+<ul>
+  <li>Shorter Sequence bug fixed</li>
+</ul>
+<a name="2022-06-17"></a>
+<?= HTML_REDFLY_LOGO ?> v9.5.2 Release Notes (June 17, 2022)
 <ul>
   <li>Fix some bugs in edit module</li>
 </ul>

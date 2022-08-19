@@ -3,6 +3,16 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2022-August-19 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.5.3 released</li>
+      <li>Shorter Sequence bug fixed</li>
+      <li>Please see the <a href="release_notes.php#2022-08-19">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2022-June-17 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.5.2 released</li>

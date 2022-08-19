@@ -297,6 +297,7 @@ release:
 	docker run --rm -tv $(PWD)/go/icrm/cmd:/go/src/cmd redfly_icrm
 	docker rmi $$(docker images | grep "redfly_icrm" | tr -s " " | cut -d" " -f3)	
 	(cd ./go/icrm/cmd && ./icrm_calculation --username=$(MYSQL_USER) --password=$(MYSQL_PASSWORD)) || (echo "icrm_calculation failed $$?"; exit 1)
+	$(MARIADB) -u $(MYSQL_USER) -p$(MYSQL_PASSWORD) redfly -e "update ReporterConstruct set cell_culture_only=1 where cell_culture_only=0 and evidence_id in (14, 15);"
 
 schema-backup:
 	docker build -t mariadb_schema_backup ./utilities/mariadb/schema-backup/
