@@ -35,6 +35,12 @@ Please see our <a href="help.php">User&#39;s Guide</a> for more information.
 When referencing specific CRMs, please be sure to include a reference to the original discoverers
 (cited in the "cite" tab or under "PMID" in the GFF-formatted download).
 <ul>
+  <li>
+    Keränen, S.V.E., Villahoz-Baleta, A., Bruno, A.E., and Halfon, M.S. (2022). 
+    REDfly: An integrated knowledgebase for insect regulatory genomics. <em>Insects</em>, 13:618; 
+    <a href="https://www.mdpi.com/2075-4450/13/7/618" 
+      target="_blank">doi: 10.3390/ insects13070618</a><br>
+  </li>
   <li>Rivera, John, Keränen, Soile V. E., Gallo, Steven M. and Halfon, Marc S. (2018).
     REDfly: the transcriptional regulatory element database for Drosophila.
     <i>Nucleic Acids Res.</i>;
