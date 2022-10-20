@@ -1,14 +1,21 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2022-10-21"></a>
+<?= HTML_REDFLY_LOGO ?> v9.5.4 Release Notes (October 21, 2022)
+<ul>
+  <li>Refactor CRM algorithm and implement it in Rust by removing manual override and adding consideration for triple store data and fully nested set.</li>
+  <li>Rewrite the entire update process in Python and Rust to improve performance by over 5x.</li>
+</ul>
 <a name="2022-08-19"></a>
 <?= HTML_REDFLY_LOGO ?> v9.5.3 Release Notes (August 19, 2022)
 <ul>
-  <li>Shorter Sequence bug fixed</li>
+  <li>Fix bug that local BLAT service rejects shorter sequence entries.</li>
 </ul>
 <a name="2022-06-17"></a>
 <?= HTML_REDFLY_LOGO ?> v9.5.2 Release Notes (June 17, 2022)
 <ul>
-  <li>Fix some bugs in edit module</li>
+  <li>Fix bug that the editor would be blocked when uploading a file with blank lines.</li>
+  <li>Query PMID data from Flybase API serivce.</li>
 </ul>
 <a name="2021-08-18"></a>
 <?= HTML_REDFLY_LOGO ?> v9.5.0 Release Notes (August 18, 2021)

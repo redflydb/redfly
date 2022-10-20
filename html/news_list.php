@@ -3,6 +3,17 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2022-October-21 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.5.4 released</li>
+      <li>Refactor the CRM algorithm</li>
+      <li>Rewrite the entire update process</li>
+      <li>Please see the <a href="release_notes.php#2022-10-21">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2022-August-19 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.5.3 released</li>
