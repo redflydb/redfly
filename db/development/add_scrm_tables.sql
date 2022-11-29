@@ -77,3 +77,52 @@ INSERT INTO `Species` (
 ("Bombyx mori", "bmor", "", "", "", ""),
 ("Cimex lectularius", "clec", "", "", "", ""),
 ("Culex quinquefasciatus", "cqui", "", "", "", "");
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "A.ceph_1.0", false FROM `Species`
+    WHERE `Species`.`short_name`="acep";
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "Acol_1.0", false FROM `Species`
+    WHERE `Species`.`short_name` = "acol";
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "baen1", false FROM `Species`
+    WHERE `Species`.`short_name` = "baen";
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "bimp_2.2", false FROM `Species`
+    WHERE `Species`.`short_name` = "bimp";
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "bmor_v1", false FROM `Species`
+    WHERE `Species`.`short_name` = "bmor";
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "Clec_2.1", false FROM `Species`
+    WHERE `Species`.`short_name` = "clec";
+
+INSERT INTO `GenomeAssembly` (
+    `species_id`,
+    `release_version`,
+    `is_deprecated`
+) SELECT `Species`.`species_id`, "Cqui_1.0", false FROM `Species`
+    WHERE `Species`.`short_name` = "cqui";
