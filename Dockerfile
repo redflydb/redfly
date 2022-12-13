@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/php
-FROM php:7.4-apache
+FROM php:8.0-apache
 
 # Install the dependencies for the PHP extensions.
 RUN apt-get update -y && \
@@ -20,9 +20,9 @@ RUN apt-get update -y && \
         pdo_mysql \
         pgsql && \
     pecl install \
-        mcrypt-1.0.4 \
-        yaml-2.2.1 \
-        xdebug-3.0.4 && \
+        mcrypt-1.0.5 \
+        yaml-2.2.2 \
+        xdebug-3.2.0 && \
     docker-php-ext-enable \
         mcrypt \
         yaml
