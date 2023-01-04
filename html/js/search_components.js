@@ -11,7 +11,7 @@ REDfly.templates = {
     redfly_anatomical_expression_identifier_url: new Ext.Template('<font color="blue"><b><u><a href="{url}?anatomical_expression_term={flybase_id}" ' +
         'target="_blank">{text}</a></u></b></font>'),
     // Result tab titles
-    crm_rc_tab_results_title: new Ext.Template('CRM ({number_of_crms_search_result}/{number_of_database_crms}) / ' + 
+    crm_rc_tab_results_title: new Ext.Template('CRM ({number_of_crms_search_result}/{number_of_database_crms}) / ' +
         'RC ({number_of_rcs_search_result}/{number_of_database_rcs}) ' +
         '<a style="white-space: nowrap;" href="#" onclick="numHelp();return false;">?</a>'),
     crmsegment_tab_results_title: new Ext.Template('CRM Segment ({number_of_crmsegments_search_result})'),
@@ -55,7 +55,7 @@ REDfly.config = {
         flybase: 'http://flybase.org/reports/',
         flybase_cv_term_report: 'http://flybase.org/cgi-bin/cvreport.pl?rel=is_a&',
         flybase_images: 'http://flybase.org/cgi-bin/gbrowse_img/dmel/',
-        gbrowse: 'http://flybase.org/cgi-bin/gbrowse2/dmel/',
+        gbrowse: 'http://128.205.11.6/jbrowse',
         go: 'http://amigo.geneontology.org/amigo/term/',
         pubmed: 'http://www.ncbi.nlm.nih.gov/pubmed/',
         redfly: redflyBaseUrl + 'search.php',
@@ -78,7 +78,7 @@ REDfly.config = {
             title: 'Predicted CRM',
             loadingTitle: '<b>LOADING...</b>',
             results: REDfly.templates.predictedcrm_tab_results_title
-        },            
+        },
         'tab-tfbs': {
             title: 'TFBS',
             loadingTitle: '<b>LOADING...</b>',
@@ -113,25 +113,25 @@ REDfly.window.downloadSingleRc = new REDfly.window.download({
     title: 'Download RC'
 });
 REDfly.window.downloadSingleCrmSegment = new REDfly.window.download({
-    downloadAllItems: false,    
+    downloadAllItems: false,
     downloadUrlTemplate: new Ext.Template('/raw/download/crmsegment?' +
         'format={file_type}'),
     title: 'Download CRM Segment'
 });
 REDfly.window.downloadSinglePredictedCrm = new REDfly.window.download({
-    downloadAllItems: false,    
+    downloadAllItems: false,
     downloadUrlTemplate: new Ext.Template('/raw/download/predictedcrm?' +
         'format={file_type}'),
     title: 'Download Predicted CRM'
 });
 REDfly.window.downloadSingleTfbs = new REDfly.window.download({
-    downloadAllItems: false,    
+    downloadAllItems: false,
     downloadUrlTemplate: new Ext.Template('/raw/download/transcriptionfactorbindingsite?' +
         'format={file_type}'),
     title: 'Download TFBS'
 });
 REDfly.window.downloadSelectEntries = new REDfly.window.download({
-    downloadAllItems: false,    
+    downloadAllItems: false,
     downloadUrlTemplate: new Ext.Template('/raw/download/list?' +
         'format={file_type}'),
     title: 'Download Selected Entries'

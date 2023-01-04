@@ -146,7 +146,7 @@ class CrmsegmentHandler implements iEditable
         INNER JOIN Chromosome c ON crms.chromosome_id = c.chromosome_id
         LEFT OUTER JOIN CRMSegment_has_FigureLabel l ON crms.crm_segment_id = l.crm_segment_id
         LEFT OUTER JOIN ext_FlyExpressImage fei ON crms.pubmed_id = fei.pubmed_id AND
-            l.label = fei.label        
+            l.label = fei.label
 SQL;
         $sqlGroupBy[] = "crms.crm_segment_id";
         $this->helper->constructQuery(
@@ -220,8 +220,8 @@ SQL;
             crms.current_end AS end,
             crms.archived_genome_assembly_release_versions,
             crms.archived_starts,
-            crms.archived_ends,            
-            crms.is_crm,            
+            crms.archived_ends,
+            crms.is_crm,
             crms.is_minimalized,
             crms.is_negative,
             crms.notes,
@@ -380,37 +380,37 @@ SQL;
             ais.species_id AS assayed_in_species_id,
             ais.short_name AS assayed_in_species_short_name,
             ais.scientific_name AS assayed_in_species_scientific_name,
-            crms.crm_segment_id AS id, 
-            crms.name, 
-            crms.entity_id, 
+            crms.crm_segment_id AS id,
+            crms.name,
+            crms.entity_id,
             crms.version,
             crms.state,
-            crms.gene_id, 
-            g.name AS gene_name, 
+            crms.gene_id,
+            g.name AS gene_name,
             g.identifier AS gene_identifier,
-            crms.chromosome_id, 
+            crms.chromosome_id,
             c.name AS chromosome,
-            crms.evidence_id, 
+            crms.evidence_id,
             e.term AS evidence_term,
             crms.evidence_subtype_id,
             IF(ISNULL(crms.evidence_subtype_id), '', es.term) AS evidence_subtype_term,
             crms.sequence_source_id,
             sst.term AS sequence_source_term,
             crms.pubmed_id,
-            crms.figure_labels, 
+            crms.figure_labels,
             crms.notes,
-            crms.is_crm, 
-            crms.is_override, 
-            crms.is_negative, 
+            crms.is_crm,
+            crms.is_override,
+            crms.is_negative,
             crms.is_minimalized,
-            crms.fbtp, 
+            crms.fbtp,
             crms.fbal,
-            crms.sequence, 
+            crms.sequence,
             crms.size,
             crms.current_genome_assembly_release_version AS release_version,
-            crms.current_start AS start, 
+            crms.current_start AS start,
             crms.current_end AS end,
-            cite.contents AS citation, 
+            cite.contents AS citation,
             cite.author_email,
             crms.date_added,
             DATE_FORMAT(crms.date_added, '%M %D, %Y at %l:%i:%s%p') AS date_added_formatted,
@@ -430,7 +430,7 @@ SQL;
         INNER JOIN Gene g ON crms.gene_id = g.gene_id
         INNER JOIN Chromosome c ON crms.chromosome_id = c.chromosome_id
         INNER JOIN EvidenceTerm e ON crms.evidence_id = e.evidence_id
-        LEFT OUTER JOIN EvidenceSubtypeTerm es ON crms.evidence_subtype_id = es.evidence_subtype_id        
+        LEFT OUTER JOIN EvidenceSubtypeTerm es ON crms.evidence_subtype_id = es.evidence_subtype_id
         INNER JOIN SequenceSourceTerm sst ON crms.sequence_source_id = sst.source_id
         INNER JOIN Citation cite ON crms.pubmed_id = cite.external_id AND
             cite.citation_type = 'PUBMED'
@@ -462,8 +462,8 @@ SQL;
                 $sql = <<<SQL
                 SELECT crms.crm_segment_id,
                     crms.pubmed_id,
-                    et.identifier, 
-                    et.term_id AS id, 
+                    et.identifier,
+                    et.term_id AS id,
                     et.term
                 FROM CRMSegment crms
                 INNER JOIN CRMSegment_has_Expression_Term map ON crms.crm_segment_id = map.crm_segment_id
@@ -656,7 +656,7 @@ SQL;
                       WHERE entity_id IS NOT NULL
                       GROUP BY entity_id) AS optimized_crms
                 INNER JOIN CRMSegment crms ON optimized_crms.entity_id = crms.entity_id AND
-                    optimized_crms.last_version = crms.version                            
+                    optimized_crms.last_version = crms.version
                 INNER JOIN Species sfs ON crms.sequence_from_species_id = sfs.species_id
                 INNER JOIN Species ais ON crms.assayed_in_species_id = ais.species_id
                 INNER JOIN Gene g ON crms.gene_id = g.gene_id
@@ -1573,9 +1573,9 @@ SQL;
             IF(ISNULL(crms.auditor_id), '', crms.last_audit) AS last_audit
         FROM CRMSegment crms
         INNER JOIN Users curator ON crms.curator_id = curator.user_id
-        LEFT OUTER JOIN Users auditor ON crms.auditor_id = auditor.user_id        
-        WHERE crms.state IN ('approval', 'approved', 'current', 'deleted', 'editing') AND 
-            $redflyIdCriteria AND 
+        LEFT OUTER JOIN Users auditor ON crms.auditor_id = auditor.user_id
+        WHERE crms.state IN ('approval', 'approved', 'current', 'deleted', 'editing') AND
+            $redflyIdCriteria AND
             $nameCriteria
 SQL;
         $result = $this->db->query($sql);
@@ -1644,7 +1644,7 @@ SQL;
         WHERE crms.state IN ('approval', 'approved', 'current', 'deleted', 'editing') AND
             $redflyIdCriteria AND
             crms.chromosome_id = $chromosomeId AND
-            crms.current_start BETWEEN $startMin AND $startMax AND 
+            crms.current_start BETWEEN $startMin AND $startMax AND
             crms.current_end BETWEEN $endMin AND $endMax
 SQL;
         $result = $this->db->query($sql);
@@ -2102,7 +2102,7 @@ SQL;
             $sql = <<<SQL
             SELECT crm_segment_id
             FROM CRMSegment
-            WHERE entity_id = $entityId AND 
+            WHERE entity_id = $entityId AND
                 version = $version
 SQL;
             $result = $this->db->query($sql);
@@ -2265,7 +2265,7 @@ SQL;
                 if ( $type !== self::EntityCode ) {
                     throw new Exception($redflyId . " is not a valid CRM segment id");
                 }
-                $sql = "SELECT pubmed_id 
+                $sql = "SELECT pubmed_id
                         FROM CRMSegment";
                 $sql .= ( $dbId !== null
                     ? " WHERE entity_id IS NULL and rc_id = " . $dbId
@@ -2398,9 +2398,9 @@ SQL;
             );
         }
         $sql = <<<SQL
-        SELECT crms.crm_segment_id AS id, 
-            crms.entity_id, 
-            crms.version, 
+        SELECT crms.crm_segment_id AS id,
+            crms.entity_id,
+            crms.version,
             crms.pubmed_id,
             GROUP_CONCAT(fei.label) AS flyexpress_labels
         FROM CRMSegment crms
