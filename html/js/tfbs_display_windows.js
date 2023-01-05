@@ -133,7 +133,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
                 'location',
                 'name',
                 'notes',
-                'previous_curator_full_names',                
+                'previous_curator_full_names',
                 'public_browser_links',
                 'public_browser_names',
                 'public_database_links',
@@ -214,7 +214,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
         this.redflyStores.anatomicalExpressionTerms.load();
         this.redflyStores.associatedRc.load();
         this.redflyStores.coordinates.load();
-        this.redflyStores.tfbs.load();        
+        this.redflyStores.tfbs.load();
         // Increment the coordinates of the next window.
         REDfly.config.nextWindowCoordinates = REDfly.fn.getNextWindowCoordinates(
             REDfly.config.nextWindowCoordinates[0],
@@ -224,7 +224,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
             this,
             arguments
         );
-    },    
+    },
     // ------------------------------------------------------------------------------------------
     // Collector function to create the window onces all stores have loaded.
     // ------------------------------------------------------------------------------------------
@@ -410,7 +410,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
                 html: '<b>Release ' + tfbsRecord.get('release_version') +
                     ' Coordinates: </b>' + tfbsRecord.get('coordinates') + ' <br /><br />'
             },
-            // The previous coordinates no longer needed  
+            // The previous coordinates no longer needed
             //previousCoordinatesWidget,
             {
                 html: '<b>"Sequence From" Species: </b>' + sequenceFromSpeciesScientificName + '<br />'
@@ -438,7 +438,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
                 i < locations.length;
                 i++ ) {
                 locationInformations += locations[i] + '<br/><br/>';
-            }    
+            }
             var locationPanel = new Ext.Panel({
                 id: 'tab-location-' + this.redflyOptions.redflyId,
                 html: [{
@@ -456,7 +456,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
             previousCurators += '<b>Previous Curator(s):</b> ' + tfbsRecord.get('previous_curator_full_names') + '<br /><br />';
         } else {
             previousCurators = '<br />';
-        }        
+        }
         var citationPanel = new Ext.Panel({
             id: 'tab-citation-' + this.redflyOptions.redflyId,
             html: [
@@ -526,7 +526,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
                 '<b>Sequence:</b><font face="courier">' + formattedSequence + '</font><br><br>' +
                 '<b>Sequence with Flank:</b><font face="courier">' + formattedSequenceWithFlank + '</font>',
             tabTip: 'The length and nucleotide sequence of this Transcription Factor Binding Site',
-            title: 'Sequence'    
+            title: 'Sequence'
         });
         this.redflyOptions.tabPanel.add(sequencePanel);
         var anatomicalExpressionTermGrid = new Ext.grid.GridPanel({

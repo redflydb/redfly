@@ -5,7 +5,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
     autoscroll: true,
     closable: false,
     height: REDfly.config.windowHeight,
-    // id will be set to the REDfly identifier and used by Ext.WindowGroup to identify the window    
+    // id will be set to the REDfly identifier and used by Ext.WindowGroup to identify the window
     id: null,
     layout: 'fit',
     plain: true,
@@ -87,10 +87,10 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                 'pubmed_id',
                 'sex',
                 'silencer',
-                'stage_off_identifier', 
-                'stage_off_term', 
-                'stage_on_identifier', 
-                'stage_on_term', 
+                'stage_off_identifier',
+                'stage_off_term',
+                'stage_on_identifier',
+                'stage_on_term',
                 'term'
             ],
             idProperty: 'id',
@@ -109,7 +109,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
             proxy: new Ext.data.HttpProxy({
                 method: 'GET',
                 url: redflyApiUrl + '/jsonstore/anatomicalexpression/get?redfly_id=' +
-                    this.redflyOptions.redflyId + '&triplestore=true' + 
+                    this.redflyOptions.redflyId + '&triplestore=true' +
                     '&sort=anatomical_expression_term,stage_on_term,stage_off_term,biological_process_term'
             }),
             root: 'results',
@@ -202,7 +202,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
             totalProperty: 'num'
         });
         this.redflyOptions.storesNumber++;
-        // Create the tab panel to hold all of the tabs but don't populate them 
+        // Create the tab panel to hold all of the tabs but don't populate them
         // until the stores are loaded.
         this.redflyOptions.tabPanel = new Ext.TabPanel({
             activeTab: 0,
@@ -229,7 +229,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                 },
                 scope: this,
                 text: 'Close'
-            }],            
+            }],
             defaults: {
                 autoScroll: true
             },
@@ -283,7 +283,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
     },
     // ------------------------------------------------------------------------------------------
     // Create the CRM segment window. This is done after all of the stores have loaded.
-    // ------------------------------------------------------------------------------------------    
+    // ------------------------------------------------------------------------------------------
     createComponents: function() {
         var crmSegmentRecord = this.redflyStores.crmSegment.getAt(0);
         var sequenceFromSpeciesScientificName = crmSegmentRecord.get('sequence_from_species_scientific_name');
@@ -308,11 +308,11 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                     image: this.redflyStores.image.getAt(i).get('image')
                 });
             }
-        }        
+        }
         if ( crmSegmentName.match(/[a-zA-Z0-9()-]_VT[0-9]/g) ) {
             var vc = crmSegmentName.split('_')[1];
             vc_href = 'http://enhancers.starklab.org/tile/'+ vc;
-            imageString += '<br><b>Fly Enhancers: </b> <a target="_blank" href="' + 
+            imageString += '<br><b>Fly Enhancers: </b> <a target="_blank" href="' +
                 vc_href + '/">' + vc + '</a>';
         }
         var sequence = crmSegmentRecord.get('sequence');
@@ -362,11 +362,11 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
             })
             : new Ext.Component() );
         var publicDatabaseInformations = '';
-        if ( (crmSegmentRecord.get('gene_identifier').toLowerCase() !== 'unspecified') && 
+        if ( (crmSegmentRecord.get('gene_identifier').toLowerCase() !== 'unspecified') &&
             (crmSegmentRecord.get('public_database_names') !== null) &&
             (crmSegmentRecord.get('public_database_names') !== '') ) {
             var publicDatabaseNames = crmSegmentRecord.get('public_database_names').split(',');
-            var publicDatabaseLinks = crmSegmentRecord.get('public_database_links').split(',');    
+            var publicDatabaseLinks = crmSegmentRecord.get('public_database_links').split(',');
             for ( var publicDatabaseNameIndex = 0;
                 publicDatabaseNameIndex < publicDatabaseNames.length;
                 publicDatabaseNameIndex++ ) {
@@ -375,7 +375,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                         publicDatabaseInformations += ' (';
                     } else {
                         publicDatabaseInformations += ' | ';
-                    } 
+                    }
                     publicDatabaseInformations +=
                         '<a href="' +
                         publicDatabaseLinks[publicDatabaseNameIndex].replace('gene_identifier', crmSegmentRecord.get('gene_identifier')) +
@@ -447,7 +447,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                 html: '<b>Release ' + crmSegmentRecord.get('release_version') + ' Coordinates: </b>' +
                     crmSegmentRecord.get('coordinates') + ' <br /><br />'
             },
-            // The previous coordinates no longer needed 
+            // The previous coordinates no longer needed
             //previousCoordinatesWidget,
             {
                 html: '<b>"Sequence From" Species: </b>' + sequenceFromSpeciesScientificName + '<br />'
@@ -475,13 +475,13 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                 i < locations.length;
                 i++ ) {
                 locationInformations += locations[i] + '<br/><br/>';
-            }    
+            }
             var locationPanel = new Ext.Panel({
                 id: 'tab-location-' + this.redflyOptions.redflyId,
                 html: [{
                     html: locationInformations
                 }, {
-                    html: '<img src="' + REDfly.config.urls.flybase_images + crmSegmentRecord.get('image') + 
+                    html: '<img src="' + REDfly.config.urls.flybase_images + crmSegmentRecord.get('image') +
                         '" alt=""/><br /><br />'
                 }],
                 tabTip: 'Location information for the selected CRM Segment',
@@ -500,7 +500,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
         if ( crmSegmentName.includes('Unspecified_VT') ) {
             var vc = crmSegmentName.split('_')[1];
             vc_href = 'http://enhancers.starklab.org/tile/' + vc;
-            vtHTMLString = '<b>Fly Enhancers: </b> <a target="_blank" href="' + vc_href + '/">' + 
+            vtHTMLString = '<b>Fly Enhancers: </b> <a target="_blank" href="' + vc_href + '/">' +
                 vc + '</a><br><br>';
         } else {
             vtHTMLString = '';
@@ -512,7 +512,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
             var newSecondaryPubmedReference = this.redflyStores.anatomicalExpressionTerms.getAt(index).get('pubmed_id');
             if ( (newSecondaryPubmedReference !== null) &&
                 (newSecondaryPubmedReference !== '') &&
-                (newSecondaryPubmedReference !== crmSegmentRecord.get('pubmed_id')) && 
+                (newSecondaryPubmedReference !== crmSegmentRecord.get('pubmed_id')) &&
                 (! secondaryPubmedReferences.includes(newSecondaryPubmedReference) )) {
                 secondaryPubmedReferences.push(newSecondaryPubmedReference);
             }
@@ -599,7 +599,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                         var flybaseLink = REDfly.templates.flybase_identifier_url.apply({
                             flybase_id: store.getAt(rowIndex).get('identifier'),
                             text: 'FlyBaseID',
-                            url: REDfly.config.urls.flybase_cv_term_report                            
+                            url: REDfly.config.urls.flybase_cv_term_report
                         });
                         return redflyLink + ' | ' + flybaseLink;
                     },
@@ -707,24 +707,24 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                             default:
                                 return 'Unknown';
                         }
-                    },                    
+                    },
                     sortable: false,
                     width: 70
                 }, {
                     // Value will be empty when dataIndex = ''
                     dataIndex: '',
                     header: 'Biological Process',
-                    menuDisabled: true,                    
+                    menuDisabled: true,
                     renderer: function (value, metaData, record, rowIndex, colIndex, store) {
-                        if (( store.getAt(rowIndex).get('biological_process_identifier') === null ) || 
-                            ( store.getAt(rowIndex).get('biological_process_identifier') === '' )) { 
-                            return ''; 
+                        if (( store.getAt(rowIndex).get('biological_process_identifier') === null ) ||
+                            ( store.getAt(rowIndex).get('biological_process_identifier') === '' )) {
+                            return '';
                         } else {
                             return REDfly.templates.go_identifier_url.apply({
                                 go_id: store.getAt(rowIndex).get('biological_process_identifier'),
                                 text: store.getAt(rowIndex).get('biological_process_term'),
                                 url: REDfly.config.urls.go
-                            }); 
+                            });
                         }
                     },
                     sortable: false,
@@ -749,7 +749,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                             default:
                                 return 'Unknown';
                         }
-                    },                    
+                    },
                     sortable: false,
                     width: 70
                 }, {
@@ -759,10 +759,10 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                     menuDisabled: true,
                     renderer: function (value, metaData, record, rowIndex, colIndex, store) {
                         return value.charAt(0).toUpperCase() + value.slice(1);
-                    },                    
+                    },
                     sortable: false,
                     width: 100
-                } 
+                }
             ],
             store: this.redflyStores.anatomicalExpressionTerms
         });
