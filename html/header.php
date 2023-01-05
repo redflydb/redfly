@@ -94,7 +94,7 @@ $lastUpdateLine = "Database updated on " . $lastUpdateTime . " with " . $numberL
         <?php
             if ( isset($GLOBALS["options"]->google_applications->analytics_api_3_tracking_id) ) {
                 print "gtag('config', '" . $GLOBALS["options"]->google_applications->analytics_api_3_tracking_id . "');";
-            }        
+            }
             if ( isset($GLOBALS["options"]->google_applications->analytics_4_measurement_id) ) {
                 print "gtag('config', '" . $GLOBALS["options"]->google_applications->analytics_4_measurement_id . "');";
             }
@@ -126,6 +126,9 @@ $lastUpdateLine = "Database updated on " . $lastUpdateTime . " with " . $numberL
     <li><a class="nav_effect"
            href="<?= $baseURL ?>search.php"
            onclick="document.location.reload(true)">Search</a></li>
+    <li><a class="nav_effect"
+           href="http://128.205.11.6/jbrowse"
+           target="_blank">JBrowse</a></li>
     <li><a class="nav_effect"
            href="<?= $baseURL ?>help.php">Help</a></li>
     <li><a class="nav_effect"
