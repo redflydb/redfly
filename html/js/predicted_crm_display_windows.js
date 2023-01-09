@@ -354,7 +354,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                         publicBrowserInformations += '<a href="' +
                             publicBrowserLinks[index]
                                 .replace('chromosome', predictedCrmRecord.get('chromosome'))
-                                .replace('start..end', predictedCrmRecord.get('start') + '..' + predictedCrmRecord.get('end')) +
+                                .replace('start..end', (predictedCrmRecord.get('start') - 2000) + '..' + (predictedCrmRecord.get('end') + 2000)) +
                             '" target="_blank">' +
                             publicBrowserNames[index] +
                             '</a>';

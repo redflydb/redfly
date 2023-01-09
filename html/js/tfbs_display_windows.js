@@ -380,7 +380,7 @@ REDfly.window.tfbs = Ext.extend(Ext.Window, {
                         publicBrowserInformations += '<a href="' +
                             publicBrowserLinks[publicBrowserNameIndex]
                                 .replace('chromosome', tfbsRecord.get('chromosome'))
-                                .replace('start..end', tfbsRecord.get('start') + '..' + tfbsRecord.get('end')) +
+                                .replace('start..end', (tfbsRecord.get('start') - 2000) + '..' + (tfbsRecord.get('end') + 2000)) +
                             '" target="_blank">' +
                             publicBrowserNames[publicBrowserNameIndex] +
                             '</a>';

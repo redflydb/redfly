@@ -417,7 +417,7 @@ REDfly.window.crmSegment = Ext.extend(Ext.Window, {
                         publicBrowserInformations += '<a href="' +
                             publicBrowserLinks[publicBrowserNameIndex]
                                 .replace('chromosome', crmSegmentRecord.get('chromosome'))
-                                .replace('start..end', crmSegmentRecord.get('start') + '..' + crmSegmentRecord.get('end')) +
+                                .replace('start..end', (crmSegmentRecord.get('start') - 2000) + '..' + (crmSegmentRecord.get('end') + 2000)) +
                             '" target="_blank">' +
                             publicBrowserNames[publicBrowserNameIndex] +
                             '</a>';

@@ -471,7 +471,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                         publicBrowserInformations += '<a href="' +
                             publicBrowserLinks[publicBrowserNameIndex]
                                 .replace('chromosome', rcRecord.get('chromosome'))
-                                .replace('start..end', rcRecord.get('start') + '..' + rcRecord.get('end')) +
+                                .replace('start..end', (parseInt(rcRecord.get('start')) - 2000) + '..' + (parseInt(rcRecord.get('end')) + 2000)) +
                             '" target="_blank">' +
                             publicBrowserNames[publicBrowserNameIndex] +
                             '</a>';
