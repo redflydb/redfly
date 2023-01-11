@@ -3,6 +3,16 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2023-January-12 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.6.0 released</li>
+      <li>REDfly JBrowse releases</li>
+      <li>Please see the <a href="release_notes.php#2022-01-12">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2022-October-21 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.5.4 released</li>
@@ -580,7 +590,7 @@ our &quot;search by date - last updated after&quot; feature. Please note
 that new or updated records do NOT cause the <?= HTML_REDFLY_LOGO ?> version to
 update. As always when accessing data from an online database,
 please make note of the date on which you access your data and
-include this in any reports of analysis performed using <?= HTML_REDFLY_LOGO ?> 
+include this in any reports of analysis performed using <?= HTML_REDFLY_LOGO ?>
 records</li>
     </ul>
   </td>

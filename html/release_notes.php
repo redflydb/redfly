@@ -1,5 +1,10 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2023-01-12"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.0 Release Notes (January 12, 2023)
+<ul>
+  <li>REDfly JBrowse component based on Drosophila melanogaster data goes live.</li>
+</ul>
 <a name="2022-10-21"></a>
 <?= HTML_REDFLY_LOGO ?> v9.5.4 Release Notes (October 21, 2022)
 <ul>
@@ -131,7 +136,7 @@
 <?= HTML_REDFLY_LOGO ?> v8.0.0 Release Notes (September 14, 2020)
 <ul>
   <li>Additional insect species included in the database</li>
-  <li>A few old minor bugs discovered and fixed</li>  
+  <li>A few old minor bugs discovered and fixed</li>
 </ul>
 <a name="2020-07-23"></a>
 <?= HTML_REDFLY_LOGO ?> v7.1.1 Release Notes (July 23, 2020)
