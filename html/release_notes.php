@@ -1,5 +1,11 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2023-04-28"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.1 Release Notes (April 28, 2023)
+<ul>
+  <li>Suspend updating of iCRM data until new iCRM algorithms are released.</li>
+  <li>Some elements were renamed.</li>
+</ul>
 <a name="2023-01-12"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.0 Release Notes (January 12, 2023)
 <ul>

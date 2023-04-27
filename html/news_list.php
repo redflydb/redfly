@@ -3,11 +3,22 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2023-April-28 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.6.1 released</li>
+      <li>Temporarily suspend the update of iCRM data</li>
+      <li>Rename some elements</li>
+      <li>Please see the <a href="release_notes.php#2023-04-28">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2023-January-12 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.6.0 released</li>
       <li>REDfly JBrowse releases</li>
-      <li>Please see the <a href="release_notes.php#2022-01-12">Release Notes</a> for more details</li>
+      <li>Please see the <a href="release_notes.php#2023-01-12">Release Notes</a> for more details</li>
     </ul>
   </td>
 </tr>
