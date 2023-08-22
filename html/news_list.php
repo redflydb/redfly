@@ -3,6 +3,16 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2023-August-25 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.6.2 released</li>
+      <li>Fix some bugs</li>
+      <li>Please see the <a href="release_notes.php#2023-08-25">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2023-April-28 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.6.1 released</li>

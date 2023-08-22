@@ -1,5 +1,11 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2023-08-25"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.2 Release Notes (August 25, 2023)
+<ul>
+  <li>Fix duplicate RCs bug.</li>
+  <li>Correct error messages are reported when uploading attribute file and expression file.</li>
+</ul>
 <a name="2023-04-28"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.1 Release Notes (April 28, 2023)
 <ul>
