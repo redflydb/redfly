@@ -17,7 +17,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
     // We must assign the options and stores objects in initComponent() or it will use a static copy
     // shared among all windows
     entityName: null,
-    redflyId: null,    
+    redflyId: null,
     redflyOptions: null,
     redflyStores: null,
     // ------------------------------------------------------------------------------------------
@@ -78,17 +78,17 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
         this.redflyOptions.storesNumber++;
         this.redflyStores.anatomicalExpressionTerms = new Ext.data.JsonStore({
             fields: [
-                'biological_process_identifier', 
+                'biological_process_identifier',
                 'biological_process_term',
                 'identifier',
                 'id',
                 'pubmed_id',
                 'sex',
                 'silencer',
-                'stage_off_identifier', 
-                'stage_off_term', 
-                'stage_on_identifier', 
-                'stage_on_term', 
+                'stage_off_identifier',
+                'stage_off_term',
+                'stage_on_identifier',
+                'stage_on_term',
                 'term'
             ],
             idProperty: 'id',
@@ -107,7 +107,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
             proxy: new Ext.data.HttpProxy({
                 method: 'GET',
                 url: redflyApiUrl + '/jsonstore/anatomicalexpression/get?redfly_id=' +
-                    this.redflyOptions.redflyId + '&triplestore=true' + 
+                    this.redflyOptions.redflyId + '&triplestore=true' +
                     '&sort=anatomical_expression_term,stage_on_term,stage_off_term,biological_process_term'
             }),
             root: 'results',
@@ -130,7 +130,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                 'last_update',
                 'name',
                 'notes',
-                'previous_curator_full_names',                
+                'previous_curator_full_names',
                 'public_browser_links',
                 'public_browser_names',
                 'public_database_links',
@@ -166,7 +166,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
             totalProperty: 'num'
         });
         this.redflyOptions.storesNumber++;
-        // Create the tab panel to hold all of the tabs but don't populate them 
+        // Create the tab panel to hold all of the tabs but don't populate them
         // until the stores are loaded.
         this.redflyOptions.tabPanel = new Ext.TabPanel({
             activeTab: 0,
@@ -193,7 +193,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                 },
                 scope: this,
                 text: 'Close'
-            }],            
+            }],
             defaults: {
                 autoScroll: true
             },
@@ -246,7 +246,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
     },
     // ------------------------------------------------------------------------------------------
     // Create the predicted CRM window. This is done after all of the stores have loaded.
-    // ------------------------------------------------------------------------------------------    
+    // ------------------------------------------------------------------------------------------
     createComponents: function() {
         var predictedCrmRecord = this.redflyStores.predictedCrm.getAt(0);
         var sequenceFromSpeciesScientificName = predictedCrmRecord.get('sequence_from_species_scientific_name');
@@ -354,7 +354,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                         publicBrowserInformations += '<a href="' +
                             publicBrowserLinks[index]
                                 .replace('chromosome', predictedCrmRecord.get('chromosome'))
-                                .replace('start..end', predictedCrmRecord.get('start') + '..' + predictedCrmRecord.get('end')) +
+                                .replace('start..end', (parseInt(predictedCrmRecord.get('start')) - 2000) + '..' + (parseInt(predictedCrmRecord.get('end')) + 2000)) +
                             '" target="_blank">' +
                             publicBrowserNames[index] +
                             '</a>';
@@ -384,7 +384,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                 html: '<b>Release ' + predictedCrmRecord.get('release_version') + ' Coordinates: </b>' +
                     predictedCrmRecord.get('coordinates') + ' <br /><br />'
             },
-            // The previous coordinates no longer needed  
+            // The previous coordinates no longer needed
             //previousCoordinatesWidget,
             {
                 html: '<b>"Sequence From" Species: </b>' + sequenceFromSpeciesScientificName + '<br />'
@@ -404,7 +404,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
         if ( predictedCrmName.match(/[a-zA-Z0-9()-]_VT[0-9]/g) ) {
             var vc = predictedCrmName.split('_')[1];
             vc_href = 'http://enhancers.starklab.org/tile/' + vc;
-            vtHTMLString = '<b>Fly Enhancers: </b> <a target="_blank" href="' + vc_href + '/">' + 
+            vtHTMLString = '<b>Fly Enhancers: </b> <a target="_blank" href="' + vc_href + '/">' +
                 vc + '</a><br><br>';
         } else {
             vtHTMLString = '';
@@ -416,7 +416,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
             var newSecondaryPubmedReference = this.redflyStores.anatomicalExpressionTerms.getAt(index).get('pubmed_id');
             if ( (newSecondaryPubmedReference !== null) &&
                 (newSecondaryPubmedReference !== '') &&
-                (newSecondaryPubmedReference !== predictedCrmRecord.get('pubmed_id')) && 
+                (newSecondaryPubmedReference !== predictedCrmRecord.get('pubmed_id')) &&
                 (! secondaryPubmedReferences.includes(newSecondaryPubmedReference) )) {
                 secondaryPubmedReferences.push(newSecondaryPubmedReference);
             }
@@ -473,7 +473,7 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                     html: '<b>Evidence For Element:</b> ' + predictedCrmRecord.get('evidence_term') + '<br />'
                 }, {
                     html: '<b>Evidence Subtype For Element:</b> ' + predictedCrmRecord.get('evidence_subtype_term') + '<br />'
-                }                
+                }
             ],
             tabTip: 'Citation information/link to the PubMed record',
             title: 'Citation'
@@ -611,24 +611,24 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                             default:
                                 return 'Unknown';
                         }
-                    },                    
+                    },
                     sortable: false,
                     width: 70
                 }, {
                     // Value will be empty when dataIndex = ''
                     dataIndex: '',
                     header: 'Biological Process',
-                    menuDisabled: true,                    
+                    menuDisabled: true,
                     renderer: function (value, metaData, record, rowIndex, colIndex, store) {
-                        if (( store.getAt(rowIndex).get('biological_process_identifier') === null ) || 
-                            ( store.getAt(rowIndex).get('biological_process_identifier') === '' )) { 
-                            return ''; 
+                        if (( store.getAt(rowIndex).get('biological_process_identifier') === null ) ||
+                            ( store.getAt(rowIndex).get('biological_process_identifier') === '' )) {
+                            return '';
                         } else {
                             return REDfly.templates.go_identifier_url.apply({
                                 go_id: store.getAt(rowIndex).get('biological_process_identifier'),
                                 text: store.getAt(rowIndex).get('biological_process_term'),
                                 url: REDfly.config.urls.go
-                            }); 
+                            });
                         }
                     },
                     sortable: false,
@@ -640,10 +640,10 @@ REDfly.window.predictedCrm = Ext.extend(Ext.Window, {
                     menuDisabled: true,
                     renderer: function (value, metaData, record, rowIndex, colIndex, store) {
                         return value.charAt(0).toUpperCase() + value.slice(1);
-                    },                    
+                    },
                     sortable: false,
                     width: 100
-                } 
+                }
             ],
             store: this.redflyStores.anatomicalExpressionTerms
         });

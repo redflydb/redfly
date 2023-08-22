@@ -1,5 +1,22 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2023-08-25"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.2 Release Notes (August 25, 2023)
+<ul>
+  <li>Fix duplicate RCs bug.</li>
+  <li>Correct error messages are reported when uploading attribute file and expression file.</li>
+</ul>
+<a name="2023-04-28"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.1 Release Notes (April 28, 2023)
+<ul>
+  <li>Suspend updating of iCRM data until new iCRM algorithms are released.</li>
+  <li>Some elements were renamed. #, ^ and ' were replaced with -, -, prime for better compatibility with computational parsers.</li>
+</ul>
+<a name="2023-01-12"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.0 Release Notes (January 12, 2023)
+<ul>
+  <li>REDfly JBrowse component based on Drosophila melanogaster data goes live.</li>
+</ul>
 <a name="2022-10-21"></a>
 <?= HTML_REDFLY_LOGO ?> v9.5.4 Release Notes (October 21, 2022)
 <ul>
@@ -131,7 +148,7 @@
 <?= HTML_REDFLY_LOGO ?> v8.0.0 Release Notes (September 14, 2020)
 <ul>
   <li>Additional insect species included in the database</li>
-  <li>A few old minor bugs discovered and fixed</li>  
+  <li>A few old minor bugs discovered and fixed</li>
 </ul>
 <a name="2020-07-23"></a>
 <?= HTML_REDFLY_LOGO ?> v7.1.1 Release Notes (July 23, 2020)

@@ -134,6 +134,10 @@ class ImportDataHandler
                     $entityName = trim($attributeRow["gene_name"]) . "_" . trim($attributeRow["arbitrary_name"]);
                     $newEntityAnatomicalExpressions = [];
                     if ( 0 < $anatomicalExpressionRowsNumber ) {
+                        if (!in_array($entityName, $entityNames)) {
+                            throw new Exception(sprintf("The gene_name: %s and arbitrary_name: %s that exist in the attribute file do not exist in the expression file", $attributeRow["gene_name"], $attributeRow["arbitrary_name"]));
+                        }
+
                         // Searching all the anatomical expression(s) associated to the new entity saved
                         // from the anatomical expression data
                         foreach ( array_keys($entityNames, $entityName) as $key => $value ) {
@@ -831,7 +835,7 @@ class ImportDataHandler
                         if ( strpos(
                             $line,
                             "(+)"
-                        ) !== false ) {    
+                        ) !== false ) {
                             fwrite($fixedFastaFile, ">" . $matches[2] . "(+)\n");
                         } else {
                             fwrite($fixedFastaFile, ">" . $matches[2] . "(-)\n");

@@ -20,9 +20,9 @@ RUN apt-get update -y && \
         pdo_mysql \
         pgsql && \
     pecl install \
-        mcrypt-1.0.5 \
-        yaml-2.2.2 \
-        xdebug-3.2.0 && \
+        mcrypt-1.0.6 \
+        yaml-2.2.3 \
+        xdebug-3.2.2 && \
     docker-php-ext-enable \
         mcrypt \
         yaml
@@ -31,8 +31,15 @@ RUN apt-get update -y && \
 COPY ./assets/config.ini /usr/local/etc/php/conf.d/
 COPY ./assets/redfly-site.conf /etc/apache2/conf-available/
 
+# disable apache2 header to hide apache version.
+RUN sed -i 's/^ServerTokens OS/ServerTokens Prod/g' /etc/apache2/conf-enabled/security.conf && \
+    sed -i 's/^ServerSignature On/#ServerSignature On/g' /etc/apache2/conf-enabled/security.conf && \
+    sed -i 's/^#ServerSignature Off/ServerSignature Off/g' /etc/apache2/conf-enabled/security.conf && \
+# hide php version.
+    cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && \
+    echo 'expose_php = Off' >> /usr/local/etc/php/php.ini && \
 # Enable mod_rewrite and the site configuration for the Apache HTTP server.
-RUN a2enmod rewrite && \
+    a2enmod rewrite && \
     a2enconf redfly-site
 
 # Expose a mount point for mounting and working with the web application files.

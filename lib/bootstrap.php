@@ -2,7 +2,7 @@
 require __DIR__ . "/../vendor/autoload.php";
 ini_set(
     "memory_limit",
-    "256M"
+    "512M"
 );
 ini_set(
     "max_execution_time",

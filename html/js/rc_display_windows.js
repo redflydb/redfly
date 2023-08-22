@@ -101,7 +101,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                         'Error',
                         'Error loading the anatomical expression terms'
                     );
-                },                
+                },
                 load: {
                     fn: this.allStoresLoaded,
                     scope: this
@@ -110,7 +110,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
             proxy: new Ext.data.HttpProxy({
                 method: 'GET',
                 url: redflyApiUrl + '/jsonstore/anatomicalexpression/get?redfly_id=' +
-                    this.redflyOptions.redflyId + '&triplestore=true' + 
+                    this.redflyOptions.redflyId + '&triplestore=true' +
                     '&sort=anatomical_expression_term,stage_on_term,stage_off_term,biological_process_term'
             }),
             root: 'results',
@@ -197,7 +197,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                 'location',
                 'name',
                 'notes',
-                'previous_curator_full_names',                
+                'previous_curator_full_names',
                 'public_browser_links',
                 'public_browser_names',
                 'public_database_links',
@@ -223,7 +223,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                     fn: this.allStoresLoaded,
                     scope: this
                 }
-            },            
+            },
             proxy: new Ext.data.HttpProxy({
                 method: 'GET',
                 url: redflyApiUrl + '/jsonstore/reporterconstruct/get?redfly_id=' +
@@ -233,7 +233,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
             totalProperty: 'num'
         });
         this.redflyOptions.storesNumber++;
-        // Create the tab panel to hold all of the tabs but don't populate them 
+        // Create the tab panel to hold all of the tabs but don't populate them
         // until the stores are loaded.
         this.redflyOptions.tabPanel = new Ext.TabPanel({
             activeTab: 0,
@@ -260,7 +260,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                 },
                 scope: this,
                 text: 'Close'
-            }],            
+            }],
             defaults: {
                 autoScroll: true
             },
@@ -315,7 +315,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
     },
     // ------------------------------------------------------------------------------------------
     // Create the RC window. This is done after all of the stores have loaded.
-    // ------------------------------------------------------------------------------------------    
+    // ------------------------------------------------------------------------------------------
     createComponents: function() {
         var rcRecord = this.redflyStores.rc.getAt(0);
         var sequenceFromSpeciesScientificName = rcRecord.get('sequence_from_species_scientific_name');
@@ -353,7 +353,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
         if ( rcName.match(/[a-zA-Z0-9()-]_VT[0-9]/g) ) {
             var vc = rcName.split('_')[1];
             vc_href = 'http://enhancers.starklab.org/tile/'+ vc;
-            imageString += '<br><b>Fly Enhancers: </b> <a target="_blank" href="' + 
+            imageString += '<br><b>Fly Enhancers: </b> <a target="_blank" href="' +
                 vc_href + '/">' + vc + '</a>';
         }
         var sequence = rcRecord.get('sequence');
@@ -463,7 +463,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                             '" target="_blank">' +
                             publicBrowserNames[publicBrowserNameIndex] +
                             '</a>';
-                        break;                        
+                        break;
                     case 'JBrowse':
                         if ( publicBrowserInformations !== '<b>Browser Links: </b>' ) {
                             publicBrowserInformations += ' | ';
@@ -471,7 +471,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                         publicBrowserInformations += '<a href="' +
                             publicBrowserLinks[publicBrowserNameIndex]
                                 .replace('chromosome', rcRecord.get('chromosome'))
-                                .replace('start..end', rcRecord.get('start') + '..' + rcRecord.get('end')) +
+                                .replace('start..end', (parseInt(rcRecord.get('start')) - 2000) + '..' + (parseInt(rcRecord.get('end')) + 2000)) +
                             '" target="_blank">' +
                             publicBrowserNames[publicBrowserNameIndex] +
                             '</a>';
@@ -501,7 +501,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                 html: '<b>Release ' + rcRecord.get('release_version') + ' Coordinates: </b>' +
                     rcRecord.get('coordinates') + ' <br /><br />'
             },
-            // The previous coordinates no longer needed  
+            // The previous coordinates no longer needed
             //previousCoordinatesWidget,
             {
                 html: '<b>"Sequence From" Species: </b>' + sequenceFromSpeciesScientificName + '<br />'
@@ -535,13 +535,13 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                 i < locations.length;
                 i++ ) {
                 locationInformations += locations[i] + '<br/><br/>';
-            }    
+            }
             var locationPanel = new Ext.Panel({
                 id: 'tab-location-' + this.redflyOptions.redflyId,
                 html: [{
                     html: locationInformations
                 }, {
-                    html: '<img src="' + REDfly.config.urls.flybase_images + rcRecord.get('image') + 
+                    html: '<img src="' + REDfly.config.urls.flybase_images + rcRecord.get('image') +
                         '" alt=""/><br /><br />'
                 }],
                 tabTip: 'Location information for the selected Reporter Construct',
@@ -560,7 +560,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
         if ( rcName.includes('Unspecified_VT') ) {
             var vc = rcName.split('_')[1];
             vc_href = 'http://enhancers.starklab.org/tile/' + vc;
-            vtHTMLString = '<b>Fly Enhancers: </b> <a target="_blank" href="' + vc_href + '/">' + 
+            vtHTMLString = '<b>Fly Enhancers: </b> <a target="_blank" href="' + vc_href + '/">' +
                 vc + '</a><br><br>';
         } else {
             vtHTMLString = '';
@@ -572,7 +572,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
             var newSecondaryPubmedReference = this.redflyStores.anatomicalExpressionTerms.getAt(index).get('pubmed_id');
             if ( (newSecondaryPubmedReference !== null) &&
                 (newSecondaryPubmedReference !== '') &&
-                (newSecondaryPubmedReference !== rcRecord.get('pubmed_id')) && 
+                (newSecondaryPubmedReference !== rcRecord.get('pubmed_id')) &&
                 (! secondaryPubmedReferences.includes(newSecondaryPubmedReference) )) {
                 secondaryPubmedReferences.push(newSecondaryPubmedReference);
             }
@@ -602,7 +602,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
             previousCurators += '<b>Previous Curator(s):</b> ' + rcRecord.get('previous_curator_full_names') + '<br /><br />';
         } else {
             previousCurators = '<br />';
-        }                
+        }
         var citationPanel = new Ext.Panel({
             id: 'tab-citation-' + this.redflyOptions.redflyId,
             html: [
@@ -804,24 +804,24 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                             default:
                                 return 'Unknown';
                         }
-                    },                    
+                    },
                     sortable: false,
                     width: 70
                 }, {
                     // Value will be empty when dataIndex = ''
                     dataIndex: '',
                     header: 'Biological Process',
-                    menuDisabled: true,                    
+                    menuDisabled: true,
                     renderer: function (value, metaData, record, rowIndex, colIndex, store) {
-                        if (( store.getAt(rowIndex).get('biological_process_identifier') === null ) || 
-                            ( store.getAt(rowIndex).get('biological_process_identifier') === '' )) { 
-                            return ''; 
+                        if (( store.getAt(rowIndex).get('biological_process_identifier') === null ) ||
+                            ( store.getAt(rowIndex).get('biological_process_identifier') === '' )) {
+                            return '';
                         } else {
                             return REDfly.templates.go_identifier_url.apply({
                                 go_id: store.getAt(rowIndex).get('biological_process_identifier'),
                                 text: store.getAt(rowIndex).get('biological_process_term'),
                                 url: REDfly.config.urls.go
-                            }); 
+                            });
                         }
                     },
                     sortable: false,
@@ -846,7 +846,7 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                             default:
                                 return 'Unknown';
                         }
-                    },                    
+                    },
                     sortable: false,
                     width: 70
                 }, {
@@ -856,10 +856,10 @@ REDfly.window.reporterConstruct = Ext.extend(Ext.Window, {
                     menuDisabled: true,
                     renderer: function (value, metaData, record, rowIndex, colIndex, store) {
                         return value.charAt(0).toUpperCase() + value.slice(1);
-                    },                    
+                    },
                     sortable: false,
                     width: 100
-                } 
+                }
             ],
             store: this.redflyStores.anatomicalExpressionTerms
         });
