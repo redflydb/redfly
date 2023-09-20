@@ -35,6 +35,9 @@ COPY ./assets/redfly-site.conf /etc/apache2/conf-available/
 RUN sed -i 's/^ServerTokens OS/ServerTokens Prod/g' /etc/apache2/conf-enabled/security.conf && \
     sed -i 's/^ServerSignature On/#ServerSignature On/g' /etc/apache2/conf-enabled/security.conf && \
     sed -i 's/^#ServerSignature Off/ServerSignature Off/g' /etc/apache2/conf-enabled/security.conf && \
+# security patch
+    a2enmod headers && \
+    sed -i 's/^#Header set X-Frame-Options: "sameorigin"/Header set X-Frame-Options: "DENY"/g' /etc/apache2/conf-enabled/security.conf && \
 # hide php version.
     cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && \
     echo 'expose_php = Off' >> /usr/local/etc/php/php.ini && \
