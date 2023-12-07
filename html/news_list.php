@@ -3,6 +3,17 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2023-December-8 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.6.3 released</li>
+      <li>Remove links</li>
+      <li>Add some chromosomes</li>
+      <li>Please see the <a href="release_notes.php#2023-12-08">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2023-August-25 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.6.2 released</li>

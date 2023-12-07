@@ -3,7 +3,7 @@
 set -e;
 
 # The Aedes aegypti species
-# 
+#
 # Get the VectorBase genome in the GFF format for the Aedes aegypti species
 wget -O - https://vectorbase.org/common/downloads/release-53/AaegyptiLVP_AGWG/gff/data/VectorBase-53_AaegyptiLVP_AGWG.gff > ./raw_aaeg.gff
 # Filter only the necessary terms from the VectorBase genome of the Aedes aegypti species
@@ -40,12 +40,12 @@ rm raw_agam.gff
 #wget -O - https://www.vectorbase.org/download/anatomytgma1122013-06obogz | gunzip > ./tgma.obo
 
 # The Drosophila melanogaster species
-# 
+#
 # Get the FlyBase genome in the GFF format for the Drosophila melanogaster species
-wget -O - ftp://ftp.flybase.net/genomes/dmel/current/gff/dmel-all-no-analysis-r*.gff.gz | gunzip -c > dmel-all-no-analysis.gff;
+wget -O - ftp://ftp.flybase.net/genomes/dmel/current/gff/dmel-all-r*.gff.gz | gunzip -c > dmel-all-no-analysis.gff;
 # Filter only the necessary terms from the FlyBase genome of the Drosophila melanogaster species
 cat dmel-all-no-analysis.gff | awk -F "\t" 'NF == 9 \
-        && $1 ~ /^(2L|2R|3L|3R|4|U|X|Y)$/ \
+        && $1 ~ /^(2L|2R|3L|3R|4|U|X|Y|211000022278279|211000022278436|211000022278449|211000022278760|211000022279165|211000022279188|211000022279264|211000022279392|211000022279681|211000022280328|211000022280341211000022280347|211000022280481|211000022280494|211000022280703|Unmapped_Scaffold_8_D1580_D1567)$/ \
         && $3 ~ /^(CDS|exon|five_prime_UTR|gene|intron|mRNA|ncRNA|snoRNA|snRNA|pseudogene|three_prime_UTR|tRNA)$/' \
     > ./dmel.gff;
 # Get the FlyBase anatomy ontology for the Drosophila melanogaster species

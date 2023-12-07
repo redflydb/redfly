@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("header.php");
 $dbSpeciesUrl = $baseURL . "/api/rest/json/information/species";
 $cUrlSession = curl_init($dbSpeciesUrl);
@@ -26,20 +26,6 @@ $barcelona = 0;
 <div class="heading_c">Species</div>
 <br>
 <div>
-  <a href="http:///199.109.192.174"
-     target="_blank"><strong>BLAT</strong></a>
-  Local implementation of 
-  <a href="http://genome.ucsc.edu/cgi-bin/hgBlat"
-     target="_blank"><strong>UCSC BLAT</strong></a> configured for all the species in the table below</div>
-<br>
-<div>
-  <a href="http:///199.109.193.56"
-     target="_blank"><strong>In-Silico PCR</strong></a>
-  Local implementation of 
-  <a href="http://genome.ucsc.edu/cgi-bin/hgPcr"
-     target="_blank"><strong>UCSC In-Silico PCR</strong></a> configured for all the species in the table below</div>
-<br>
-<div>
   <table border="1" cellpadding="2">
     <tr>
       <th>&nbspScientific Name&nbsp</th>
@@ -65,5 +51,5 @@ $barcelona = 0;
         }
       ?>
   </table>
-</div>  
+</div>
 <?php include("footer.php"); ?>

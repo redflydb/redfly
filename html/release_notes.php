@@ -1,5 +1,11 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2023-12-08"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.3 Release Notes (December 8, 2023)
+<ul>
+  <li>Remove some local links from the Species page.</li>
+  <li>Add some Drosophila chromosomes.</li>
+</ul>
 <a name="2023-08-25"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.2 Release Notes (August 25, 2023)
 <ul>
