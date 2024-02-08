@@ -140,6 +140,9 @@ $lastUpdateLine = "Database updated on " . $lastUpdateTime . " with " . $numberL
     <li><a class="nav_effect"
            href="<?= $baseURL ?>contact.php"
            onclick="document.location.reload(true)">Contact Us</a></li>
+    <li><a class="nav_effect"
+           href="http://128.205.11.6/scrm/options"
+           target="_blank">SCRMshaw_annotations</a></li>
   </ul>
 </nav>
 <hr class="redline">

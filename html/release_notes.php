@@ -1,5 +1,10 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2024-02-09"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.4 Release Notes (February 9, 2024)
+<ul>
+  <li>The public beta version of SCRMshaw page is online.</li>
+</ul>
 <a name="2023-12-08"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.3 Release Notes (December 8, 2023)
 <ul>

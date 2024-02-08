@@ -3,6 +3,16 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2024-February-9 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.6.4 released</li>
+      <li>The public beta version of SCRMshaw page is online</li>
+      <li>Please see the <a href="release_notes.php#2024-02-09">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2023-December-8 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.6.3 released</li>
