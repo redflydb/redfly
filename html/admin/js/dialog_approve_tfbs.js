@@ -36,7 +36,7 @@ REDfly.component.tfbsApprovalPanel = new Ext.extend(Ext.FormPanel, {
                 method: 'GET',
                 url: REDfly.config.apiUrl + '/jsonstore/transcriptionfactorbindingsite/load'
             }),
-            // Embedded Ext.data.JsonReader configs            
+            // Embedded Ext.data.JsonReader configs
             fields: REDfly.dialog.tfbsRecord,
             idProperty: 'redfly_id',
             messageProperty: 'message',
@@ -44,7 +44,7 @@ REDfly.component.tfbsApprovalPanel = new Ext.extend(Ext.FormPanel, {
             successProperty: 'success',
             totalProperty: 'num'
         });
-        // The following fields are going to be placed in the second form at 
+        // The following fields are going to be placed in the second form at
         // the right side of this super-form
         var itemList = [
             {
@@ -65,7 +65,7 @@ REDfly.component.tfbsApprovalPanel = new Ext.extend(Ext.FormPanel, {
                 width: 200,
                 xtype: 'displayfield'
             }
-        ];        
+        ];
         var formElements = {
             sequenceFromSpecies: this.newFormField(
                 'textfield',
@@ -91,9 +91,9 @@ REDfly.component.tfbsApprovalPanel = new Ext.extend(Ext.FormPanel, {
                 'textfield',
                 'gene_name',
                 'Gene Name'
-            ),            
+            ),
             transcriptionFactor: this.newFormField(
-                'textfield',                
+                'textfield',
                 'tf_name',
                 'Transcription Factor'
             ),
@@ -116,7 +116,7 @@ REDfly.component.tfbsApprovalPanel = new Ext.extend(Ext.FormPanel, {
                 'textarea',
                 'sequence_with_flank',
                 'Sequence With Flank'
-            ),                        
+            ),
             notes: this.newFormField(
                 'textarea',
                 'notes',
@@ -433,7 +433,7 @@ REDfly.dialog.approveTfbs = Ext.extend(Ext.Window, {
         );
         // Set up the handler to watch the status of the approval panel and
         // enable/disable the Approval button based on the validation status of
-        // that panel.        
+        // that panel.
         // Add or remove monitoring of the clientvalidation event when this
         // window is shown or hidden, respectively.
         this.on(
@@ -456,7 +456,7 @@ REDfly.dialog.approveTfbs = Ext.extend(Ext.Window, {
         panelId
     ) {
         var panel = this.entityPanels[panelId];
-        if ( (panel.getDataValue('date_added') === panel.getDataValue('last_update')) || 
+        if ( (panel.getDataValue('date_added') === panel.getDataValue('last_update')) ||
             (panel.getDataValue('last_update') === null) ) {
             this.mergePanel.formElements.curatorDisplay.update({
                 fullName: panel.getDataValue('curator_full_name'),
@@ -468,7 +468,7 @@ REDfly.dialog.approveTfbs = Ext.extend(Ext.Window, {
                 fullName: panel.getDataValue('curator_full_name'),
                 timeOrderWords: 'Added On',
                 formattedDate: panel.getDataValue('last_update_formatted')
-            });            
+            });
         }
         if ( panel.getDataValue('last_audit') === null ) {
             this.mergePanel.formElements.auditorDisplay.update({
@@ -481,8 +481,8 @@ REDfly.dialog.approveTfbs = Ext.extend(Ext.Window, {
                 fullName: panel.getDataValue('auditor_full_name'),
                 timeOrderWords: 'Last Audited On',
                 formattedDate: panel.getDataValue('last_audit_formatted')
-            });            
-        }        
+            });
+        }
         switch (dataField) {
             case 'evidence_term':
                 this.mergePanel.setDataValue('evidence_id', panel.getDataValue('evidence_id'));
@@ -500,7 +500,7 @@ REDfly.dialog.approveTfbs = Ext.extend(Ext.Window, {
             case 'sequence_from_species_scientific_name':
                 this.mergePanel.setDataValue('sequence_from_species_id', panel.getDataValue('sequence_from_species_id'));
                 this.mergePanel.setDataValue('sequence_from_species_short_name', panel.getDataValue('sequence_from_species_short_name'));
-                break;                
+                break;
             case 'tf_name':
                 this.mergePanel.setDataValue('tf_id', panel.getDataValue('tf_id'));
                 break;
@@ -665,7 +665,7 @@ REDfly.dialog.approveTfbs = Ext.extend(Ext.Window, {
                                             icon: Ext.MessageBox.INFO,
                                             msg: returnValue.message.replace(/[\n]/g, '<br>'),
                                             title: returnValue.success ? 'Success' : 'Error'
-                                        });                                        
+                                        });
                                         rejectionWindow.close();
                                         this.hide();
                                     },

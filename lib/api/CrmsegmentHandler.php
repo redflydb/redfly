@@ -598,7 +598,7 @@ SQL;
                 // 1) All the new entities (still unversioned)
                 //    which entity identifier is null and
                 // 2) the latest versions, that is, internal identifiers
-                //    (rc_id), of all the entities which entity identifier
+                //    (crm_segment_id), of all the entities which entity identifier
                 //    is not null
                 $sql = $sqlBase . <<<SQL
                     IF(crms.state != 'archived', TRUE, FALSE) AS editable
@@ -2268,7 +2268,7 @@ SQL;
                 $sql = "SELECT pubmed_id
                         FROM CRMSegment";
                 $sql .= ( $dbId !== null
-                    ? " WHERE entity_id IS NULL and rc_id = " . $dbId
+                    ? " WHERE entity_id IS NULL and crm_segment_id = " . $dbId
                     : " WHERE entity_id = " . $entityId .  " AND version = " . $version );
                 $sql .= " LIMIT 1";
                 $result = $this->db->query($sql);

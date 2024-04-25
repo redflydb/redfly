@@ -149,7 +149,7 @@ class TranscriptionfactorbindingsiteHandler implements iEditable
         INNER JOIN Chromosome c ON tfbs.chromosome_id = c.chromosome_id
         LEFT OUTER JOIN BS_has_FigureLabel l ON tfbs.tfbs_id = l.tfbs_id
         LEFT OUTER JOIN ext_FlyExpressImage fei ON tfbs.pubmed_id = fei.pubmed_id AND
-            l.label = fei.label        
+            l.label = fei.label
 SQL;
         $sqlGroupBy[] = "tfbs.tfbs_id";
         $this->helper->constructQuery(
@@ -222,7 +222,7 @@ SQL;
             tfbs.current_end AS end,
             tfbs.archived_genome_assembly_release_versions,
             tfbs.archived_starts,
-            tfbs.archived_ends,            
+            tfbs.archived_ends,
             tfbs.notes,
             tfbs.pubmed_id,
             tfbs.sequence,
@@ -407,7 +407,7 @@ SQL;
             tfbs.date_added,
             DATE_FORMAT(tfbs.date_added, '%M %D, %Y at %l:%i:%s%p') AS date_added_formatted,
             curator.user_id AS curator_id,
-            CONCAT(curator.first_name, ' ', curator.last_name) AS curator_full_name, 
+            CONCAT(curator.first_name, ' ', curator.last_name) AS curator_full_name,
             tfbs.last_update,
             DATE_FORMAT(tfbs.last_update, '%M %D, %Y at %l:%i:%s%p') AS last_update_formatted,
             auditor.user_id AS auditor_id,
@@ -545,7 +545,7 @@ SQL;
             tfbs.gene_id,
             g.name AS gene,
             tfbs.tf_id,
-            tf.name AS transcription_factor, 
+            tf.name AS transcription_factor,
             c.name AS chromosome,
             tfbs.current_genome_assembly_release_version AS release_version,
             tfbs.current_start AS start,
@@ -579,7 +579,7 @@ SQL;
                       FROM BindingSite
                       WHERE entity_id IS NOT NULL
                       GROUP BY entity_id) AS optimized_tfbs
-                INNER JOIN BindingSite tfbs ON optimized_tfbs.tfbs_id = tfbs.tfbs_id 
+                INNER JOIN BindingSite tfbs ON optimized_tfbs.tfbs_id = tfbs.tfbs_id
                 INNER JOIN Species sfs ON tfbs.sequence_from_species_id = sfs.species_id
                 INNER JOIN Species ais ON tfbs.assayed_in_species_id = ais.species_id
                 INNER JOIN Gene g ON tfbs.gene_id = g.gene_id
@@ -595,7 +595,7 @@ SQL;
             // although it will be never edited at any moment.
             case "archived":
                 $sql = $sqlBase . <<<SQL
-                    FALSE AS editable                
+                    FALSE AS editable
                 FROM (SELECT entity_id,
                           MAX(version) AS last_archived_version
                       FROM BindingSite
@@ -642,7 +642,7 @@ SQL;
             case "editing":
             case "deleted":
                 $sql = $sqlBase . <<<SQL
-                    TRUE AS editable                
+                    TRUE AS editable
                 FROM BindingSite tfbs
                 INNER JOIN Species sfs ON tfbs.sequence_from_species_id = sfs.species_id
                 INNER JOIN Species ais ON tfbs.assayed_in_species_id = ais.species_id
@@ -2230,5 +2230,206 @@ SQL;
 
         $data["redfly_id"] = $redflyId;
         return RestResponse::factory(true, null, array($data));
+    }
+    // --------------------------------------------------------------------------------
+    // Return help for the "reject" action
+    // --------------------------------------------------------------------------------
+    public function rejectHelp()
+    {
+        $description = "Reject one or more TFBS from the approval queue.";
+        $options = array(
+            "delete_items"   => "TRUE to mark the items for deletion from the approval queue",
+            "email_curators" => "TRUE to send email to the curators and include the rejection message",
+            "message"        => "Optional message to send to the curators",
+            "names"          => "An array of one or more TFBS and curator names encoded as JSON",
+            "redfly_ids"     => "An array of one or more REDfly identifiers encoded as JSON"
+        );
+
+        return RestResponse::factory(
+            true,
+            $description,
+            $options
+        );
+    }
+    // --------------------------------------------------------------------------------
+    // Reject one (currently used) or more (rarely used, now it is the responsability
+    // of the batch audit interface) TFBS(s).
+    // --------------------------------------------------------------------------------
+    public function rejectAction(
+        array $arguments,
+        array $postData = null
+    ) {
+        try {
+            Auth::authorize(array("admin"));
+        } catch ( Exception $e ) {
+            $httpResponseCode = ( Auth::getUser() === null
+                ? 401
+                : 403);
+            return RestResponse::factory(
+                false,
+                $e->getMessage(),
+                array(),
+                array(),
+                $httpResponseCode
+            );
+        }
+        $redflyIdList = json_decode($arguments["redfly_ids"]);
+        $redflyIdList = ( is_array($redflyIdList)
+            ? $redflyIdList
+            : array($redflyIdList)
+        );
+        $nameList = json_decode($arguments["names"]);
+        $nameList = ( is_array($nameList)
+            ? $nameList
+            : array($nameList)
+        );
+        $deleteItems = $this->helper->convertValueToBool($arguments["delete_items"]);
+        $emailCurators = $this->helper->convertValueToBool($arguments["email_curators"]);
+        $emailMessage = ( isset($arguments["message"]) && (! empty($arguments["message"]))
+            ? $arguments["message"]
+            : null
+        );
+        try {
+            $this->db->startTransaction();
+            foreach ( $redflyIdList as $redflyId ) {
+                $type = $entityId = $version = $dbId = null;
+                $this->helper->parseEntityId(
+                    $redflyId,
+                    $type,
+                    $entityId,
+                    $version,
+                    $dbId
+                );
+                if ( $type !== self::EntityCode ) {
+                    throw new Exception($redflyId . " is not a valid TFBS id");
+                }
+                $sql = "UPDATE BindingSite
+                    SET state = '";
+                $sql .= ( ! $deleteItems
+                    ? "editing"
+                    : "deleted");
+                $sql .= "',
+                    last_audit = NOW(),
+                    auditor_id = " . Auth::getUser()->userId();
+                $sql .= ( $dbId !== null
+                    ? " WHERE entity_id IS NULL and tfbs_id = ?"
+                    : " WHERE entity_id = ? AND version = ?" );
+                $sql .= " LIMIT 1";
+                if ( ($statement = $this->db->getHandle()->prepare($sql)) === false ) {
+                    throw new Exception("Error preparing statement: " .
+                        $sql . ", " . $this->db->getError());
+                }
+                if ( $dbId !== null ) {
+                    $statement->bind_param(
+                        "i",
+                        $dbId
+                    );
+                } else {
+                    $statement->bind_param(
+                        "ii",
+                        $entityId,
+                        $version
+                    );
+                }
+                if ( $statement->execute() === false ) {
+                    throw new Exception("Error executing statement: " .
+                        $sql . ", " . $statement->error);
+                }
+            }
+            $this->db->commit();
+        } catch ( Exception $e ) {
+            $this->db->rollback();
+            return RestResponse::factory(
+                false,
+                "Error: " . $e->getMessage()
+            );
+        }
+        $rejectList = "";
+        try {
+            foreach ( $redflyIdList as $index => $redflyId ) {
+                $type = $entityId = $version = $dbId = null;
+                $this->helper->parseEntityId(
+                    $redflyId,
+                    $type,
+                    $entityId,
+                    $version,
+                    $dbId
+                );
+                if ( $type !== self::EntityCode ) {
+                    throw new Exception($redflyId . " is not a valid TFBS id");
+                }
+                $sql = "SELECT pubmed_id
+                        FROM BindingSite";
+                $sql .= ( $dbId !== null
+                    ? " WHERE entity_id IS NULL and tfbs_id = " . $dbId
+                    : " WHERE entity_id = " . $entityId .  " AND version = " . $version );
+                $sql .= " LIMIT 1";
+                $result = $this->db->query($sql);
+                if ( ($row = $result->fetch_assoc()) === null ) {
+                    throw new Exception("Failed to find " . $redflyId);
+                }
+                $rejectList .= $redflyId . " (" .
+                    "name: " . $nameList[$index]->name . ", " .
+                    "PMID: " . $row["pubmed_id"] . ", " .
+                    "curator: " . $nameList[$index]->curator . ")\n";
+            }
+        } catch ( Exception $e ) {
+            return RestResponse::factory(
+                false,
+                "Error: " . $e->getMessage()
+            );
+        }
+        if ( $emailCurators ) {
+            $curatorEmailList = $this->helper->getCuratorEmails($redflyIdList);
+            if ( count($curatorEmailList) === 0 ) {
+                return RestResponse::factory(
+                    false,
+                    "Error: No curator/auditor email address from the database"
+                );
+            }
+            $body = "The following TFBS was rejected" .
+                ( $deleteItems
+                    ? " and marked for deletion"
+                    : "" ) .
+                " by " . Auth::getUser()->fullName() . "\n\n$rejectList";
+            $body .= "\n" .
+                ( $emailMessage !== null
+                    ? $emailMessage
+                    : "No reason provided") .
+                "\n";
+            $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+            $mail->isSMTP();
+            $mail->Host = "smtp.gmail.com";
+            $mail->Port = 587;
+            $mail->SMTPSecure = "tls";
+            $mail->SMTPAuth = true;
+            $mail->AuthType = "XOAUTH2";
+            $mail->setOAuth(
+                new PHPMailer\PHPMailer\OAuth([
+                    "provider"     => new League\OAuth2\Client\Provider\Google([
+                        "clientId"     => $GLOBALS["options"]->email->gmail_client_id,
+                        "clientSecret" => $GLOBALS["options"]->email->gmail_client_secret
+                    ]),
+                    "clientId"     => $GLOBALS["options"]->email->gmail_client_id,
+                    "clientSecret" => $GLOBALS["options"]->email->gmail_client_secret,
+                    "refreshToken" => $GLOBALS["options"]->email->gmail_refresh_token,
+                    "userName"     => $GLOBALS["options"]->email->gmail_address
+                ])
+            );
+            $mail->CharSet = "utf-8";
+            $mail->Subject = "[REDfly] TFBS rejected";
+            $mail->Body = $body;
+            $mail->setFrom($GLOBALS["options"]->email->gmail_address);
+            $mail->addReplyTo($GLOBALS["options"]->email->gmail_address);
+            foreach ( $curatorEmailList as $email ) {
+                $mail->addAddress($email);
+            }
+            $mail->send();
+        }
+
+        return RestResponse::factory(
+            true,
+            "Rejected:\n" . $rejectList
+        );
     }
 }
