@@ -1,5 +1,10 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2024-06-06"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.5 Release Notes (June 6, 2024)
+<ul>
+  <li>Fix the bug that CRM Segment cannot be rejected.</li>
+</ul>
 <a name="2024-02-09"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.4 Release Notes (February 9, 2024)
 <ul>
