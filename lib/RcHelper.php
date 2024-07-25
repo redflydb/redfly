@@ -738,8 +738,8 @@ SQL;
         try {
             $this->db->startTransaction();
             $deleteSql = <<<SQL
-            DELETE 
-            FROM RC_has_ExprTerm 
+            DELETE
+            FROM RC_has_ExprTerm
             WHERE rc_id = $rcId
 SQL;
             $this->db->query($deleteSql);
@@ -858,15 +858,15 @@ SQL;
                 $row = $result->fetch_assoc();
                 $anatomicalExpressionIdentifier = $row["identifier"];
                 $selectSql = <<<SQL
-                SELECT pubmed_id, 
-                    stage_on, 
-                    stage_off, 
-                    biological_process, 
-                    sex, 
+                SELECT pubmed_id,
+                    stage_on,
+                    stage_off,
+                    biological_process,
+                    sex,
                     ectopic,
                     silencer
                 FROM triplestore_rc
-                WHERE rc_id = $oldRcId AND 
+                WHERE rc_id = $oldRcId AND
                     expression = '$anatomicalExpressionIdentifier'
 SQL;
                 $result = $this->db->query($selectSql);
@@ -910,7 +910,7 @@ SQL;
         }
         // Delete current associations for the reporter construct
         $sql = <<<SQL
-        DELETE 
+        DELETE
         FROM RC_associated_BS
         WHERE rc_id = $rcId
 SQL;

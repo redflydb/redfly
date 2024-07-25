@@ -43,16 +43,16 @@ Ext.define(
                         this.getViewModel().set('validateButtonDisabled', false);
                     } else {
                         this.getViewModel().set('validateButtonDisabled', true);
-                    } 
-                    break;                    
+                    }
+                    break;
                 case 'rc':
-                    if ((attributeData && fastaData && expressionData) || 
+                    if ((attributeData && fastaData && expressionData) ||
                         ((! attributeData) && (! fastaData) && expressionData && updateExpressionsCheckboxCheckedOn)) {
                         this.getViewModel().set('validateButtonDisabled', false);
                     } else {
                         this.getViewModel().set('validateButtonDisabled', true);
                     }
-                    break;                    
+                    break;
                 default:
                     this.getViewModel().set('validateButtonDisabled', true);
             }
@@ -72,7 +72,7 @@ Ext.define(
                     success: function(form, action) {
                         this.getViewModel().set('importButtonDisabled', true);
                         Ext.Msg.alert('Success', 'Import successful. ' +
-                            'Use the Batch Audit tool to check the entries ' + 
+                            'Use the Batch Audit tool to check the entries ' +
                             'imported with their new state set as "editing".');
                     },
                     url: REDfly.Config.getApiV2Url() + '/batch/import',

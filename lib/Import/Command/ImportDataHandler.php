@@ -693,8 +693,10 @@ class ImportDataHandler
             } else {
                 $anatomicalExpressionSex = $anatomicalExpressionRow["sex"];
             }
-            if ( $anatomicalExpressionRow["ectopic"] === "" ) {
+            if ( $anatomicalExpressionRow["ectopic"] === "" || $anatomicalExpressionRow["ectopic"] === "False" || $anatomicalExpressionRow["ectopic"] === "false" ) {
                 $anatomicalExpressionEctopic = "0";
+            } else if ($anatomicalExpressionRow["ectopic"] === "True" || $anatomicalExpressionRow["ectopic"] === "true" ) {
+                $anatomicalExpressionEctopic = "1";
             } else {
                 $anatomicalExpressionEctopic = $anatomicalExpressionRow["ectopic"];
             }
