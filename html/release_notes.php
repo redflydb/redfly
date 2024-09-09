@@ -1,5 +1,10 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2024-09-09"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.6 Release Notes (September 9, 2024)
+<ul>
+  <li>Fix the bug that ectopic cannot identified correctly during batch upload.</li>
+</ul>
 <a name="2024-06-06"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.5 Release Notes (June 6, 2024)
 <ul>
