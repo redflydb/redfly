@@ -11,10 +11,12 @@ services:
             - 80:80
         volumes:
             - ./:/var/www
+        restart: always
     blat_server:
         build: ./go/blatserver
         volumes:
             - ./go/blatserver/assets:/assets
+        restart: always
     mariadb_server:
         command:
             # 2097152 = 2MB
@@ -38,7 +40,9 @@ services:
             - ./mysql:/var/lib/mysql
             - ./db/dumps:/docker-entrypoint-initdb.d
             - ./logs:/tmp
+        restart: always
     termlookup_server:
         build: ./go/termlookupserver
         volumes:
             - ./go/termlookupserver/assets:/go/src/assets
+        restart: always
