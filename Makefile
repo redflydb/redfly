@@ -59,7 +59,7 @@ help:
 	@ echo "  extjs-libraries-reload              Reload the (existing and new) ExtJS libraries used by the"
 	@ echo "                                      REDfly application"
 	@ echo "  help                                Show the REDfly Makefile arguments and their functions"
-	@ echo "  help-update                         Update the Help documentation in HTML using the GitBook engine with" 
+	@ echo "  help-update                         Update the Help documentation in HTML using the GitBook engine with"
 	@ echo "                                      new information from .md file(s) and new pictures."
 	@ echo "  html/admin/new/ext                  Deploy the new Sencha ExtJS 6.0 for the REDfly application"
 	@ echo "  html/images/flyexpress              Deploy the FlyExpress images for the REDfly application"
@@ -109,11 +109,11 @@ help:
 	@ echo "                                      CURATOR_FIRSTNAME=student firstname"
 	@ echo "                                      CURATOR_LASTNAME=student lastname"
 	@ echo "                                      CURATOR_EMAIL=student email"
-	@ echo "                                      CURATOR_PASSWORD=student password"	
+	@ echo "                                      CURATOR_PASSWORD=student password"
 	@ echo "  ubir-backup                         Generate the zip file of all the REDfly data for the UBIR"
 	@ echo "  update                              Update all the REDfly data dependent from the external data sources"
 	@ echo "  vendor-install                      Rebuilds the Composer image and install all the PHP libraries used by the REDfly application"
-	@ echo "  vendor-update                       Rebuilds the Composer image and upgrade/downgrade all the PHP libraries used by the REDfly application"	
+	@ echo "  vendor-update                       Rebuilds the Composer image and upgrade/downgrade all the PHP libraries used by the REDfly application"
 	@ echo "  vscode-debug-settings-configuration Configure the Visual Studio Code debug settings"
 	@ echo "  xdebug                              Activate the XDebug module for PHP debugging."
 
@@ -135,7 +135,7 @@ clean:
 	sudo rm -rf ./html/admin/new/.sencha
 	rm -rf ./html/datadumps
 	rm -rf ./html/gitbook
-	rm -rf ./html/images/flyexpress	
+	rm -rf ./html/images/flyexpress
 	rm -rf ./html/js/extjs
 	rm -rf ./logs
 	rm -rf ./vendor
@@ -148,7 +148,7 @@ clean:
 configuration:
 	cp ./config/settings.yml.dist ./config/settings.yml
 	chmod 0644 ./config/settings.yml
-	sed -i 's,<ENVIRONMENT_NAME>,$(ENVIRONMENT_NAME),g' ./config/settings.yml	
+	sed -i 's,<ENVIRONMENT_NAME>,$(ENVIRONMENT_NAME),g' ./config/settings.yml
 	sed -i 's,<REDFLY_BASE_URL>,$(REDFLY_BASE_URL),g' ./config/settings.yml
 	sed -i 's,<SITE_AUTH_REALM>,$(REDFLY_BASE_URL),g' ./config/settings.yml
 	sed -i 's,<GMAIL_ADDRESS>,$(GMAIL_ADDRESS),g' ./config/settings.yml
@@ -158,7 +158,7 @@ configuration:
 	sed -i 's,<GOOGLE_ANALYTICS_API_3_TRACKING_ID>,$(GOOGLE_ANALYTICS_API_3_TRACKING_ID),g' ./config/settings.yml
 	sed -i 's,<GOOGLE_ANALYTICS_API_3_VIEW_ID>,$(GOOGLE_ANALYTICS_API_3_VIEW_ID),g' ./config/settings.yml
 	sed -i 's,<GOOGLE_OAUTH2_CREDENTIALS_FILE>,$(GOOGLE_OAUTH2_CREDENTIALS_FILE),g' ./config/settings.yml
-	sed -i 's,<GOOGLE_ANALYTICS_4_MEASUREMENT_ID>,$(GOOGLE_ANALYTICS_4_MEASUREMENT_ID),g' ./config/settings.yml	
+	sed -i 's,<GOOGLE_ANALYTICS_4_MEASUREMENT_ID>,$(GOOGLE_ANALYTICS_4_MEASUREMENT_ID),g' ./config/settings.yml
 	sed -i 's,<MYSQL_PASSWORD>,$(MYSQL_PASSWORD),g' ./config/settings.yml
 	sed -i 's,<NCBI_API_KEY>,$(NCBI_API_KEY),g' ./config/settings.yml
 	sed -i 's,<RECAPTCHA_PUBLIC_KEY>,$(RECAPTCHA_PUBLIC_KEY),g' ./config/settings.yml
@@ -295,7 +295,7 @@ release:
 	curl -u $(REDFLY_USER):$(REDFLY_PASSWORD) $(REDFLY_BASE_URL)api/rest/jsonstore/reporterconstruct/calculateCrm > ./release_output/calculateCrm_output_$(date +'%Y%m%d').json || (echo "calculateCrm failed $$?"; exit 1)
 	docker build -t redfly_icrm:latest ./go/icrm/
 	docker run --rm -tv $(PWD)/go/icrm/cmd:/go/src/cmd redfly_icrm
-	docker rmi $$(docker images | grep "redfly_icrm" | tr -s " " | cut -d" " -f3)	
+	docker rmi $$(docker images | grep "redfly_icrm" | tr -s " " | cut -d" " -f3)
 	(cd ./go/icrm/cmd && ./icrm_calculation --username=$(MYSQL_USER) --password=$(MYSQL_PASSWORD)) || (echo "icrm_calculation failed $$?"; exit 1)
 	$(MARIADB) -u $(MYSQL_USER) -p$(MYSQL_PASSWORD) redfly -e "update ReporterConstruct set cell_culture_only=1 where cell_culture_only=0 and evidence_id in (14, 15);"
 

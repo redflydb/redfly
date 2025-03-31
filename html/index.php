@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("header.php");
 include("reminder.php");
 include("news.php");
@@ -14,7 +14,6 @@ include("news.php");
 bringing you new features and a better user experience.
 We want to hear where you want to see us go!
   <br>
-Please take the survey <a href="https://www.surveymonkey.com/r/L83SV5B">HERE</a>!
 We appreciate your feedback!
   <div class="heading_release_l">
     </p>
@@ -29,26 +28,26 @@ We appreciate your feedback!
       <img class="watermark" src="/images/logos/logo.png">
     </div>
     <p>
-    <?= HTML_REDFLY_LOGO ?> is a curated collection of known insect transcriptional 
-<i>cis</i>-regulatory modules (CRMs), <i>cis</i>-regulatory module segments 
-(CRMsegs), predicted <i>cis</i>-regulatory modules (pCRMs), and transcription 
-factor binding sites (TFBSs). Our mission is to extract, accumulate, organize, 
-annotate, and link the growing body of information on insect transcriptional 
-<i>cis</i>-regulatory sequences, with an emphasis on empirically validated CRMs 
-curated from the published literature. The majority of the data are for 
-<i>Drosophila melanogaster</i>, but we also annotate an increasing number of other 
+    <?= HTML_REDFLY_LOGO ?> is a curated collection of known insect transcriptional
+<i>cis</i>-regulatory modules (CRMs), <i>cis</i>-regulatory module segments
+(CRMsegs), predicted <i>cis</i>-regulatory modules (pCRMs), and transcription
+factor binding sites (TFBSs). Our mission is to extract, accumulate, organize,
+annotate, and link the growing body of information on insect transcriptional
+<i>cis</i>-regulatory sequences, with an emphasis on empirically validated CRMs
+curated from the published literature. The majority of the data are for
+<i>Drosophila melanogaster</i>, but we also annotate an increasing number of other
 insects.
-Despite more than 20 years of experimental determination of these elements, 
+Despite more than 20 years of experimental determination of these elements,
 the data have never been collected into a single searchable database.
-<?= HTML_REDFLY_LOGO ?> seeks to include all experimentally verified fly regulatory 
-elements along with their DNA sequence, their associated genes, and the expression 
-patterns they direct. Expression patterns are annotated using a 
+<?= HTML_REDFLY_LOGO ?> seeks to include all experimentally verified fly regulatory
+elements along with their DNA sequence, their associated genes, and the expression
+patterns they direct. Expression patterns are annotated using a
 <a href="https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/wiki"
-   target="_blank">defined anatomy ontology</a> to enable high interoperability with 
+   target="_blank">defined anatomy ontology</a> to enable high interoperability with
 <a href="http://flybase.bio.indiana.edu/"
-   target="_blank">FlyBase</a>, 
+   target="_blank">FlyBase</a>,
 <a href="http://www.flyexpress.net/"
-   target="_blank">FlyExpress</a>, the 
+   target="_blank">FlyExpress</a>, the
 <a href="http://insitu.fruitfly.org/cgi-bin/ex/insitu.pl"
    target="_blank">BDGP in situ hybridization database</a>, and other model organism resources.
     </p>
@@ -58,17 +57,17 @@ are not included in the <?= HTML_REDFLY_LOGO ?> database, or have corrections to
 archived data, please <a href="contact.php">contact us</a>.
     </p>
     <p>
-<?= HTML_REDFLY_LOGO ?> has 
-<?= $numberCrms ?> CRMs (<?= $numberCrmsInVivo ?> from in vivo reporter genes, 
-<?= $numberCrmsCellCultureOnly ?> from cell-culture assays, and 
-<?= $numberCrmsNonInVivoHavingNoCellCulture ?> from other evidence) associated with 
-<?= $numberCrmGenes ?> genes, 
-<?= $numberCrmSegments ?> CRMsegs associated with 
-<?= $numberCrmSegmentGenes  ?> genes, 
+<?= HTML_REDFLY_LOGO ?> has
+<?= $numberCrms ?> CRMs (<?= $numberCrmsInVivo ?> from in vivo reporter genes,
+<?= $numberCrmsCellCultureOnly ?> from cell-culture assays, and
+<?= $numberCrmsNonInVivoHavingNoCellCulture ?> from other evidence) associated with
+<?= $numberCrmGenes ?> genes,
+<?= $numberCrmSegments ?> CRMsegs associated with
+<?= $numberCrmSegmentGenes  ?> genes,
 <?= $numberPredictedCrms ?> pCRMs, and
-<?= $numberTfbss ?> TFBSs bound by 
-<?= $numberTfbsTfs ?> transcription factors acting on 
-<?= $numberTfbsGenes ?> target genes. These data are based on 
+<?= $numberTfbss ?> TFBSs bound by
+<?= $numberTfbsTfs ?> transcription factors acting on
+<?= $numberTfbsGenes ?> target genes. These data are based on
 <?= $numberPublications ?> curated publications.
     </p>
     <div class="separator">

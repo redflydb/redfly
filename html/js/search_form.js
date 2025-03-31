@@ -43,9 +43,9 @@ Ext.onReady(function () {
     var redflyIdUrl = '';
     //----------------------------------------------------------------------------------
     // All The JSON Stores Alphabetically Sorted
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of anatomical expressions
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var anatomicalExpressionStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         autoload: false,
@@ -69,9 +69,9 @@ Ext.onReady(function () {
         totalProperty: 'num'
     });
     anatomicalExpressionStore.load();
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of biological processes
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var biologicalProcessStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         autoload: false,
@@ -93,15 +93,15 @@ Ext.onReady(function () {
         root: 'results',
         totalProperty: 'num'
     });
-    biologicalProcessStore.load();        
+    biologicalProcessStore.load();
     //----------------------------------------------------------------------------------
     // JSON store of chromosomes
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var chromosomeStore = new Ext.data.JsonStore({
-        // Ext.data.JsonStore configs        
+        // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
-            url: redflyApiUrl + '/jsonstore/chromosome/list?sort=species_short_name,name'
+            url: redflyApiUrl + '/jsonstore/chromosome/list?sort=-length'
         }),
         // Embedded Ext.data.JsonReader configs
         fields: [
@@ -113,7 +113,7 @@ Ext.onReady(function () {
             'species_short_name'
         ],
         idProperty: 'id',
-        messageProperty: 'message',        
+        messageProperty: 'message',
         listeners: {
             load: selectChromosome
         },
@@ -121,11 +121,11 @@ Ext.onReady(function () {
         totalProperty: 'num'
     });
     chromosomeStore.load();
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of cis-regulatory module segments
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var crmSegmentStore = new Ext.data.JsonStore({
-        // Ext.data.JsonStore configs        
+        // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
             url: redflyApiUrl + '/jsonstore/crmsegment/search?sort=name'
@@ -137,7 +137,7 @@ Ext.onReady(function () {
             'coordinates_display',
             'gene',
             'gene_id',
-            'has_images',            
+            'has_images',
             'id',
             'name',
             'redfly_id',
@@ -155,10 +155,10 @@ Ext.onReady(function () {
         },
         root: 'results',
         totalProperty: 'num'
-    });    
+    });
     //----------------------------------------------------------------------------------
     // JSON store of cis-regulatory modules without any page size
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var crmStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
@@ -184,7 +184,7 @@ Ext.onReady(function () {
     });
     //----------------------------------------------------------------------------------
     // JSON store of database information
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var databaseInformationStore = new Ext.data.JsonStore({
         fields: [
             'last_crm_update',
@@ -203,7 +203,7 @@ Ext.onReady(function () {
     databaseInformationStore.load();
     //----------------------------------------------------------------------------------
     // JSON store of evidence terms
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var evidenceStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
@@ -222,10 +222,10 @@ Ext.onReady(function () {
         root: 'results',
         totalProperty: 'num'
     });
-    evidenceStore.load();    
-    //----------------------------------------------------------------------------------    
+    evidenceStore.load();
+    //----------------------------------------------------------------------------------
     // JSON store of developmental stages
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var developmentalStageStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         autoload: false,
@@ -251,14 +251,14 @@ Ext.onReady(function () {
     developmentalStageStore.load();
     //----------------------------------------------------------------------------------
     // JSON store of genes.
-    // It does not load like the rest of the stores because it does not have any data 
+    // It does not load like the rest of the stores because it does not have any data
     // until the search field is filled in
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var geneStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         baseParams: {
             sort: 'name'
-        },        
+        },
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
             url: redflyApiUrl + '/jsonstore/gene/list'
@@ -278,11 +278,11 @@ Ext.onReady(function () {
         root: 'results',
         totalProperty: 'num'
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of inferred cis-regulatory modules
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var inferredCrmStore = new Ext.data.JsonStore({
-        // Ext.data.JsonStore configs        
+        // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
             url: redflyApiUrl + '/jsonstore/inferredcrm/search?sort=gene,coordinates'
@@ -310,16 +310,16 @@ Ext.onReady(function () {
         root: 'results',
         totalProperty: 'total'
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of predicted cis-regulatory modules
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var predictedCrmStore = new Ext.data.JsonStore({
         // Embedded Ext.data.JsonReader configs
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
             url: redflyApiUrl + '/jsonstore/predictedcrm/search?sort=name'
         }),
-        // Embedded Ext.data.JsonReader configs        
+        // Embedded Ext.data.JsonReader configs
         fields: [
             'assayed_in_species_scientific_name',
             'coordinates',
@@ -345,9 +345,9 @@ Ext.onReady(function () {
     });
     //----------------------------------------------------------------------------------
     // JSON store of reporter constructs
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var rcStore = new Ext.data.JsonStore({
-        // Embedded Ext.data.JsonReader configs        
+        // Embedded Ext.data.JsonReader configs
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
             url: redflyApiUrl + '/jsonstore/reporterconstruct/search?sort=name'
@@ -379,9 +379,9 @@ Ext.onReady(function () {
         root: 'results',
         totalProperty: 'num'
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of species
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var speciesStore = new Ext.data.JsonStore({
         // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
@@ -401,11 +401,11 @@ Ext.onReady(function () {
         totalProperty: 'num'
     });
     speciesStore.load();
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // JSON store of transcription factor binding sites
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var tfbsStore = new Ext.data.JsonStore({
-        // Ext.data.JsonStore configs        
+        // Ext.data.JsonStore configs
         proxy: new Ext.data.HttpProxy({
             method: 'GET',
             url: redflyApiUrl + '/jsonstore/transcriptionfactorbindingsite/search?sort=name'
@@ -417,7 +417,7 @@ Ext.onReady(function () {
             'coordinates_display',
             'gene',
             'gene_id',
-            'has_images',            
+            'has_images',
             'id',
             'name',
             'redfly_id',
@@ -442,7 +442,7 @@ Ext.onReady(function () {
     // All The Array Stores Alphabetically Sorted
     //----------------------------------------------------------------------------------
     // Array store of chromosome positions
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var chromosomePositionStore = new Ext.data.ArrayStore({
         fields: [
             'id',
@@ -454,13 +454,13 @@ Ext.onReady(function () {
         [1, '5\''],
         [2, '3\'']
     ]);
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // Array store of gene displays
-    //----------------------------------------------------------------------------------        
+    //----------------------------------------------------------------------------------
     var geneDisplayStore = new Ext.data.ArrayStore({
-        // The field order here must not be altered 
+        // The field order here must not be altered
         // because it is followed by the function
-        // "geneKeyPause" below. 
+        // "geneKeyPause" below.
         fields: [
             'record',
             'display'
@@ -518,7 +518,7 @@ Ext.onReady(function () {
     });
     //----------------------------------------------------------------------------------
     // Text field of pubmed ID
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var pubmedIdTextField = new Ext.form.TextField({
         autoCreate: {
             maxLength: 20,
@@ -581,7 +581,7 @@ Ext.onReady(function () {
     var assayedInSpeciesComboBox = new Ext.form.ComboBox({
         displayField: 'display',
         editable: false,
-        emptyText: 'Select Species...',                
+        emptyText: 'Select Species...',
         enableKeyEvents: true,
         fieldLabel: '<b>"Assayed In" Species</b> <a href="javascript:assayedInSpeciesHelp()">?</a>',
         forceSelection: true,
@@ -624,7 +624,7 @@ Ext.onReady(function () {
                 paramObj.display = '*' + q.query + '*';
                 q.combo.getStore().load({ params: paramObj });
                 q.cancel = true;
-            },             
+            },
             specialkey: checkEnter
         },
         mode: 'local',
@@ -652,7 +652,7 @@ Ext.onReady(function () {
             if ( value !== '' ) {
                 if ( new RegExp('^\\d+$').test(value) ) {
                     endCoordinateValue = Ext.getCmp('endCoordinateTextField').getValue();
-                    if ( (endCoordinateValue !== '') && 
+                    if ( (endCoordinateValue !== '') &&
                         (new RegExp('^\\d+$').test(endCoordinateValue)) ) {
                         if ( parseInt(endCoordinateValue, 10) <= parseInt(value, 10) ) {
                             return 'The start coordinate must be less than the end coordinate';
@@ -677,7 +677,7 @@ Ext.onReady(function () {
             maxLength: 8,
             size: 8,
             tag: 'input'
-        },        
+        },
         fieldLabel: '<b>End Coord.</b> <a href="javascript:coordinatesHelp()">?</a>',
         id: 'endCoordinateTextField',
         listeners: { specialkey: checkEnter },
@@ -686,7 +686,7 @@ Ext.onReady(function () {
             if ( value !== '' ) {
                 if ( new RegExp('^\\d+$').test(value) ) {
                     startCoordinateValue = Ext.getCmp('startCoordinateTextField').getValue();
-                    if ( (startCoordinateValue !== '') && 
+                    if ( (startCoordinateValue !== '') &&
                         (new RegExp('^\\d+$').test(startCoordinateValue)) ) {
                         if ( parseInt(value, 10) <= parseInt(startCoordinateValue, 10) ) {
                             return 'The end coordinate must be great than the start coordinate';
@@ -722,7 +722,7 @@ Ext.onReady(function () {
                     return 'This value, ' + value + ', must be numeric and integer';
                 }
             }
-        }        
+        }
     });
     //----------------------------------------------------------------------------------
     // Text field of the search range interval
@@ -744,12 +744,12 @@ Ext.onReady(function () {
                     return 'This value, ' + value + ', must be numeric and integer';
                 }
             }
-        },        
+        },
         value: '10000'
     });
     //----------------------------------------------------------------------------------
     // Combobox of evidence terms
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var evidenceComboBox = new Ext.form.ComboBox({
         displayField: 'term',
         emptyText: 'Select Evidence...',
@@ -858,7 +858,7 @@ Ext.onReady(function () {
         format: 'M d Y',
         listeners: { specialkey: checkEnter }
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // Date field for the entries added on or after the date entered
     //----------------------------------------------------------------------------------
     var dateAddedDateField = new Ext.form.DateField({
@@ -866,12 +866,12 @@ Ext.onReady(function () {
             maxLength: 29,
             size: 15,
             tag: 'input'
-        },        
+        },
         fieldLabel: '<b>Entry Added After...</b> <a href="javascript:dateAddedHelp()">?</a>',
         format: 'M d Y',
         listeners: { specialkey: checkEnter }
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // Text field that contains the last search URL
     //----------------------------------------------------------------------------------
     var urlLinkTextField = new Ext.form.TextField({
@@ -933,7 +933,7 @@ Ext.onReady(function () {
             var dbLastPredictedCrm = databaseInformationStore.getAt(0).get('last_predictedcrm_update').toString();
             REDfly.config.predictedCrmSearchParameters = {
                 last_update: '>' + dbLastPredictedCrm
-            };  
+            };
             predictedCrmStore.load();
             // date of the last updated TFBS
             var dbLastTfbs = databaseInformationStore.getAt(0).get('last_tfbs_update').toString();
@@ -949,7 +949,7 @@ Ext.onReady(function () {
     });
     //----------------------------------------------------------------------------------
     // Button to search the entire database
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var browseAllButton = new Ext.Button({
         handler: function () {
             sequenceFromSpeciesComboBox.reset();
@@ -991,9 +991,9 @@ Ext.onReady(function () {
         },
         text: 'Browse All'
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // Button to make a customized database search
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     var searchButton = new Ext.Button({
         handler: function () {
             searchDatabase();
@@ -1192,7 +1192,7 @@ Ext.onReady(function () {
                                                 inputValue: 'tf-gene-only'
                                             }
                                         ],
-                                        xtype: 'radiogroup'                                        
+                                        xtype: 'radiogroup'
                                     }, {
                                         id: 'tfbs-miscellaneous-options',
                                         items: [
@@ -1577,10 +1577,10 @@ Ext.onReady(function () {
                                         margins: '15px 0 0',
                                         title: '<b style="color:black;">Gene Name</b> <a href="javascript:geneHelp()">?</a>',
                                         width: 230,
-                                        xtype: 'fieldset'   
+                                        xtype: 'fieldset'
                                     }, {
                                         bodyStyle:'padding:0 25px 0',
-                                        border: false,                                        
+                                        border: false,
                                         items: [
                                             elementNameOrFBtpIdentifierTextField,
                                             sequenceFromSpeciesComboBox
@@ -1590,7 +1590,7 @@ Ext.onReady(function () {
                                         xtype: 'fieldset'
                                     },{
                                         bodyStyle:'padding:0 15px 0',
-                                        border: false,                                        
+                                        border: false,
                                         items: [
                                             pubmedIdTextField,
                                             assayedInSpeciesComboBox
@@ -1879,14 +1879,14 @@ Ext.onReady(function () {
         view: new Ext.ux.grid.BufferView({ scrollDelay: false }),
         width: searchFormPanel.getWidth() - 2
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // Handle a click event on the CRM segment result grid by opening an CRM segment window.
     // Parameters:
     //      thisGrid: the grid that was clicked
     //      rowIndex: the row index that was clicked
     //      columnIndex: the column index that was clicked
     //      e: the event
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     function cellClickCrmSegment(thisGrid, rowIndex, columnIndex, e)
     {
         // Column 0 is the checkbox. Do not open a window if the checkbox was clicked.
@@ -1976,14 +1976,14 @@ Ext.onReady(function () {
         view: new Ext.ux.grid.BufferView({ scrollDelay: false }),
         width: searchFormPanel.getWidth() - 2
     });
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     // Handle a click event on the predicted CRM result grid by opening a predicted CRM window.
     // Parameters:
     //      thisGrid: the grid that was clicked
     //      rowIndex: the row index that was clicked
     //      columnIndex: the column index that was clicked
     //      e: the event
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     function cellClickPredictedCrm(thisGrid, rowIndex, columnIndex, e)
     {
         // Column 0 is the checkbox. Do not open a window if the checkbox was clicked.
@@ -2003,7 +2003,7 @@ Ext.onReady(function () {
                 entityName
             );
         }
-    }    
+    }
     var predictedCrmGrid = new Ext.grid.GridPanel({
         autoExpandColumn: 3,
         columnLines: true,
@@ -2068,14 +2068,14 @@ Ext.onReady(function () {
         view: new Ext.ux.grid.BufferView({ scrollDelay: false }),
         width: searchFormPanel.getWidth() - 2
     });
-    //----------------------------------------------------------------------------------            
+    //----------------------------------------------------------------------------------
     // Handle a click event on the TFBS result grid by opening an TFBS window.
     // Parameters:
     //      thisGrid: the grid that was clicked
     //      rowIndex: the row index that was clicked
     //      columnIndex: the column index that was clicked
     //      e: the event
-    //----------------------------------------------------------------------------------    
+    //----------------------------------------------------------------------------------
     function cellClickTfbs(thisGrid, rowIndex, columnIndex, e)
     {
         // Column 0 is the checkbox. Do not open a window if the checkbox was clicked.
@@ -2310,7 +2310,7 @@ Ext.onReady(function () {
                 id: 'tab-icrm',
                 items: inferredCrmGrid,
                 title: REDfly.config.resultTabDefaults['tab-icrm'].title
-            } 
+            }
         ],
         listeners: {
             beforetabchange: tabChange
@@ -2559,7 +2559,7 @@ Ext.onReady(function () {
         bookmarkDevelopmentalStageIdentifier,
         bookmarkExactDevelopmentalStageIdentifier,
         bookmarkBiologicalProcessIdentifier,
-        bookmarkExactBiologicalProcessIdentifier,                
+        bookmarkExactBiologicalProcessIdentifier,
         bookmarkLastUpdate,
         bookmarkDateAdded;
     // Does a search on the database and stores the values of the
@@ -2573,7 +2573,7 @@ Ext.onReady(function () {
             var aaelGeneValue = geneComboBox.getValue().split('AAEL')[1];
             // The Anopheles gambiae species
             var agapGeneValue = geneComboBox.getValue().split('AGAP')[1];
-            // The Drosophila melanogaster species            
+            // The Drosophila melanogaster species
             var fbgnGeneValue = geneComboBox.getValue().split('FBgn')[1];
             // The Tribolium castaneum species
             var tcGeneValue = geneComboBox.getValue().split('TC')[1];
@@ -2600,7 +2600,7 @@ Ext.onReady(function () {
         bookmarkPubmedId = pubmedIdTextField.getValue();
         bookmarkSequenceFromSpeciesId = sequenceFromSpeciesComboBox.getValue();
         bookmarkAssayedInSpeciesId = assayedInSpeciesComboBox.getValue();
-        //bookmarkCellCultureOnly = 
+        //bookmarkCellCultureOnly =
         //bookmarkFivePrime =
         //bookmarkThreePrime =
         //bookmarkInIntron =
@@ -2643,7 +2643,7 @@ Ext.onReady(function () {
         bookmarkDevelopmentalStageIdentifier = developmentalStageComboBox.getValue();
         bookmarkExactDevelopmentalStageIdentifier = Ext.getCmp('exactDevelopmentalStageTerm').items.items[0].getValue();
         bookmarkBiologicalProcessIdentifier = biologicalProcessComboBox.getValue();
-        bookmarkExactBiologicalProcessIdentifier = Ext.getCmp('exactBiologicalProcessTerm').items.items[0].getValue();        
+        bookmarkExactBiologicalProcessIdentifier = Ext.getCmp('exactBiologicalProcessTerm').items.items[0].getValue();
         bookmarkLastUpdate = lastUpdateDateField.getValue();
         bookmarkDateAdded = dateAddedDateField.getValue();
         urlLinkTextField.setValue(urlCreate());
@@ -2655,7 +2655,7 @@ Ext.onReady(function () {
                         number_of_crmsegments_search_result: crmSegmentStore.getTotalCount()
                     }
                 });
-                break;                
+                break;
             case inferredCrmStore:
                 setResultTabTitle({
                     id: 'tab-icrm',
@@ -2687,8 +2687,8 @@ Ext.onReady(function () {
             case tfbsStore:
                 setResultTabTitle({
                     id: 'tab-tfbs',
-                    results: { 
-                        number_of_tfbss_search_result: tfbsStore.getTotalCount() 
+                    results: {
+                        number_of_tfbss_search_result: tfbsStore.getTotalCount()
                     }
                 });
                 break;
@@ -2704,7 +2704,7 @@ Ext.onReady(function () {
         setResultTabTitle({
             id: 'tab-crmsegment',
             loading: true
-        });        
+        });
         setResultTabTitle({
             id: 'tab-pcrm',
             loading: true
@@ -2758,7 +2758,7 @@ Ext.onReady(function () {
         var geneLocus = '';
         // Gene search restrictions
         var geneRestrictions = '';
-        // Gene search  (defaults to 'false')    
+        // Gene search  (defaults to 'false')
         var geneSearch = 'false';
         // Whether or not an entry has an associate RC
         var hasRc = '';
@@ -2807,9 +2807,9 @@ Ext.onReady(function () {
             var aaelGeneValue = geneComboBox.getValue().split('AAEL')[1];
             // The Anopheles gambiae species
             var agapGeneValue = geneComboBox.getValue().split('AGAP')[1];
-            // The Drosophila melanogaster species 
+            // The Drosophila melanogaster species
             var fbgnGeneValue = geneComboBox.getValue().split('FBgn')[1];
-            // The Tribolium castaneum species 
+            // The Tribolium castaneum species
             var tcGeneValue = geneComboBox.getValue().split('TC')[1];
             var index;
             if ( (aaelGeneValue !== undefined) ||
@@ -2836,7 +2836,7 @@ Ext.onReady(function () {
             // For predicted and inferred CRMs
             if ( includeRangeRadioGroup.getValue().inputValue === 'by_locus' ) {
                 geneSearch = 'true';
-                geneLocus = geneComboBox.getValue();                
+                geneLocus = geneComboBox.getValue();
             }
             if ( includeRangeRadioGroup.getValue().inputValue === 'by_name' ) {
                 geneSearch = 'true';
@@ -2845,7 +2845,7 @@ Ext.onReady(function () {
         }
         // 1) Sets the gene name to be searched by locus or name and
         // 2) gets the search range interval
-        if ( includeRangeRadioGroup.getValue() !== null ) { 
+        if ( includeRangeRadioGroup.getValue() !== null ) {
             if ( includeRangeRadioGroup.getValue().inputValue === 'by_locus') {
                 includeSearchRangeInterval = 'true';
                 if ( searchRangeIntervalTextField.getValue() !== '' ) {
@@ -2855,7 +2855,7 @@ Ext.onReady(function () {
                 }
             } else {
                 includeSearchRangeInterval = 'false';
-                searchRangeInterval = 0;    
+                searchRangeInterval = 0;
             }
         } else {
             includeSearchRangeInterval = 'false';
@@ -2867,7 +2867,7 @@ Ext.onReady(function () {
                 elementName = '*' + elementNameOrFBtpIdentifierTextField.getValue() + '*';
                 fbtpIdentifier = '';
             } else {
-                // Any FBtp/FBmc identifier must belong to the Drosophila 
+                // Any FBtp/FBmc identifier must belong to the Drosophila
                 // melanogaster species at the moment.
                 elementName = '';
                 fbtpIdentifier = elementNameOrFBtpIdentifierTextField.getValue() + '*';
@@ -2900,7 +2900,7 @@ Ext.onReady(function () {
         // Checks if the RC, CRM segment, and predicted CRM entries must include the enhancer attribute
         if ( Ext.getCmp('rc-restrictions-include-enhancer').getValue() ) {
             enhancerAttributeIncluded = 'true';
-        }        
+        }
         // Checks if the RC, CRM segment, and predicted CRM entries must include the silencer attribute
         if ( Ext.getCmp('rc-restrictions-include-silencer').getValue() ) {
             silencerAttributeIncluded = 'true';
@@ -2918,7 +2918,7 @@ Ext.onReady(function () {
             isMinimalized = 'true';
         } else {
             isMinimalized = 'false';
-        }                
+        }
         // Checks if the RC entries have images
         if ( Ext.getCmp('rc-miscellaneous-options-has-images').getValue() ) {
             rcHasImages = 'true';
@@ -3033,7 +3033,7 @@ Ext.onReady(function () {
             exactBiologicalProcessIdentifier = 'true';
         } else {
             exactBiologicalProcessIdentifier = 'false';
-        }                
+        }
         var time;
         // Gets the date of the last update
         if ( lastUpdateDateField.getValue() !== '' ) {
@@ -3056,7 +3056,7 @@ Ext.onReady(function () {
         // redfly parameter so different variables are needed
         var redflyIdRcUrl = '';
         var redflyIdTfUrl = '';
-        var redflyIdCrmsUrl = '';        
+        var redflyIdCrmsUrl = '';
         switch (redflyIdUrl.split(':')[0]) {
             case 'RFRC':
                 redflyIdRcUrl = redflyIdUrl;
@@ -3074,7 +3074,7 @@ Ext.onReady(function () {
                 is_crm: true,
                 redfly_id: redflyIdRcUrl
             };
-            crmStore.load();            
+            crmStore.load();
             REDfly.config.rcSearchParameters = {
                 redfly_id: redflyIdRcUrl
             };
@@ -3193,7 +3193,7 @@ Ext.onReady(function () {
                 silencer_attribute_included: silencerAttributeIncluded,
                 three_prime: threePrime
             };
-            crmStore.load();            
+            crmStore.load();
         } else {
             // Check if the RC entries are only CRM's
             if ( Ext.getCmp('rc-data-type-crm').getValue() ) {
@@ -3282,7 +3282,7 @@ Ext.onReady(function () {
                 silencer_attribute_included: silencerAttributeIncluded,
                 three_prime: threePrime
             };
-            crmStore.load();            
+            crmStore.load();
         }
         REDfly.config.crmsegmentSearchParameters = {
             anatomical_expression_identifier: anatomicalExpressionIdentifier,
@@ -3304,7 +3304,7 @@ Ext.onReady(function () {
             five_prime: fivePrime,
             gene_id: geneId,
             is_minimalized: isMinimalized,
-            is_negative: isNegative,            
+            is_negative: isNegative,
             in_exon: inExon,
             in_intron: inIntron,
             include_range: includeSearchRangeInterval,
@@ -3432,7 +3432,7 @@ Ext.onReady(function () {
             chr_start: startCoordinate,
             components: elementName,
             date_added: epochAdded,
-            developmental_stage_identifier: developmentalStageIdentifier,            
+            developmental_stage_identifier: developmentalStageIdentifier,
             evidence_id: evidenceId,
             exact_anatomical_expression_identifier: exactAnatomicalExpressionIdentifier,
             fbtp_identifier: fbtpIdentifier,
@@ -3532,7 +3532,7 @@ Ext.onReady(function () {
         }
         if ( ! Ext.isEmpty(bookmarkExactBiologicalProcessIdentifier) ) {
             url = url + 'exact_biological_process_identifier=' + bookmarkExactBiologicalProcessIdentifier + '&';
-        }        
+        }
         if ( ! Ext.isEmpty(bookmarkLastUpdate) ) {
             url = url + 'last_update=' + bookmarkLastUpdate + '&';
         }
@@ -3646,7 +3646,7 @@ Ext.onReady(function () {
             function () {
                 if ( geneComboBox.getValue() === '' ) {
                     geneStore.load({
-                        params: { 
+                        params: {
                             limit: 0,
                             species_id: sequenceFromSpeciesComboBox.getValue()
                         }
@@ -3679,7 +3679,7 @@ Ext.onReady(function () {
                                     geneDisplayStore.loadData(geneDisplayArray);
                                 }
                             },
-                            params: { 
+                            params: {
                                 identifier: geneComboBox.getValue() + '*',
                                 species_id: sequenceFromSpeciesComboBox.getValue()
                             }
@@ -3750,14 +3750,14 @@ Ext.onReady(function () {
             Ext.getCmp('rc-restrictions').setValue('exclude-silencer', false);
         } else if ( checkbox.getName() === 'exclude-silencer' ) {
             Ext.getCmp('rc-restrictions').setValue('include-silencer', false);
-        }        
+        }
     }
     // Automatically fills in the gene field with the most valid entry
     // if the user does not enter an entire value
     function autoFill()
     {
         if ( geneComboBox.getValue() !== '' ) {
-            // The Anopheles gambiae species            
+            // The Anopheles gambiae species
             var aaelGeneValue = geneComboBox.getValue().split('AAEL')[1];
             // The Anopheles gambiae species
             var agapGeneValue = geneComboBox.getValue().split('AGAP')[1];

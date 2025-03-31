@@ -3,6 +3,16 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2025-April-1 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.6.7 released</li>
+      <li>New search tool released</li>
+      <li>Please see the <a href="release_notes.php#2025-04-01">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2024-September-9 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.6.6 released</li>

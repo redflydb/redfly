@@ -1,5 +1,11 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
+<a name="2025-04-01"></a>
+<?= HTML_REDFLY_LOGO ?> v9.6.7 Release Notes (April 1, 2025)
+<ul>
+  <li>The new search tool has started public testing.</li>
+  <li>SCRMshaw enters the Release Candidate stage.</li>
+</ul>
 <a name="2024-09-09"></a>
 <?= HTML_REDFLY_LOGO ?> v9.6.6 Release Notes (September 9, 2024)
 <ul>

@@ -19,14 +19,19 @@ services:
         restart: always
     mariadb_server:
         command:
-            # 2097152 = 2MB
-            --group_concat_max_len=2097152
-            --max_allowed_packet=2097152
+            --group_concat_max_len=1024M
+            --max_allowed_packet=1024M
             --plugin-load-add=server_audit.so
             --server_audit_file_path=/tmp
             --server_audit_events=query_dml_no_select
             --server_audit_file_rotate_now=1
             --server_audit_file_rotate_size=1000000000
+            --innodb_buffer_pool_size=100M
+            --net_read_timeout=3600
+            --net_write_timeout=3600
+            --connect_timeout=3600
+            --interactive_timeout=86400
+            --wait_timeout=86400
         environment:
             - MYSQL_ROOT_PASSWORD
             - MYSQL_DATABASE

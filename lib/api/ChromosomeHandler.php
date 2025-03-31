@@ -88,6 +88,9 @@ class ChromosomeHandler
                             case "species_short_name":
                                 $sqlOrderBy[] = "s.short_name " . $direction;
                                 break;
+                            case "length":
+                                $sqlOrderBy[] = "c.length " . $direction;
+                                break;
                             default:
                                 break;
                         }
@@ -109,8 +112,8 @@ class ChromosomeHandler
             s.short_name AS species_short_name,
             c.name,
             c.length,
-            CONCAT(c.name, ' (', s.short_name,')') AS display 
-        FROM Species s, 
+            CONCAT(c.name, ' (', s.short_name,')') AS display
+        FROM Species s,
             GenomeAssembly ga,
             Chromosome c
         WHERE s.species_id = ga.species_id AND
