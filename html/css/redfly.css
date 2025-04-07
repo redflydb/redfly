@@ -184,6 +184,30 @@ div.info
     box-shadow: 0 0 3px rgb(190, 30, 45);
 }
 
+.new_search_button
+{
+    font-size: 18px;
+    height: 40px;
+    width: 270px;
+    color: black;
+    background-color: rgba(242, 242, 242, 1);
+    border: 1px solid #BFBFBF;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.new_search_button:hover
+{
+    background-color: rgba(242, 242, 242, 0.6);
+    border-radius: 20px;
+}
+
+.new_search_button:focus
+{
+    outline: none;
+    box-shadow: 0 0 3px rgb(190, 30, 45);
+}
+
 span.section
 {
     font-size: 14pt;
