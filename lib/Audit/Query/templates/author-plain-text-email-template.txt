@@ -9,7 +9,7 @@ Thank you for helping us make your cis-regulatory data more accessible to the co
 Regards,
 The REDfly team
 
-Follow us on Twitter!
+Follow us on Bluesky!
 %s
 Give us valuable feedback with the 4-question REDfly survey!
 %s

@@ -2,21 +2,20 @@
 <br>
 <div class="heading_c"> About <?= HTML_REDFLY_LOGO ?></div>
 <p>
-To receive announcements about important <?= HTML_REDFLY_LOGO ?> news, follow us on Twitter
+To receive announcements about important <?= HTML_REDFLY_LOGO ?> news, follow us on Bluesky
   <span style="vertical-align:-8px;">
-    <a href="https://twitter.com/REDfly_database"
-       class="twitter-follow-button"
+    <a href="https://bsky.app/profile/redfly-database.bsky.social"
+       class="bluesky-follow-button"
        data-show-count="false"
-       data-size="large">@REDfly_database</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+       data-size="large">@redfly-database.bsky.social</a>
   </span>
 </p>
 <p>
-  <?= HTML_REDFLY_LOGO ?> is a collaboration between the 
+  <?= HTML_REDFLY_LOGO ?> is a collaboration between the
   <a href="http://halfonlab.ccr.buffalo.edu/"
-     target="_blank">Halfon lab</a> and the 
+     target="_blank">Halfon lab</a> and the
   <a href="http://www.buffalo.edu/ccr.html"
-     target="_blank">Center for Computational Research</a> at the 
+     target="_blank">Center for Computational Research</a> at the
   <a href="http://www.buffalo.edu/"
      target="_blank">University at Buffalo</a>.
 </p>
@@ -36,9 +35,9 @@ When referencing specific CRMs, please be sure to include a reference to the ori
 (cited in the "cite" tab or under "PMID" in the GFF-formatted download).
 <ul>
   <li>
-    Keränen, S.V.E., Villahoz-Baleta, A., Bruno, A.E., and Halfon, M.S. (2022). 
-    REDfly: An integrated knowledgebase for insect regulatory genomics. <em>Insects</em>, 13:618; 
-    <a href="https://www.mdpi.com/2075-4450/13/7/618" 
+    Keränen, S.V.E., Villahoz-Baleta, A., Bruno, A.E., and Halfon, M.S. (2022).
+    REDfly: An integrated knowledgebase for insect regulatory genomics. <em>Insects</em>, 13:618;
+    <a href="https://www.mdpi.com/2075-4450/13/7/618"
       target="_blank">doi: 10.3390/ insects13070618</a><br>
   </li>
   <li>Rivera, John, Keränen, Soile V. E., Gallo, Steven M. and Halfon, Marc S. (2018).
@@ -82,7 +81,7 @@ When referencing specific CRMs, please be sure to include a reference to the ori
   (CC BY-NC-ND 4.0)
   and its underlying source code under a
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"
-     target="_blank">GNU General Public License v3</a> (GNU GPL 3.0). 
+     target="_blank">GNU General Public License v3</a> (GNU GPL 3.0).
   See
   <a href="disclaimer.php"
      target="_blank">
@@ -90,36 +89,36 @@ When referencing specific CRMs, please be sure to include a reference to the ori
 </p>
 <p>
   <span class="label">About our logo:</span>
-  <br><br>The <?= HTML_REDFLY_LOGO ?> logo was designed by 
+  <br><br>The <?= HTML_REDFLY_LOGO ?> logo was designed by
   <a href="https://www.linkedin.com/in/alexread89"
-     target="_blank">Alex Read</a> as part of the 
+     target="_blank">Alex Read</a> as part of the
   <a href="http://gmod.org/wiki/GMOD_Logo_Program"
      target="_blank">GMOD Spring 2010 Logo Program</a>.
 </p>
 <p>
   <span class="label">Funding Support:</span>
   <br><br>
-  <?= HTML_REDFLY_LOGO ?> is funded in part by 
+  <?= HTML_REDFLY_LOGO ?> is funded in part by
     <a href="http://www.nih.gov/"
-       target="_blank">National Institutes of Health</a> grant 
+       target="_blank">National Institutes of Health</a> grant
     <a href="https://reporter.nih.gov/search/26mjToed5Uu9fBcb8ZOBoA/project-details/10267371"
-       target="_blank">U24 GM142435</a>. Previous support was provided by 
+       target="_blank">U24 GM142435</a>. Previous support was provided by
     <a href="http://www.nih.gov/"
-       target="_blank">NIH</a> grant 
+       target="_blank">NIH</a> grant
     <a href="https://projectreporter.nih.gov/project_info_description.cfm?aid=9024852&icde=28958976"
-       target="_blank">R01 GM114067</a> and 
+       target="_blank">R01 GM114067</a> and
     <a href="http://www.nsf.gov/"
-       target="_blank">National Science Foundation</a> grants 
+       target="_blank">National Science Foundation</a> grants
     <a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1758252"
-       target="_blank">DBI-1758252</a> and 
+       target="_blank">DBI-1758252</a> and
     <a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1355511"
        target="_blank">DBI-1355511</a>.
 </p>
 <p>
   <span class="label">Database:</span><br><br>
-  <?= HTML_REDFLY_LOGO ?> utilizes the 
+  <?= HTML_REDFLY_LOGO ?> utilizes the
     <a href="http://mariadb.org/"
-       target="_blank">MariaDB</a> database.  A schema diagram can be found 
+       target="_blank">MariaDB</a> database.  A schema diagram can be found
     <a href="/images/redfly_v9_schema.png"
        target="_blank">here</a>.
 </p>

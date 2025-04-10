@@ -457,8 +457,8 @@ class ApprovedEntitiesAuthorsNotificationHandler
         $message = sprintf(
             file_get_contents(__DIR__ . "/templates/author-html-email-template.txt") . $data,
             $title,
-            "https://twitter.com/intent/follow?screen_name=REDfly_database",
-            "https://twitter.com/intent/follow?screen_name=REDfly_database",
+            "https://bsky.app/profile/redfly-database.bsky.social",
+            "https://bsky.app/profile/redfly-database.bsky.social",
             "https://www.surveymonkey.com/r/L83SV5B",
             "https://www.surveymonkey.com/r/L83SV5B"
         );
@@ -576,7 +576,7 @@ class ApprovedEntitiesAuthorsNotificationHandler
         $message = sprintf(
             file_get_contents(__DIR__ . "/templates/author-plain-text-email-template.txt") . $data,
             $title,
-            "https://twitter.com/intent/follow?screen_name=REDfly_database",
+            "https://bsky.app/profile/redfly-database.bsky.social",
             "https://www.surveymonkey.com/r/L83SV5B"
         );
         if ( $message === false ) {

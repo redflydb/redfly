@@ -11,22 +11,13 @@ We welcome queries, corrections, suggestions, and submission of new data.<br>
 Please use the form below to contact the <?= HTML_REDFLY_LOGO ?> team.
 </p>
 <p>
-To receive announcements about important <?= HTML_REDFLY_LOGO ?> news, follow us on Twitter
+To receive announcements about important <?= HTML_REDFLY_LOGO ?> news, follow us on Bluesky
 <span style="vertical-align:-8px;">
-   <a href="https://twitter.com/REDfly_database"
-      class="twitter-follow-button"
+   <a href="https://bsky.app/profile/redfly-database.bsky.social"
+      class="bluesky-follow-button"
+      target="_blank"
       data-show-count="false"
-      data-size="large">@REDfly_database</a>
-    <script>!function(d,s,id){
-        var js, fjs = d.getElementsByTagName(s)[0], p=/^http:/.test(d.location) ? 'http':'https';
-        if (!d.getElementById(id)) {
-            js = d.createElement(s);
-            js.id = id;
-            js.src = p+'://platform.twitter.com/widgets.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }
-        } (document, 'script', 'twitter-wjs');
-    </script>
+      data-size="large">@redfly-database.bsky.social</a>
 </span>
 </p>
 <!-- Begin Contact Form -->
@@ -38,7 +29,7 @@ To receive announcements about important <?= HTML_REDFLY_LOGO ?> news, follow us
   <br><br>
   <p>Name</p>
   <br>
-  <input class="shadow" 
+  <input class="shadow"
          type="text"
          name="userName" required>
   <br><br>

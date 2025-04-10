@@ -91,8 +91,7 @@ When using specific CRM, CRMseg, pCRM, and TFBS data, please make sure to cite t
       </a>
     </p>
     <div align="center">
-      <a href="https://twitter.com/REDfly_database" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @REDfly_database</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="https://bsky.app/profile/redfly-database.bsky.social" class="bluesky-follow-button" target="_blank" data-show-count="false" data-size="large">Follow @redfly-database.bsky.social</a>
     </div>
   </div>
 </div>
