@@ -1,6 +1,12 @@
 <?php include("header.php"); ?>
 <div class="heading_c"> Release Notes </div>
-<a name="2025-04-01"></a>
+<a name="2026-01-29"></a>
+<?= HTML_REDFLY_LOGO ?> v9.7.0 Release Notes (January 29, 2026)
+<ul>
+  <li>Curation interface updated to v10 design using ReactJS.</li>
+  <li>JBrowse can display data from multiple species.</li>
+  <li>Fixed many serious bugs in the new search tool.</li>
+</ul>
 <?= HTML_REDFLY_LOGO ?> v9.6.7 Release Notes (April 1, 2025)
 <ul>
   <li>The new search tool has started public testing.</li>

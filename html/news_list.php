@@ -3,6 +3,17 @@
 <table border="0" cellpadding="2">
 <tr>
   <td>
+    <span class="newsdate"> 2026-January-29 <br> </span>
+    <ul>
+      <li><?= HTML_REDFLY_LOGO ?> v9.7.0 released</li>
+      <li>Curation interface updated to v10 design using ReactJS.</li>
+      <li>JBrowse can display data from multiple species.</li>
+      <li>Please see the <a href="release_notes.php#2026-01-29">Release Notes</a> for more details</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td>
     <span class="newsdate"> 2025-April-1 <br> </span>
     <ul>
       <li><?= HTML_REDFLY_LOGO ?> v9.6.7 released</li>

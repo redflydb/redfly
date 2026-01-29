@@ -42,7 +42,7 @@ rm raw_agam.gff
 # The Drosophila melanogaster species
 #
 # Get the FlyBase genome in the GFF format for the Drosophila melanogaster species
-wget -O - ftp://ftp.flybase.net/genomes/dmel/current/gff/dmel-all-r*.gff.gz | gunzip -c > dmel-all-no-analysis.gff;
+wget -O - https://s3ftp.flybase.org/genomes/Drosophila_melanogaster/current/gff/dmel-all-r6.66.gff.gz | gunzip -c > dmel-all-no-analysis.gff;
 # Filter only the necessary terms from the FlyBase genome of the Drosophila melanogaster species
 cat dmel-all-no-analysis.gff | awk -F "\t" 'NF == 9 \
         && $1 ~ /^(2L|2R|3L|3R|4|U|X|Y|211000022278279|211000022278436|211000022278449|211000022278760|211000022279165|211000022279188|211000022279264|211000022279392|211000022279681|211000022280328|211000022280341211000022280347|211000022280481|211000022280494|211000022280703|Unmapped_Scaffold_8_D1580_D1567)$/ \
