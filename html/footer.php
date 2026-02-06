@@ -17,8 +17,8 @@
                 <tr>
                   <td align="left" valign="center">Funded in part by the <a href="https://www.nsf.gov/" target="_blank">NSF</a></td>
                   <td align="left" valign="center"><img src="<?= $baseURL ?>images/nsf_logo.jpg"></td>
-                  <td align="left" valign="center">and the <a href="https://www.nigms.nih.gov/" target="_blank">NIGMS</a></td>
-                  <td align="left" valign="center"><img src="<?= $baseURL ?>images/NIGMS_logo.jpg"></td>
+                  <td align="left" valign="center">and the <a href="http://www.nih.gov/" target="_blank">NIH</a></td>
+                  <td align="left" valign="center"><img src="<?= $baseURL ?>images/nih_logo_44x25.png"></td>
                 </tr>
               </table>
             </td>
@@ -31,7 +31,7 @@
   <tr>
     <td align="center"><p style="font-size: 0.8em;">
       Copyright © University at Buffalo—State University of New York.
-      <?= HTML_REDFLY_LOGO ?> is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+      <?= HTML_REDFLY_LOGO ?> is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
       See <a href="<?= $baseURL ?>about_redfly.php#REDfly-licensing-statement"
              target="_blank">License</a>.<br>
       The copyrights of all curated content belong to their respective owners.</p>
