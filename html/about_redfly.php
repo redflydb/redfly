@@ -101,8 +101,7 @@ When referencing specific CRMs, please be sure to include a reference to the ori
   <?= HTML_REDFLY_LOGO ?> is funded in part by
     <a href="http://www.nih.gov/"
        target="_blank">National Institutes of Health</a> grant
-    <a href="https://reporter.nih.gov/search/qAQfTtH15ECFu69S_4u1cg/project-details/11115771"
-       target="_blank">R03 HD119839</a>. Previous support was provided by
+    R03 HD119839. Previous support was provided by
     <a href="http://www.nih.gov/"
        target="_blank">NIH</a> grant
     <a href="https://reporter.nih.gov/search/26mjToed5Uu9fBcb8ZOBoA/project-details/10267371"
