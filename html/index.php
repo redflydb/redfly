@@ -6,7 +6,7 @@ include("news.php");
 <br>
 <div class="main_text">
   <p align="center" style="margin-top: 0;">
-    <a href="http://128.205.11.6/search/options?sequence=1&assayed=1&cellCulture=1&range=10000#basic" target="_blank">
+    <a href="https://redfly.ccr.buffalo.edu/search/options?sequence=1&assayed=1&cellCulture=1&range=10000#basic" target="_blank">
       <button class="new_search_button">Try to new Search Tool (beta)</button>
     </a>
     <a href="search.php">
@@ -83,7 +83,7 @@ The regulatory data curated by <?= HTML_REDFLY_LOGO ?> are the result of the har
 When using specific CRM, CRMseg, pCRM, and TFBS data, please make sure to cite the original discoverers.
     </div>
     <p align="center">
-      <a href="http://128.205.11.6/search/options?sequence=1&assayed=1&cellCulture=1&range=10000#basic" target="_blank">
+      <a href="https://redfly.ccr.buffalo.edu/search/options?sequence=1&assayed=1&cellCulture=1&range=10000#basic" target="_blank">
         <button class="new_search_button">Try to new Search Tool (beta)</button>
       </a>
       <a href="search.php">

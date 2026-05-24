@@ -55,7 +55,7 @@ REDfly.config = {
         flybase: 'http://flybase.org/reports/',
         flybase_cv_term_report: 'http://flybase.org/cgi-bin/cvreport.pl?rel=is_a&',
         flybase_images: 'http://flybase.org/cgi-bin/gbrowse_img/dmel/',
-        gbrowse: 'http://128.205.11.6/jbrowse',
+        gbrowse: 'https://redfly.ccr.buffalo.edu/jbrowse',
         go: 'http://amigo.geneontology.org/amigo/term/',
         pubmed: 'http://www.ncbi.nlm.nih.gov/pubmed/',
         redfly: redflyBaseUrl + 'search.php',

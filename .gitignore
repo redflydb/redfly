@@ -74,3 +74,6 @@ User/*
 
 # Statistics files
 go/statistics/cmd/docs/*.txt
+
+node_modules
+.env.kimberly
