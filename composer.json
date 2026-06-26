@@ -10,10 +10,10 @@
         }
     ],
     "require": {
-        "doctrine/dbal": "4.4.3",
+        "doctrine/dbal": "2.13.9",
         "google/apiclient": "2.19.3",
         "google/recaptcha": "1.5",
-        "guzzlehttp/guzzle": "7.10.0",
+        "guzzlehttp/guzzle": "7.12.3",
         "latitude/latitude": "2.3.1",
         "league/csv": "9.28.0",
         "league/json-guard": "1.0.1",
